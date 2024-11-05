@@ -162,3 +162,40 @@
    justify-content: center;
    align-items: center;
   }
+
+  .our-strenght{
+    background-color: #ECF5FB;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .our-strenght-img{
+    width: 100%;
+    margin-top: -55px;
+  }
+  .our-strenght-logo{
+    width: 400px;
+    height: 80px;
+    object-fit: contain;
+  }
+  .our-strenght-heading{
+    font-size: 20px;
+    font-weight: bold;
+    color: #01233B;
+  }
+  .our-strenght-right-content{
+    display: flex;
+    gap: 30px;
+  }
+
+  .our-strenght-right-content-count{
+    color: #01233B;
+    font-weight: 700;
+    font-size: 19px;
+  }
+
+  .our-strenght-right-content-head{
+    color: #01233B;
+    font-weight: 600;
+    font-size: 16px;
+  }
