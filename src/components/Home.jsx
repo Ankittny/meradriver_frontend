@@ -34,22 +34,22 @@ const Home = () => {
           <div className="form-container">
             <p>ONLINE BOOKING</p>
             <p className="form-container-text">Book Your Driver Now</p>
-            <div className="button-group">
+            <div className="button-group mt-3">
               <button
-                className={`tab ${formType === "company" ? "active" : ""}`}
+                className={`tab rounded ${formType === "company" ? "active" : ""}`}
                 onClick={() => handleTabClick("company")}
               >
                 Company Name
               </button>
               <button
-                className={`tab ${formType === "individual" ? "active" : ""}`}
+                className={`tab rounded  mx-3 ${formType === "individual" ? "active" : ""}`}
                 onClick={() => handleTabClick("individual")}
               >
                 Individual
               </button>
             </div>
 
-            <form className="booking-form">
+            <form className="booking-form ">
               {formType === "individual" ? (
                 <>
                   <div className="form-row">
@@ -94,15 +94,15 @@ const Home = () => {
       <CounterComponent />
 
       {/* Our Services */}
-      <div className="container mt-5">
+      <div className="container-fluid ">
         <div className="row ">
-          <div className="col-6">
+          <div className="col-lg-6">
             <div className="service-right">
               <Image src={"/DeWatermark.png"} width={520} height={300} alt="" />
             </div>
           </div>
 
-          <div className="col-6">
+          <div className="col-lg-6">
             <div className="">
               <h1 className="service-left-heading">Our Services</h1>
               <div className="service-left-para">
@@ -114,11 +114,11 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="row" style={{gap:'3px'}}>
-                <div className="col-6 service-left-menu">
+              <div className="row" >
+                <div className="col-lg-6 service-left-menu ">
                  <p className="" style={{textAlign:'center'}}>Huge Data base of several kinds of Drivers</p>
                 </div>
-                <div className="col-6 service-left-menu">
+                <div className="col-lg-6 service-left-menu ">
                 <p className="" style={{textAlign:'center'}}>Driver training is provided as and when required in association of reputed agency.</p>
                 </div>
               </div>
