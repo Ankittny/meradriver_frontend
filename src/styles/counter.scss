@@ -2,9 +2,10 @@
 
 .counter {
     background-color: #F1F7FD;
-    height: 210px;
-    padding: 20px;
-   
+    padding: 40px;
+    position: relative;
+    top: -90px;
+    z-index: -1;
 
   
 
@@ -15,7 +16,8 @@
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       margin: 10px;
-      width: 150px;
+      width: 200px;
+      position: relative;
     }
   
     .icon {
@@ -31,6 +33,14 @@
     p {
       color: #555;
       margin: 0;
+    }
+    .icon svg{
+      border: 3px solid #01233b;
+      padding: 6px;
+      border-radius: 100%;
+      position: absolute;
+      top: -18px;
+      left: 85px;
     }
   }
   

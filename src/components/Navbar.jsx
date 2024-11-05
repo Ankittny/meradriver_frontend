@@ -6,9 +6,9 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <div className="">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary mt-3">
         <div className="container-fluid">
-          <Image src={'/MERA-DRIVER.png'} width={200} height={60} alt=""/>
+          <Image src={'/MERA-DRIVER.png'} width={150} height={40} alt=""/>
           <button
             className="navbar-toggler"
             type="button"
@@ -21,7 +21,7 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 px-4 my-2">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" href="#">
                   Home
@@ -59,11 +59,11 @@ const Navbar = () => {
               </li>
             </ul>
 
-            <button className="btn btn-outline-success" type="submit">
-              Apply for Jobs
+            <button className="btn btn-outline-success mx-3" type="submit">
+            Book Mera Diver
             </button>
             <button className="btn btn-outline-success" type="submit">
-              Apply for Drivers
+              Login
             </button>
           </div>
         </div>
