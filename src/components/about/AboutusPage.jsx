@@ -75,7 +75,7 @@ const AboutusPage = () => {
             <div className="col-6 d-flex justify-content-center align-items-center">
               <div className="executive-team-right">
                 <p>
-                  Mr. Mahendra Swain(Founder & Managing Director) is a
+                  <span className="">Mr. Mahendra Swain</span>(Founder & Managing Director) is a
                   recognized and accomplished entrepreneur of M S Infraengineers
                   Pvt. Ltd. established in 1976. Mr.Swain is instrumental in the
                   growth of his companies. He leads his companie’s goals to
@@ -96,7 +96,7 @@ const AboutusPage = () => {
             <div className="col-6 d-flex justify-content-center align-items-center ">
               <div className="executive-team-right">
                 <p>
-                  Mr. Mahendra Swain(Founder & Managing Director) is a
+                <span className="">Mr. Mahendra Swain</span>(Founder & Managing Director) is a
                   recognized and accomplished entrepreneur of M S Infraengineers
                   Pvt. Ltd. established in 1976. Mr.Swain is instrumental in the
                   growth of his companies. He leads his companie’s goals to
@@ -135,7 +135,7 @@ const AboutusPage = () => {
             <div className="col-6 d-flex justify-content-center align-items-center">
               <div className="executive-team-right">
                 <p>
-                  Mr. Mahendra Swain(Founder & Managing Director) is a
+                <span className="">Mr. Mahendra Swain</span>(Founder & Managing Director) is a
                   recognized and accomplished entrepreneur of M S Infraengineers
                   Pvt. Ltd. established in 1976. Mr.Swain is instrumental in the
                   growth of his companies. He leads his companie’s goals to
