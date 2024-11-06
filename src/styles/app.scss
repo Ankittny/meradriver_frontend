@@ -40,8 +40,26 @@ p {
 @import "./navbar.scss";
 @import "./bestdriver.scss";
 @import "./aboutus.scss";
+@import "./aboutuspage.scss";
+
 
 .css-ptdwpq-MuiPaper-root-MuiAppBar-root{
 background-color: white !important;
 border-radius: 10px;
 }
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  background-color: #fff !important;
+}
+
+.navbar-nav {
+  gap: 14px;
+ }

@@ -1,3 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --primary-color:#01233B;
+  --secondary-color:#155A8B;
+  --font-family: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
 .home-container {
   position: relative;
   width: 100%;
@@ -6,7 +35,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // color: white;
 }
 
 .background-video {
@@ -15,7 +43,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -1;
 }
 
@@ -24,7 +53,6 @@
   top: 0;
   width: 90%;
   border-radius: 6px;
-  // padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +64,6 @@
   position: relative;
   width: 100%;
   max-width: 1200px;
-  // padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,6 +73,7 @@
 .content {
   max-width: 500px;
 }
+
 .content h1 {
   color: white;
   font-weight: bold;
@@ -139,12 +167,14 @@
   color: #01233b;
   font-weight: 500;
 }
+
 .service-left-para {
   color: #444444;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
 }
+
 .service-left-para p {
   font-size: 13px;
   font-weight: 400;
@@ -164,59 +194,160 @@
   align-items: center;
 }
 
-.our-strenght{
+.our-strenght {
   background-color: #ECF5FB;
   width: 100%;
   padding: 10px;
- }
-  
- .our-strenght-img{
+}
+
+.our-strenght-img {
   width: 100%;
   margin-top: -55px;
- }
- .our-strenght-logo{
+}
+
+.our-strenght-logo {
   width: 400px;
   height: 80px;
-  object-fit: contain;
- }
- .our-strenght-heading{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.our-strenght-heading {
   font-size: 20px;
   font-weight: bold;
   color: #01233B;
- }
- .our-strenght-right-content{
+}
+
+.our-strenght-right-content {
   display: flex;
   gap: 30px;
- }
-  
- .our-strenght-right-content-count{
+}
+
+.our-strenght-right-content-count {
   color: #01233B;
   font-weight: 700;
   font-size: 19px;
- }
-  
- .our-strenght-right-content-head{
+}
+
+.our-strenght-right-content-head {
   color: #01233B;
   font-weight: 600;
   font-size: 16px;
- }
+}
 
+.service-left-menus {
+  font-size: 13px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
-
- .service-left-menus{
- font-size: 13px;
- box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
- 
- }
-
- .form-container p{
+.form-container p {
   margin-bottom: 0px;
- }
- .service-right img{
+}
+
+.service-right img {
   width: 100%;
   height: auto;
- }
- .btn-outline-success{
+}
+
+.btn-outline-success {
   background-color: #01233B !important;
   color: #fff !important;
- }
+}
+
+.bestdriver-background {
+  background-color: #F9F8F8;
+}
+
+.bestdriver {
+  background-image: url("../../public/bestdriveearcth.png");
+  width: 100%;
+  background-repeat: no-repeat !important;
+  position: relative !important;
+  background-size: cover !important;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bestdriver-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #01233B;
+  text-align: center;
+}
+
+.bestdrive-drivers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bestdrive-drivers-image {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+  height: 300px;
+}
+
+.bestdrive-drivers-type {
+  width: 100%;
+  background-color: #01233B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.aboutus-left {
+  background-color: #01233B;
+  color: white;
+  border-radius: 5px;
+  width: 60%;
+  padding: 10px;
+}
+
+.aboutus-left-heading {
+  font-size: 24px;
+  margin: auto;
+}
+
+.aboutus-left-ul {
+  text-align: justify;
+  font-size: medium;
+  color: #071634;
+  font-weight: 400;
+}
+
+.aboutus-right-image {
+  width: 100%;
+}
+
+.aboutuspage-top {
+  background-color: red;
+  width: 100%;
+  height: 250px;
+  margin-top: -80px;
+}
+
+.css-ptdwpq-MuiPaper-root-MuiAppBar-root {
+  background-color: white !important;
+  border-radius: 10px;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  background-color: #fff !important;
+}
+
+.navbar-nav {
+  gap: 14px;
+}/*# sourceMappingURL=app.css.map */
