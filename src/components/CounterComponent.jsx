@@ -10,14 +10,14 @@ const CounterComponent = () => {
     { icon: <FaHeart color="red" />, end: 17553, label: 'Happy Customers' },
     { icon: <FaHandshake />, end: 224, label: 'Successful Drives' },
     { icon: <FaUserTie />, end: 572, label: 'Successful  Drivers' },
-    { icon: <FaMapMarkerAlt />, end: 240, label: 'Successful  Covered' },
+    // { icon: <FaMapMarkerAlt />, end: 240, label: 'Successful  Covered' },
   ];
 
   return (
     <div className='counter'>
-      <div className='container'>
+      <div className='container-fluid'>
         <div className='row '>
-            <div className='col-6' style={{display:'flex',flexDirection:'row'}}>
+            <div className='col-lg-6' style={{display:'flex',flexDirection:'row'}}>
             {counters.map((counter, index) => (
             <div className='' key={index}>
               <div className='counter-box'>
@@ -30,7 +30,7 @@ const CounterComponent = () => {
             </div>
           ))}
             </div>
-            <div className='col-6'>
+            <div className='col-lg-6'>
                 
             </div>
          
