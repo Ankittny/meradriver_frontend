@@ -21,8 +21,8 @@ const Home = () => {
 
   return (
     <>
+     <Navbar />
       <div className="home-container">
-        <Navbar />
         <video autoPlay loop muted className="background-video">
           <source src="/videos/Navishkar.mp4" type="video/mp4" />
         </video>
