@@ -21,6 +21,7 @@
 body {
   font-family: var(--font-family); 
   line-height: 1.6; 
+  overflow-x: hidden;
 }
 
 
@@ -37,6 +38,8 @@ p {
 
 @import  "./home.scss";
 @import "./navbar.scss";
+@import "./bestdriver.scss";
+@import "./aboutus.scss";
 
 .css-ptdwpq-MuiPaper-root-MuiAppBar-root{
 background-color: white !important;

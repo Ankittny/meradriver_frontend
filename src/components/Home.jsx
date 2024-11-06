@@ -4,6 +4,11 @@ import "../styles/home.scss";
 import Navbar from "./Navbar";
 import CounterComponent from "./CounterComponent";
 import Image from "next/image";
+import BestDriver from "./BestDriver";
+import AboutusMeraDriver from "./AboutusMeraDriver";
+import { FaUserAlt } from "react-icons/fa";
+import { FaCarRear } from "react-icons/fa6";
+import { PiUsersThreeFill } from "react-icons/pi";
 
 const Home = () => {
   const [formType, setFormType] = useState("individual");
@@ -90,6 +95,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       {/* Counter Component */}
       <CounterComponent />
 
@@ -113,7 +119,6 @@ const Home = () => {
                   driver assigned to you.
                 </p>
               </div>
-
               <div className="row" >
                 <div className="col-lg-6 service-left-menu ">
                  <p className="" style={{textAlign:'center'}}>Huge Data base of several kinds of Drivers</p>
@@ -122,6 +127,76 @@ const Home = () => {
                 <p className="" style={{textAlign:'center'}}>Driver training is provided as and when required in association of reputed agency.</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Best Driver for you */}
+      <BestDriver />
+
+      {/* About us Mera driver */}
+      <AboutusMeraDriver />
+
+      {/* Our Strenght */}
+      <div className="our-strenght">
+        <div className="container">
+          <div className="row">
+            <div className="col-6">
+              <div className="our-strenght-left">
+                <div className="" style={{ textAlign: "end" }}>
+                  <img
+                    src={"/MERA-DRIVER.png"}
+                    alt=""
+                    className="our-strenght-logo"
+                  />
+                </div>
+                <img
+                  src={"/ourstrenght.png"}
+                  alt=""
+                  className="our-strenght-img"
+                />
+              </div>
+            </div>
+            <div className="col-6">
+              <div className="our-strenght-heading">
+                <h1>Our Strength</h1>
+              </div>
+
+              <div className="our-strenght-right-content mt-5">
+                <div>
+                <FaUserAlt size={40}/>
+                </div>
+
+                <div className="text-center">
+                  <div className="our-strenght-right-content-count">100+</div>
+                  <div className="our-strenght-right-content-head">Satisfied Retail Customer</div>
+                </div>
+              </div>
+
+
+              <div className="our-strenght-right-content mt-5">
+                <div>
+                <FaCarRear size={40}/>
+                </div>
+
+                <div className="text-center">
+                  <div className="our-strenght-right-content-count">100+</div>
+                  <div className="our-strenght-right-content-head">Satisfied  Registered and Verified Driver</div>
+                </div>
+              </div>
+
+              <div className="our-strenght-right-content mt-5">
+                <div>
+                <PiUsersThreeFill size={40}/>
+                </div>
+
+                <div className="text-center">
+                  <div className="our-strenght-right-content-count">100+</div>
+                  <div className="our-strenght-right-content-head">Satisfied  Corporate Customers</div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
