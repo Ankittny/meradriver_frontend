@@ -9,6 +9,8 @@ import AboutusMeraDriver from "./AboutusMeraDriver";
 import { FaUserAlt } from "react-icons/fa";
 import { FaCarRear } from "react-icons/fa6";
 import { PiUsersThreeFill } from "react-icons/pi";
+import FeelJourney from "./FeelJourney";
+import Link from "next/link";
 
 const Home = () => {
   const [formType, setFormType] = useState("individual");
@@ -121,10 +123,10 @@ const Home = () => {
               </div>
               <div className="row" >
                 <div className="col-lg-6 service-left-menu ">
-                 <p className="" style={{textAlign:'center'}}>Huge Data base of several kinds of Drivers</p>
+                  <p className="" style={{ textAlign: 'center' }}>Huge Data base of several kinds of Drivers</p>
                 </div>
                 <div className="col-lg-6 service-left-menu ">
-                <p className="" style={{textAlign:'center'}}>Driver training is provided as and when required in association of reputed agency.</p>
+                  <p className="" style={{ textAlign: 'center' }}>Driver training is provided as and when required in association of reputed agency.</p>
                 </div>
               </div>
             </div>
@@ -142,7 +144,7 @@ const Home = () => {
       <div className="our-strenght">
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-lg-6">
               <div className="our-strenght-left">
                 <div className="" style={{ textAlign: "end" }}>
                   <img
@@ -158,14 +160,14 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-lg-6">
               <div className="our-strenght-heading">
-                <h1>Our Strength</h1>
+                <h1 className="strenght-title">OUR STRENGTH</h1>
               </div>
 
               <div className="our-strenght-right-content mt-5">
                 <div>
-                <FaUserAlt size={40}/>
+                  <FaUserAlt size={40} />
                 </div>
 
                 <div className="text-center">
@@ -177,23 +179,23 @@ const Home = () => {
 
               <div className="our-strenght-right-content mt-5">
                 <div>
-                <FaCarRear size={40}/>
+                  <FaCarRear size={40} />
                 </div>
 
                 <div className="text-center">
-                  <div className="our-strenght-right-content-count">100+</div>
-                  <div className="our-strenght-right-content-head">Satisfied  Registered and Verified Driver</div>
+                  <div className="our-strenght-right-content-count">7000+</div>
+                  <div className="our-strenght-right-content-head"> Registered and Verified Driver</div>
                 </div>
               </div>
 
               <div className="our-strenght-right-content mt-5">
                 <div>
-                <PiUsersThreeFill size={40}/>
+                  <PiUsersThreeFill size={40} />
                 </div>
 
                 <div className="text-center">
-                  <div className="our-strenght-right-content-count">100+</div>
-                  <div className="our-strenght-right-content-head">Satisfied  Corporate Customers</div>
+                  <div className="our-strenght-right-content-count">50+</div>
+                  <div className="our-strenght-right-content-head"> Corporate Customers</div>
                 </div>
               </div>
 
@@ -201,7 +203,116 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* feel journey */}
+      <FeelJourney />
+
+      {/* driver vs taxi druvers */}
+      <div className="driver-title pt-5">
+        <div className="container-fluid">
+          <div className="driver-heading">
+            <h2 class="driver-text text-center font-lighter mx-auto">Driver Vs Taxi Services</h2>
+          </div>
+          <div className="map-item mt-5">
+            <div className="row">
+              <div className="col-lg-3">
+                <div className="driver-safe-title">
+                  <h3 className="text-center"> Driver </h3>
+                </div>
+                <div className="driver-organization position-relative">
+                  <button type="submit" class="submit-button mb-5 ">Professionals who know their trad</button>
+                  <button type="submit" class="submit-button mb-5">Great traffic sense with great skills</button>
+                  <button type="submit" class="submit-button mb-5">Understand the society in general and
+                    hence behave in a mannered way</button>
+                  <button type="submit" class="submit-button">Highly aware and know their responsibilities well</button>
+                  <div className="sep position-absolute"></div>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <div className="driver-organizations position-relative">
+                  <button type="submit" class="submit-button mb-5 ">Highly educated drivers who understand the nitty-gritties of driving</button>
+                  <button type="submit" class="submit-button mb-5">Understand technology and rules</button>
+                  <button type="submit" class="submit-button mb-5">Very well trained</button>
+                </div>
+              </div>
+              <div className="col-lg-1 position-relative">
+                <div className="sketch-title position-absolute">
+                  <img
+                    src={"/removebg-preview.png"}
+                    alt="dd3"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <div className="driver-safe-title">
+                  <h3 className="text-center"> Taxi Services </h3>
+                </div>
+                <div className="driver-organization position-relative">
+                  <button type="submit" class="submit-button mb-5 ">Professionals who know their trad</button>
+                  <button type="submit" class="submit-button mb-5">Great traffic sense with great skills</button>
+                  <button type="submit" class="submit-button mb-5">Understand the society in general and
+                    hence behave in a mannered way</button>
+                  <div className="sep position-absolute"></div>
+
+                </div>
+              </div>
+              <div className="col-lg-2">
+                <div className="dri-fix">
+                  <button type="submit" class="submit-button mb-5 ">Professionals who know their trad</button>
+                  <button type="submit" class="submit-button mb-5">Great traffic sense with great skills</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* plqace-requirements */}
+      <div className="place-title">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="place-heading">
+                <h3 className="your-cls fw-bold">Place your Requirement</h3>
+                <p>We provide driver, according to your requirement like you might need driver for the part
+                   time or the full time or for rental purposes. We provide the driver.</p>
+              </div>
+              <div className="more-action">
+                <Link className="showbtn" href="/">Show More</Link>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="work-apply">
+                <h4 className="text-center fw-bold">How it works?</h4>
+              </div>
+              <div className="animation-heading mt-3">
+              <img
+                    src={"/Layer_1.png"}
+                    alt="dd4"
+                  />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{/* mera-deriver-benifits */}
+<div className="mera-deriver-title">
+  <div className="driver-mera text-center">
+    <h3 className="fw-bold ">Mera Driver Benefits</h3>
+  </div>
+  <div className="container-fluid">
+    <div className="row">
+      <div className="col-lg-3">
+        <div className="police-title">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     </>
+
   );
 };
 

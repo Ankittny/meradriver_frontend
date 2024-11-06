@@ -3,11 +3,12 @@ import React from "react";
 const AboutusMeraDriver = () => {
   return (
     <>
-      <div className="container mt-5">
+    <div className="about-us-title">
+      <div className="container">
         <div className="row">  
           <div className="col-6">
               <div className="aboutus-left">
-               <h1 className="aboutus-left-heading">About Us Mera Driver</h1>
+               <h1 className="aboutus-left-heading text-center">About Us Mera Driver</h1>
               </div>
 
               <div className="mt-5">
@@ -31,6 +32,7 @@ const AboutusMeraDriver = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
