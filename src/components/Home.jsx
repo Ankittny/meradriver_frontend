@@ -249,19 +249,19 @@ const Home = () => {
                   <h3 className="text-center"> Driver </h3>
                 </div>
                 <div className="driver-organization position-relative">
-                  <button type="submit" class="submit-button mb-5 ">Professionals who know their trad</button>
-                  <button type="submit" class="submit-button mb-5">Great traffic sense with great skills</button>
-                  <button type="submit" class="submit-button mb-5">Understand the society in general and
+                  <button type="submit" className="submit-button mb-5 ">Professionals who know their trad</button>
+                  <button type="submit" className="submit-button mb-5">Great traffic sense with great skills</button>
+                  <button type="submit" className="submit-button mb-5">Understand the society in general and
                     hence behave in a mannered way</button>
-                  <button type="submit" class="submit-button">Highly aware and know their responsibilities well</button>
+                  <button type="submit" className="submit-button">Highly aware and know their responsibilities well</button>
                   <div className="sep position-absolute"></div>
                 </div>
               </div>
               <div className="col-lg-3">
                 <div className="driver-organizations position-relative">
-                  <button type="submit" class="submit-button mb-5 ">Highly educated drivers who understand the nitty-gritties of driving</button>
-                  <button type="submit" class="submit-button mb-5">Understand technology and rules</button>
-                  <button type="submit" class="submit-button mb-5">Very well trained</button>
+                  <button type="submit" className="submit-button mb-5 ">Highly educated drivers who understand the nitty-gritties of driving</button>
+                  <button type="submit" className="submit-button mb-5">Understand technology and rules</button>
+                  <button type="submit" className="submit-button mb-5">Very well trained</button>
                 </div>
               </div>
               <div className="col-lg-1 position-relative">
@@ -277,9 +277,9 @@ const Home = () => {
                   <h3 className="text-center"> Taxi Services </h3>
                 </div>
                 <div className="driver-organization position-relative">
-                  <button type="submit" class="submit-button mb-5 ">Professionals who know their trad</button>
-                  <button type="submit" class="submit-button mb-5">Great traffic sense with great skills</button>
-                  <button type="submit" class="submit-button mb-5">Understand the society in general and
+                  <button type="submit" className="submit-button mb-5 ">Professionals who know their trad</button>
+                  <button type="submit" className="submit-button mb-5">Great traffic sense with great skills</button>
+                  <button type="submit" className="submit-button mb-5">Understand the society in general and
                     hence behave in a mannered way</button>
                   <div className="sep position-absolute"></div>
 
@@ -287,8 +287,8 @@ const Home = () => {
               </div>
               <div className="col-lg-2">
                 <div className="dri-fix">
-                  <button type="submit" class="submit-button mb-5 ">Professionals who know their trad</button>
-                  <button type="submit" class="submit-button mb-5">Great traffic sense with great skills</button>
+                  <button type="submit" className="submit-button mb-5 ">Professionals who know their trad</button>
+                  <button type="submit" className="submit-button mb-5">Great traffic sense with great skills</button>
                 </div>
               </div>
             </div>

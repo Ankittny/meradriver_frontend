@@ -1,5 +1,10 @@
+"use client"
 import React from "react";
 import BestDriver from "../BestDriver";
+import FeelJourney from "../FeelJourney";
+import Slider from "../Slider";
+import OnlineStore from "../OnlineStore";
+import Footer from "../Footer";
 
 const Services = () => {
   return (
@@ -192,12 +197,25 @@ const Services = () => {
           <div className="col-6 p-0">
             <h1 className="trainer-manual-sunheading">Mobile Telephones</h1>
             <p className="trainer-manual-para">
-            All chauffeurs must have an operational mobile phone with them at all times and always be able to answer it in case the company needs to contact them or their passengers.
+              All chauffeurs must have an operational mobile phone with them at
+              all times and always be able to answer it in case the company
+              needs to contact them or their passengers.
             </p>
           </div>
         </div>
-
       </div>
+
+      {/* Feel journet */}
+      <FeelJourney />
+
+      {/* Slider */}
+      <Slider/>
+
+      {/* Online Store */}
+      <OnlineStore />
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 };
