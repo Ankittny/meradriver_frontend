@@ -4,7 +4,7 @@ const AboutusMeraDriver = () => {
   return (
     <>
     <div className="about-us-title">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">  
           <div className="col-6">
               <div className="aboutus-left">

@@ -29,7 +29,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
               <Link className="nav-link active" aria-current="page" href="#">
-                  About Mera Driver
+                  Apply Driver
                 </Link>
               </li>
               <li className="nav-item">

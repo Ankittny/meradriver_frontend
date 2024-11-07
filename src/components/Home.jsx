@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import "../styles/home.scss";
 import Navbar from "./Navbar";
 import CounterComponent from "./CounterComponent";
@@ -11,6 +11,35 @@ import { FaCarRear } from "react-icons/fa6";
 import { PiUsersThreeFill } from "react-icons/pi";
 import FeelJourney from "./FeelJourney";
 import Link from "next/link";
+import OnlineStore from "./OnlineStore";
+import Accordion from '@mui/material/Accordion';
+import AccordionActions from '@mui/material/AccordionActions';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Button from '@mui/material/Button';
+import Slider from "./Slider";
+import Footer from "./Footer";
+
+// import "../styles/slider.scss";
+// import Image from "next/image";
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
+import { Autoplay } from 'swiper/modules';
+
+
+// Import Swiper styles
+import 'swiper/css';
+// import 'swiper/css/pagination';
+
+// import './styles.css';/
+
+// import required modules
+import { Pagination } from 'swiper/modules';
+
+
 
 const Home = () => {
   const [formType, setFormType] = useState("individual");
@@ -19,9 +48,10 @@ const Home = () => {
     setFormType(type);
   };
 
+
   return (
     <>
-     <Navbar />
+      <Navbar />
       <div className="home-container">
         <video autoPlay loop muted className="background-video">
           <source src="/videos/Navishkar.mp4" type="video/mp4" />
@@ -46,7 +76,7 @@ const Home = () => {
                 className={`tab rounded ${formType === "company" ? "active" : ""}`}
                 onClick={() => handleTabClick("company")}
               >
-                Company Name
+                Company
               </button>
               <button
                 className={`tab rounded  mx-3 ${formType === "individual" ? "active" : ""}`}
@@ -142,7 +172,7 @@ const Home = () => {
 
       {/* Our Strenght */}
       <div className="our-strenght">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-lg-6">
               <div className="our-strenght-left">
@@ -274,7 +304,7 @@ const Home = () => {
               <div className="place-heading">
                 <h3 className="your-cls fw-bold">Place your Requirement</h3>
                 <p>We provide driver, according to your requirement like you might need driver for the part
-                   time or the full time or for rental purposes. We provide the driver.</p>
+                  time or the full time or for rental purposes. We provide the driver.</p>
               </div>
               <div className="more-action">
                 <Link className="showbtn" href="/">Show More</Link>
@@ -285,32 +315,345 @@ const Home = () => {
                 <h4 className="text-center fw-bold">How it works?</h4>
               </div>
               <div className="animation-heading mt-3">
-              <img
-                    src={"/Layer_1.png"}
-                    alt="dd4"
-                  />
+                <img
+                  src={"/Layer_1.png"}
+                  alt="dd4"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
 
-{/* mera-deriver-benifits */}
-<div className="mera-deriver-title">
-  <div className="driver-mera text-center">
-    <h3 className="fw-bold ">Mera Driver Benefits</h3>
-  </div>
-  <div className="container-fluid">
-    <div className="row">
-      <div className="col-lg-3">
-        <div className="police-title">
+      {/* step slider */}
+      <div className="swiper-titles-t ">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={15}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className="slider-slide d-flex  gap-4 ">
+              <div className="step-1">
+                <h3 >Step 1
+                </h3>
+                <p>Lorem ipsum, dolor sit amet.</p>
+              </div>
+            </div>
 
+
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="slider-slide d-flex  gap-4">
+              <div className="step-1">
+                <h3> Step 2</h3>
+                <p>Lorem ipsum, dolor sit amet.</p>              </div>
+
+            </div>
+
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="slider-slide d-flex gap-4">
+              <div className="step-1">
+                <h3> Step 3 </h3>
+                <p>Lorem ipsum, dolor sit amet.</p>
+              </div>
+            </div>
+
+
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="slider-slide d-flex gap-4">
+              <div className="step-1">
+                <h3> Step 4</h3>
+                <p>Lorem ipsum, dolor sit amet.</p>              </div>
+
+            </div>
+
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="slider-slide d-flex gap-4">
+              <div className="step-1">
+                <h3 >Step 1
+                </h3>
+                <p>Lorem ipsum, dolor sit amet.</p>                 </div>
+
+            </div>
+
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="slider-slide d-flex gap-4">
+              <div className="step-1">
+                <h3> Step 2</h3>
+                <p>Lorem ipsum, dolor sit amet.</p>              </div>
+
+            </div>
+
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="slider-slide d-flex gap-4">
+              <div className="step-1">
+                <h3> Step 3</h3>
+                <p>Lorem ipsum, dolor sit amet.</p>              </div>
+
+            </div>
+
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="slider-slide d-flex gap-4">
+              <div className="step-1">
+                <h3> Step 4</h3>
+                <p>Lorem ipsum, dolor sit amet.</p>              </div>
+
+            </div>
+
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="slider-slide d-flex gap-4">
+
+              <div className="step-1">
+                <h3> Step 5</h3>
+                <p>Lorem ipsum, dolor sit amet.</p>
+              </div>
+            </div>
+
+          </SwiperSlide>
+        </Swiper>
+
+      </div>
+
+      {/* mera-deriver-benifits */}
+      <div className="mera-deriver-title mt-5">
+        <div className="driver-mera text-center">
+          <h3 className="fw-bold ">Mera Driver Benefits</h3>
+        </div>
+        <div className="container-fluid mt-5">
+          <div className="row">
+            <div className="col-lg-3">
+              <div className="police-title py-3">
+                <div className="image-little text-center">
+                  <img
+                    src={"/Group.png"}
+                    alt="dd4" width="100px" height="100px"
+                  />
+                  <p className="mt-3">Hire Professional drivers for limited period/ hours</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="police-title py-3">
+                <div className="image-little text-center">
+                  <img
+                    src={"/Frame.png"}
+                    alt="dd4" width="100px" height="100px"
+                  />
+                  <p className="mt-3">Police Verified Drivers</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="police-title  py-3">
+                <div className="image-little text-center">
+                  <img
+                    src={"/Group (1).png"}
+                    alt="dd4" width="100px" height="100px"
+                  />
+                  <p className="mt-3 px-3">Hire cost is less than renting a taxi/cab</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="police-title py-3">
+                <div className="image-little text-center">
+                  <img
+                    src={"/Group (2).png"}
+                    alt="dd4" width="100px" height="100px"
+                  />
+                  <p className="mt-3 px-3">Centralized Call center +91 9911138139 for any assistance</p>
+                </div>
+              </div>
+            </div>
+            <div className="main-circle-icon mt-5 mx-auto">
+              <div className="row">
+                <div className="col-lg-4">
+                  <div className="police-title py-3">
+                    <div className="image-little text-center">
+                      <img
+                        src={"/Frame (2).png"}
+                        alt="dd4" width="100px" height="100px"
+                      />
+                      <p className="mt-3 px-3" >Comfort of your own car</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4">
+                  <div className="police-title py-3">
+                    <div className="image-little text-center">
+                      <img
+                        src={"/Frame (1).png"}
+                        alt="dd4" width="100px" height="100px"
+                      />
+                      <p className="mt-3 px-3">Availability of drivers as per your requirement</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-4">
+                  <div className="police-title py-3">
+                    <div className="image-little text-center">
+                      <img
+                        src={"/Group (3).png"}
+                        alt="dd4" width="100px" height="100px"
+                      />
+                      <p className="mt-3 px-3">Easy payment system</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+      <OnlineStore />
 
+      {/* accordian */}
+      <div className="accordian-title mt-5">
+        <div className="container">
+          <h2 className="frequently-title text-center">Frequently Asked Questions</h2>
+          <div className="accordian-map pt-3">
+
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="accordian-item">
+                  <div>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1-content"
+                        id="panel1-header"
+                      >
+                        How do I book an airport transfer?
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                      </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2-content"
+                        id="panel2-header"
+                      >
+                        Are there any extra charges?
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                      </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel3-content"
+                        id="panel3-header"
+                      >
+                        How much do I need to pay for airport transfer service?
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                      </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel4-content"
+                        id="panel4-header"
+                      >
+                        Will I get to travel in a shared vehicle or privately reserved?
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                      </AccordionDetails>
+                    </Accordion>
+
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="accordian-item">
+                  <div>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1-content"
+                        id="panel1-header"
+                      >
+                        If my flight gets delayed, will I be picked up by the chauffeur?
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                      </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2-content"
+                        id="panel2-header"
+                      >
+                        At the airport where will my driver come to receive me?
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                      </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel3-content"
+                        id="panel3-header"
+                      >
+                        Do you provide child seats?
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                      </AccordionDetails>
+                    </Accordion>
+                    <Accordion>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel4-content"
+                        id="panel4-header"
+                      >
+                        What happens if I'm unable to find my driver at the airport?
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        malesuada lacus ex, sit amet blandit leo lobortis eget.
+                      </AccordionDetails>
+                    </Accordion>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Slider />
+      <Footer />
     </>
 
   );
