@@ -1,8 +1,9 @@
+"use client"
 import React from "react";
 import "../../styles/aboutuspage.scss";
 import AboutusMeraDriver from "../AboutusMeraDriver";
 import FeelJourney from "../FeelJourney";
-// import Slider from "../Slider";
+import Slider from "../Slider";
 import OnlineStore from "../OnlineStore";
 import Footer from "../Footer";
 
@@ -156,9 +157,13 @@ const AboutusPage = () => {
           </div>
         </div>
       </div>
+      {/* Feel Journey */}
       <FeelJourney />
-      {/* <Slider /> */}
+      {/* Slider */}
+      <Slider />
+      {/* Onlien store */}
       <OnlineStore />
+      {/* Footer */}
       <Footer />
     </>
   );

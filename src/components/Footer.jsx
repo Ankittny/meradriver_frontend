@@ -6,6 +6,7 @@ import { FaTwitter } from "react-icons/fa";
 import { SiIndeed } from "react-icons/si";
 import { IoMdPhonePortrait } from "react-icons/io";
 import { MdOutlineEmail } from "react-icons/md";
+import Link from 'next/link';
 const Footer = () => {
     return (
         <div className="footer-title pt-5 bg-black text-white">
@@ -16,10 +17,10 @@ const Footer = () => {
                             <h4 className="glad-list">SUBSCRIBE TO MAIL!</h4>
                             <p>Get Meradriver Daily email newsletter with Special Services,
                                 Updates, Offers and many more</p>
-                            <div class="input-group mb-3">
+                            <div className="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                                <div class="input-group-append ">
-                                    <span class="input-group-text  text-black" id="basic-addon2">Subscribe</span>
+                                <div className="input-group-append ">
+                                    <span className="input-group-text  text-black" id="basic-addon2">Subscribe</span>
                                 </div>
                             </div>
                             <div className="social-icons d-flex gap-4">
@@ -64,7 +65,7 @@ const Footer = () => {
                         <div className="footer-heading">
                             <h4 className="glad-list mb-4">Company</h4>
                             <ul className="glad-item">
-                                <li>About Us</li>
+                                <li><Link href={"/about"}>About Us</Link></li>
                                 <li>Tearm and Conditions</li>
                                 <li>Privacy policy</li>
                                 <li>FAQ</li>
@@ -88,10 +89,10 @@ const Footer = () => {
                         <div className="footer-heading">
                             <h4 className="glad-list mb-4">Download Our App</h4>
                             <div className="d-flex gap-4">
-                            <div class="google-idea">
+                            <div className="google-idea">
                                 <img src="/google-play.png" width="150" alt="dd6" />
                             </div>
-                            <div class="google-idea">
+                            <div className="google-idea">
                                 <img src="/app-store.png" width="150" alt="dd7" />
                             </div>
                             </div>
