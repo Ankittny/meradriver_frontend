@@ -7,7 +7,7 @@ const BestDriver = () => {
   return (
     <>
       <div className="bestdriver-background">
-        <div className="container ">
+        <div className="container-fluid ">
           <div className="bestdriver mt-2">
             <h1 className="bestdriver-heading ">
               Best Driver Services For You

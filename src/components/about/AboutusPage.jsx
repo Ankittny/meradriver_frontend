@@ -1,6 +1,11 @@
 import React from "react";
 import "../../styles/aboutuspage.scss";
 import AboutusMeraDriver from "../AboutusMeraDriver";
+import FeelJourney from "../FeelJourney";
+// import Slider from "../Slider";
+import OnlineStore from "../OnlineStore";
+import Footer from "../Footer";
+
 
 const AboutusPage = () => {
   return (
@@ -151,6 +156,10 @@ const AboutusPage = () => {
           </div>
         </div>
       </div>
+      <FeelJourney />
+      {/* <Slider /> */}
+      <OnlineStore />
+      <Footer />
     </>
   );
 };
