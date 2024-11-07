@@ -389,3 +389,107 @@ align-items: center;
   background-color: #01233B !important;
   color: #fff !important;
  }
+
+//  place-requirements
+.police-title{
+  background-color: #f2f2f2;
+  height: 185px;
+}
+.main-circle-icon{
+  width: 90%;
+}
+.driver-mera{
+  font-size: 35px;
+}
+
+// accordian
+
+.accordian-map {
+  background-image: url(/_next/static/media/Object.7c8fb55d.png);
+  background-repeat: no-repeat;
+  height: 330px;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+}
+.MuiPaper-root {
+  margin-top: 20px;
+}
+.frequently-title {
+  font-size: 35px;
+  color: #000000;
+}
+.MuiAccordionSummary-content {
+  font-size: 14px;
+}
+
+// step slider
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
+.append-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.append-buttons button {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #007aff;
+  color: #007aff;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
+}
+.swiper-titles-t {
+   background-color: #01233B;
+   height: 200px;
+ 
+}
+.swiper-titles-t{
+  padding-top: 60px;
+}
+// .swiper-slide:hover{
+//    background-color: #eaeaea;
+//     color: #000 !important;
+//     transition: all .4s ease;
+//     transform: scale(1.1);
+   
+// }
+.step-1{
+  color: #fff;
+}
+.step-1 h3{
+  font-size: 20px;
+}
+.step-1 p{
+  font-size: 14px;
+}
