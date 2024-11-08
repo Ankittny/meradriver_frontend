@@ -47,14 +47,14 @@
   max-width: 500px;
 }
 .content h1 {
-  color: white;
+  color: #000;
   font-weight: bold;
   font-size: 2rem;
 }
 
 .content p {
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  color: #000;
 }
 
 .book-button {
@@ -306,7 +306,7 @@ align-items: center;
   .our-strenght{
     background-color: #ECF5FB;
     width: 100%;
-    padding-top: 40px;
+   
    }
    
 
@@ -492,4 +492,19 @@ align-items: center;
 }
 .step-1 p{
   font-size: 14px;
+}
+
+
+// media-query
+
+@media(max-width:768px){
+.content-overlay {
+  flex-direction: column;
+}
+.content{
+  margin-top: 75px;
+}
+.form-container{
+  margin-top: 0px;
+}
 }

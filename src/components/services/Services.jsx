@@ -11,7 +11,7 @@ const Services = () => {
     <>
       <div className="servicepage">
         <div className="service-top">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
               <div className="col-5 ">
                 <h1 className="service-heading">Services</h1>
@@ -36,7 +36,8 @@ const Services = () => {
       </div>
 
       {/* Our Services */}
-      <div className="container our-services">
+      <div className=" our-services">
+      <div className="container-fluid">
         <div className=" services-title">
           <h1 className="text-center">Our Services</h1>
         </div>
@@ -64,9 +65,11 @@ const Services = () => {
           </div>
         </div>
       </div>
+      </div>
 
       {/* Mera Driver Trainer Manual */}
-      <div className="container trainer-manual">
+      <div className=" trainer-manual">
+        <div className="container-fluid">
         <div className=" mera-title-text">
           <h1 className="text-center">Mera Driver Trainer Manual</h1>
         </div>
@@ -204,7 +207,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-
+      </div>
       {/* Feel journet */}
       <div className="feel-jou-exit">
       <FeelJourney />

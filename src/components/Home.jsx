@@ -171,7 +171,7 @@ const Home = () => {
       <AboutusMeraDriver />
 
       {/* Our Strenght */}
-      <div className="our-strenght">
+      <div className="our-strenght pt-5">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-6">
