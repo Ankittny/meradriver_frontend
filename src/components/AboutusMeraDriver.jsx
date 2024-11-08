@@ -7,7 +7,7 @@ const AboutusMeraDriver = () => {
       <div className="container-fluid">
         <div className="row">  
           <div className="col-6">
-              <div className="aboutus-left">
+              <div className="aboutus-left mt-5">
                <h1 className="aboutus-left-heading text-center">About Us Mera Driver</h1>
               </div>
 

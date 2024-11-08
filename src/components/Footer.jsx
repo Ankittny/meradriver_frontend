@@ -65,7 +65,7 @@ const Footer = () => {
                         <div className="footer-heading">
                             <h4 className="glad-list mb-4">Company</h4>
                             <ul className="glad-item">
-                                <li><Link href={"/about"}>About Us</Link></li>
+                           <li><Link href={"/about"}></Link>About Us</li>
                                 <li>Tearm and Conditions</li>
                                 <li>Privacy policy</li>
                                 <li>FAQ</li>
@@ -77,7 +77,7 @@ const Footer = () => {
                         <div className="footer-heading">
                             <h4 className="glad-list mb-4">Quick Link</h4>
                             <ul className="glad-item">
-                                <li>Our Blogs</li>
+                           <li><Link href={"/blog"}></Link>Our Blogs</li>
                                 <li>Search Job</li>
                                 <li>Post Job</li>
                                 <li>Services</li>

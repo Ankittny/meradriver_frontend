@@ -23,27 +23,27 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 px-4 my-2">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" href="/">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" href="/apply">
                   Apply Driver
                 </Link>
               </li>
               <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="services">
+              <Link className="nav-link active" aria-current="page" href="/services">
                   Service 
                 </Link>
               </li>
               <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" href="/pricing">
                   Pricing
                 </Link>
               </li>
               <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" href="/tech">
                   Tech
                 </Link>
               </li>
@@ -53,7 +53,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" href="contact">
                   Contact Us
                 </Link>
               </li>

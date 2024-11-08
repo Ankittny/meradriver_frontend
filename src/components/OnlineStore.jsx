@@ -4,7 +4,7 @@ import "../styles/onlinestore.scss";
 
 const OnlineStore = () => {
   return (
-    <div className="online-store" >
+    <div className="online-store mt-5" >
       <div className="online-text">
         <h1 className="mx-5 mb-5 fw-normal">GET FREE <span className="fw-bold">MERA DRIVER APP</span>  ON ONLINE STORE</h1>
       </div>
