@@ -27,16 +27,16 @@ const Login = () => {
 
   return (
     <div className="row login">
-      <div className="col-6">
-        <div className="login-left">
+      <div className="col-lg-6">
+        <div className="login-left text-center">
           <img src={"/MERA-DRIVER.png"} alt="" className="mt-4" />
-          <div>
+          <div className="driver-image-session">
             <img src={"/login.png"} alt="" className="w-100" />
           </div>
         </div>
       </div>
 
-      <div className="col-6">
+      <div className="col-lg-6">
         <div className="login-right">
           <div className="text-center p-5">
             <h1 className="login-right-heading">Login</h1>

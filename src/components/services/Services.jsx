@@ -37,11 +37,11 @@ const Services = () => {
 
       {/* Our Services */}
       <div className="container our-services">
-        <div className="">
+        <div className=" services-title">
           <h1 className="text-center">Our Services</h1>
         </div>
         <div className="row our-service-list">
-          <div className="col-6">
+          <div className="col-lg-6">
             <ul className="mt-3">
               <li>Provide full time job opportunity to the drivers.</li>
               <li>Police & Physical Verification on demand is provided.</li>
@@ -49,7 +49,7 @@ const Services = () => {
             </ul>
           </div>
 
-          <div className="col-6">
+          <div className="col-lg-6">
             <ul className="mt-3">
               <li>
                 Commitment of providing a back-up for a particular time period
@@ -67,7 +67,7 @@ const Services = () => {
 
       {/* Mera Driver Trainer Manual */}
       <div className="container trainer-manual">
-        <div className="">
+        <div className=" mera-title-text">
           <h1 className="text-center">Mera Driver Trainer Manual</h1>
         </div>
 
@@ -206,8 +206,9 @@ const Services = () => {
       </div>
 
       {/* Feel journet */}
+      <div className="feel-jou-exit">
       <FeelJourney />
-
+      </div>
       {/* Slider */}
       <Slider/>
 

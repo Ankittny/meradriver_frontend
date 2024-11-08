@@ -18,7 +18,7 @@ const Footer = () => {
                             <p>Get Meradriver Daily email newsletter with Special Services,
                                 Updates, Offers and many more</p>
                             <div className="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                                 <div className="input-group-append ">
                                     <span className="input-group-text  text-black" id="basic-addon2">Subscribe</span>
                                 </div>

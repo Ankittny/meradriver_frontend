@@ -13,8 +13,8 @@
 .service-heading{
     margin-top: 120px;
     color: white;
-    font-weight: 700;
-    font-size: 46px;
+    font-weight: 600;
+    font-size: 35px;
     }
 
     .service-top-right-image{
@@ -22,14 +22,14 @@
         margin-top: 109px;
     }
     .our-services{
-        margin-top: 100px;
+        margin-top: 180px;
     }
 
     .our-service-list li{
         line-height: 2;
         color: black;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .trainer-manual{
@@ -44,11 +44,18 @@
     .trainer-manual-sunheading{
       color: black;
       font-weight: 600;
-      font-size: 24px;
+      font-size: 25px;
     }
 
     .trainer-manual-para{
         line-height: 2;
         color: black;
         font-weight: 400;
+    }
+    .services-title h1, .mera-title-text h1{
+        font-weight: 600;
+        font-size: 35px;
+    }
+    .feel-jou-exit{
+        margin-top: 75px;
     }
