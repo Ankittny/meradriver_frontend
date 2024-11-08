@@ -240,7 +240,7 @@ const Home = () => {
       <div className="driver-title pt-5">
         <div className="container-fluid">
           <div className="driver-heading">
-            <h2 class="driver-text text-center font-lighter mx-auto">Driver Vs Taxi Services</h2>
+            <h2 className="driver-text text-center font-lighter mx-auto">Driver Vs Taxi Services</h2>
           </div>
           <div className="map-item mt-5">
             <div className="row">

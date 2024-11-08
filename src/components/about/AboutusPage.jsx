@@ -158,7 +158,9 @@ const AboutusPage = () => {
         </div>
       </div>
       {/* Feel Journey */}
+      <div className="feel-jou-exit">
       <FeelJourney />
+      </div>
       {/* Slider */}
       <Slider />
       {/* Onlien store */}
