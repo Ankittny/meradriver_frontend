@@ -37,3 +37,12 @@ border-radius: 0px;
 .listing-text {
     list-style: none;
 }
+
+@media(max-width:425px){
+    .footer-heading{
+       margin-top: 20px;
+    }
+    .bottom-footer {
+        display: none !important;
+    }
+}

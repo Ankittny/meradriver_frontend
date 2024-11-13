@@ -56,6 +56,8 @@ const Tech = () => {
                                 />
                             </div>
                         </div>
+                        </div>
+                        <div className='row'>
                         <div className='col-lg-6'>
                             <div className='tech-row-image'>
                                 <img
@@ -79,7 +81,8 @@ const Tech = () => {
                                     before.</p>
                             </div>
                         </div>
-
+</div>
+<div className='row'>
                         <div className='col-lg-6 mt-5' >
                             <div className='tech-row'>
                                 <h1>Mera Drive™ <br />
@@ -103,6 +106,8 @@ const Tech = () => {
                                 />
                             </div>
                         </div>
+                        </div>
+                        <div className='row'>
                         <div className='col-lg-6 mt-5'>
                             <div className='tech-row-image'>
                                 <img
@@ -126,6 +131,8 @@ const Tech = () => {
                                     before.</p>
                             </div>
                         </div>
+                        </div>
+
                         <div className='icons-toys mt-5'>
                             <div className='row'>
                                 <div className='col-lg-4'>
@@ -219,7 +226,7 @@ const Tech = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            
             <div className="feel-jou-exit">
                 <FeelJourney />
             </div>

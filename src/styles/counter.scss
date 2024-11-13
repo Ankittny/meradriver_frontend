@@ -44,3 +44,9 @@
     }
   }
   
+
+  @media(max-width:425px){
+    .fc-fix{
+      flex-direction: column !important;
+    }
+  }

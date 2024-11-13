@@ -173,7 +173,7 @@ const Home = () => {
       {/* Our Strenght */}
       <div className="our-strenght pt-5">
         <div className="container">
-          <div className="row">
+          <div className="row flex-rm">
             <div className="col-lg-6">
               <div className="our-strenght-left">
                 <div className="" style={{ textAlign: "end" }}>
@@ -437,7 +437,7 @@ const Home = () => {
         </div>
         <div className="container mt-5">
           <div className="row">
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
               <div className="police-title py-3">
                 <div className="image-little text-center">
                   <img
@@ -448,7 +448,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
               <div className="police-title py-3">
                 <div className="image-little text-center">
                   <img
@@ -459,7 +459,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
               <div className="police-title  py-3">
                 <div className="image-little text-center">
                   <img
@@ -470,7 +470,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
               <div className="police-title py-3">
                 <div className="image-little text-center">
                   <img
@@ -483,7 +483,7 @@ const Home = () => {
             </div>
             <div className="main-circle-icon mt-5 mx-auto">
               <div className="row">
-                <div className="col-lg-4">
+                <div className="col-lg-4 col-sm-6 col-xs-6 col-6">
                   <div className="police-title py-3">
                     <div className="image-little text-center">
                       <img
@@ -494,7 +494,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-4  col-sm-6 col-xs-6 col-6">
                   <div className="police-title py-3">
                     <div className="image-little text-center">
                       <img
@@ -505,7 +505,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-4  col-sm-6 col-xs-6 col-6">
                   <div className="police-title py-3">
                     <div className="image-little text-center">
                       <img
