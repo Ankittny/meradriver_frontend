@@ -42,3 +42,13 @@
     color:#010D17;
     font-weight: 300;
 }
+
+@media(max-width:425px){
+    .tech-heading{
+        text-align: center;
+    }
+    .tech-top-right-image {
+        margin-top: 0px;
+    }
+}
+
