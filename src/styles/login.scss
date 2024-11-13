@@ -1,0 +1,43 @@
+.login-left{
+  margin-top: 100px;
+}
+.login-left img{
+    width: 60%;
+}
+
+.login-right{
+    background-color:  #F7FDFF;
+    width: 100%;
+    height: 100%;  
+}
+
+.login-right-heading{
+    font-size: 25px;
+    color: #313131;
+    font-weight: 700;
+}
+
+.subheading{
+    font-size: 15px;
+    color: #313131;
+    font-weight: 400;
+}
+
+.loginwithother{
+   background-color: #fff;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 8px;
+    border-radius: 5px;
+    gap: 5px;
+    width: 80%;
+    margin: auto
+}
+.driver-image-session{
+    margin-top: 45px;
+}
+.login-right-subheading{
+    font-size: 15px;
+}

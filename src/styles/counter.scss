@@ -1,0 +1,46 @@
+
+
+.counter {
+    background-color: #F1F7FD;
+    padding: 40px;
+    position: relative;
+    top: -50px;
+    z-index: -1;
+
+  
+
+    .counter-box {
+      text-align: center;
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      width: 200px;
+      position: relative;
+    }
+  
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    h2 {
+      font-size: 2rem;
+      color: #002366;
+    }
+  
+    p {
+      color: #555;
+      margin: 0;
+    }
+    .icon svg{
+      border: 3px solid #01233b;
+      padding: 6px;
+      border-radius: 100%;
+      position: absolute;
+      top: -18px;
+      left: 85px;
+    }
+  }
+  

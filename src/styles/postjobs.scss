@@ -1,0 +1,133 @@
+.post-top{
+    background-color: rgb(200, 186, 159);
+    width: 100%;
+    height: 250px;
+    margin-top: -80px;
+    
+    }
+    
+    .post-heading{
+        margin-top: 120px;
+        color: white;
+        font-weight: 600;
+        font-size: 35px;
+    }
+    .post-top-right-image{
+        width: 100%;
+        margin-top: 109px;
+    }
+    .all-main-post{
+        // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        // border-radius: 20px;
+    }
+    .bang-title {
+        list-style: none;
+    }
+    .job-title h4{
+        font-size: 15px;
+        color: #000;
+        font-weight: 700;
+    }
+    .job-title, .company-title, .beware-title, .similar-post{
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 20px;
+    }
+    .job-title h3{
+        font-size: 20px;
+        color: #000;
+        font-weight: 700;
+    }
+    .company-title h4{
+        font-size:15px;
+        color:#000;
+    }
+    .beware-title  p, .bang-title li, .company-title p, .role-post p, .fleet-post p{
+        font-size: 15px;
+    }
+    .all-main-post h4{
+        font-size: 20px;
+    }
+
+
+
+
+
+
+
+    .post1-top{
+        background-color: rgb(200, 186, 159);
+        width: 100%;
+        height: 250px;
+        margin-top: -80px;
+    }
+    // .all-main-post{
+    //     margin-top: 120px;
+    //     font-weight: 400;
+    //     font-size: 35px;
+    // }
+    .post1-top-right-image{
+        width: 100%;
+        margin-top: 109px;
+    }
+    .fleet-post p{
+        font-size: 15px;
+    }
+    .fleet-post span{
+        font-size: 15px;
+    }
+    .bang-title {
+        list-style: none;
+    }
+    .bang-title li {
+        font-size: 15px;
+    }
+    .dd p, span{
+        font-size: 15px;
+    }
+    .post1-headings{
+    background-color: #f3f0f0;
+    border-radius: 10px;
+
+    }
+    .post1-heading{
+        margin-top: 120px;
+        color: white;
+        font-weight: 600;
+        font-size: 35px;
+    }
+
+    .post1-heading-left{
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        height: auto;
+        width: 90%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .book-button {
+        padding: 0.50rem 1rem;
+        background-color: #01233b;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        width: 120px;
+      }
+
+      .book-button {
+        font-size: 10px;
+      }
+    
+    .filter p{
+      font-size: 20px;
+      font-weight: 700;
+    }
+    
+
+    .social-icon {
+        display: flex;
+        gap: 1rem; /* Adjust the gap value as needed */
+        // margin: 1rem;
+        // cursor: pointer;
+      }

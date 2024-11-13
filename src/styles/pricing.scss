@@ -1,0 +1,278 @@
+.pricingpage-top{
+background-color: rgb(200, 186, 159);
+width: 100%;
+height: 250px;
+margin-top: -80px;
+
+}
+
+.pricing-heading{
+    margin-top: 120px;
+    color: white;
+    font-weight: 600;
+    font-size: 35px;
+}
+.pricing-top-right-image{
+    width: 100%;
+    margin-top: 109px;
+}
+.pass-tabing{
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    border-radius: 10px;
+    padding: 10px;
+}
+.tax-listing{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.tax-listing li{
+    margin-bottom: 5px;
+}
+.tax-listing svg{
+   color: darkgreen;
+   background-color: #fff;
+   border-radius: 100%;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   margin-bottom: 5px;
+} 
+.pass-table-int{
+    background-color: #e2f3ff;
+    height: 130px;
+    width: 261px;
+    border-radius: 0px 0px 220px 220px;
+    position: absolute;
+    top: 0px;
+    left: 34px;
+}
+.price-rate{
+    padding-top: 100px;
+}
+.tx-bg{
+    background: linear-gradient(163.93deg, #155A8B -5.77%, #061825 88.9%);
+
+}
+.pass-table-int h4 {
+    color: #fff;
+    font-size: 15px;
+    background: #01233b;
+    width: 112px;
+    padding: 5px;
+    border-radius: 5px;
+    float: right;
+}
+.css-1wxkzlj-MuiTabs-flexContainer{
+    justify-content: center;
+}
+.MuiTab-textColorPrimary{
+  width: 150px;
+  background-color: #155A8B;
+  border-radius: 50px;
+  color: #fff;
+}
+.css-1gsv261 {
+    border-bottom: inherit;
+    border-color: inherit;
+}
+.css-1qltlow-MuiTabs-indicator{
+    position: inherit;
+}
+.css-13xfq8m-MuiTabPanel-root {
+    padding-top: 24px;
+}
+.basic-plan .book-buttons{
+    border-radius: 15px;
+    padding: 5px 30px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border:none;
+}
+.pricing-tabs{
+  font-weight: 700;
+
+}
+
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected{
+    color: black;
+    font-weight: 700;
+}
+
+// .pricing-card {
+//     background: #ffffff;
+//     border: 1px solid #ddd;
+//     border-radius: 10px;
+//     // padding: 20px;
+//     text-align: center;
+//     position: relative;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//     transition: background-color 0.3s ease, color 0.3s ease;
+
+//     // Hover effect for all cards
+//     &:hover {
+//         background: linear-gradient(135deg, #1e3c72, #2a5298);
+//         color: #fff;
+
+//         .plan-title {
+//             color: #333; /* Set this to your desired text color */
+//             background: #fff; /* Maintain original background color */
+//         }
+//     }
+
+//     .pricing-card-topimg{
+//         width: 260px;
+//         margin-left: 53px;
+//     }
+
+//     .popular-badge {
+//         position: absolute;
+//         top: 0px;
+//         left: 65%;
+//         // transform: translateX(-50%);
+//         background: #ffca28;
+//         color: #000;
+//         padding: 5px 10px;
+//         border-radius: 5px;
+//         font-weight: bold;
+//         font-size: 12px;
+//     }
+
+//     .price {
+//         font-size: 36px;
+//         font-weight: bold;
+//         margin: 10px 0;
+//     }
+
+//     p {
+//         margin: 0;
+//         font-size: 14px;
+//     }
+
+//     ul {
+//         list-style: none;
+//         padding: 0;
+//         margin: 20px 0;
+        
+//         li {
+//             display: flex;
+//             align-items: center;
+//             font-size: 14px;
+//             margin: 5px 0;
+            
+//             svg {
+//                 margin-right: 8px;
+//                 color: #4caf50;
+//             }
+//         }
+//     }
+
+//     .plan-title {
+//         padding: 10px;
+//         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+//         border-radius: 10px;
+//         width: 200px;
+//         margin: auto;
+//         cursor: pointer;
+//         background: #fff; /* Static background color */
+//         color: #333; /* Static text color */
+//         transition: none; /* Disable transition on hover */
+//     }
+// }
+
+.pricing-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: #fff;
+
+        .plan-title {
+            color: #333;
+            background: #fff;
+        }
+
+        .pricing-card-topimg {
+            opacity: 0; /* Hide the initial image */
+        }
+
+        .hover-image {
+            opacity: 1; /* Show the hover image */
+        }
+    }
+
+    .pricing-card-topimg,
+    .hover-image {
+        width: 260px;
+        margin-left: 53px;
+        transition: opacity 0.3s ease;
+        position: absolute; /* Stack images */
+        top: 0;
+        left: 0;
+    }
+
+    .hover-image {
+        opacity: 0; /* Hidden by default */
+    }
+
+    .popular-badge {
+        position: absolute;
+        top: 0px;
+        left: 65%;
+        background: #ffca28;
+        color: #000;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            margin: 5px 0;
+
+            svg {
+                margin-right: 8px;
+                color: #4caf50;
+            }
+        }
+    }
+
+    .plan-title {
+        padding: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+            rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        border-radius: 10px;
+        width: 200px;
+        margin: auto;
+        cursor: pointer;
+        background: #fff;
+        color: #333;
+        transition: none;
+    }
+}
+

@@ -1,0 +1,54 @@
+.bestdriver-background{
+    background-color: #F9F8F8;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 408px;
+}
+
+.bestdriver{
+    background-image: url('../../public/bestdriveearcth.png');
+    width: 100%;
+    background-repeat: no-repeat !important;
+    position: relative !important;
+    background-size: cover !important;
+    height: 200px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.bestdriver-heading{
+    font-size: 24px;
+    font-weight: 700;
+    color: #01233B;
+    text-align: center;
+}
+
+.bestdrive-drivers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bestdrive-drivers-image{
+    object-fit: cover;
+    width: 100%;
+    height: 315px;
+  
+}
+.bestdrive-drivers-type{
+    margin-top: -15px;
+}
+
+.bestdrive-drivers-type{
+    width: 100%;
+    border-bottom: 50px solid #01233b;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+    color: #fff;
+
+}
+.bestdrive-drivers-type p{
+    line-height: 3;
+}

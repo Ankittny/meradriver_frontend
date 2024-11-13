@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --primary-color:#01233B;
+  --secondary-color:#155A8B;
+
+  --font-family: 'Poppins', sans-serif;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
+  font-family: var(--font-family); 
+}
+
+
+body {
+  font-family: var(--font-family); 
+  line-height: 1.6; 
+  overflow-x: hidden;
+}
+
+
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+
+@import  "./home.scss";
+@import "./navbar.scss";
+@import "./bestdriver.scss";
+@import "./aboutus.scss";
+@import "./aboutuspage.scss";
+
+@import "./services.scss";
+@import "./login.scss";
+
+@import "./feeljourney.scss";
+@import "./slider.scss";
+@import "./onlinestore.scss";
+@import "./footer.scss";
+@import "./register.scss";
+@import "./postjobs.scss";
+
+
+.css-ptdwpq-MuiPaper-root-MuiAppBar-root{
+background-color: white !important;
+border-radius: 10px;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  background-color: #fff !important;
+}
+
+.navbar-nav {
+  gap: 14px;
+ }
