@@ -137,7 +137,7 @@ const Tech = () => {
                                         />
                                         <h4>Objective In-Vehicle <br />
                                             Feedback</h4>
-                                        <p>Give drivers real-time coaching
+                                        <p >Give drivers real-time coaching
                                             on 150 maneuvers to slash
                                             accidents, expenses and risk.</p>
                                     </div>
@@ -171,6 +171,7 @@ const Tech = () => {
                                             fun.</p>
                                     </div>
                                 </div>
+
                                 <div className='col-lg-4 mt-5'>
                                     <div className='toys-size'>
                                         <img
@@ -231,3 +232,4 @@ const Tech = () => {
 }
 
 export default Tech
+

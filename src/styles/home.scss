@@ -62,7 +62,7 @@
   background-color: #01233b;
   border: none;
   color: white;
-  font-size: 1rem;
+  font-size: 13px !important;
   cursor: pointer;
   border-radius: 4px;
   width: 200px;
@@ -311,9 +311,6 @@ align-items: center;
    
 
   //  driver vs texi driver
-  .driver-title {
-    background-color: #ECF5FB;
-  }
   .driver-text{
     border: 5px solid #01233B;
     border-radius: 15px;
@@ -331,7 +328,7 @@ align-items: center;
   .sep{
     border-right: 8px solid #01233d;
     height: 272px;
-    width: 278px;
+    width: 330px;
     top: 8px;
   }
   .driver-organizations{
@@ -353,9 +350,9 @@ align-items: center;
     width: 100%;
     height: auto;
   }
-  // .place-title{
-  //   margin-top: 120px;
-  // }
+  .place-title{
+    margin-top: 120px;
+  }
   .your-cls{
     color:#212529;
     font-size: 35px;

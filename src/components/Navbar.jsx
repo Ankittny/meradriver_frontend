@@ -1,9 +1,22 @@
+"use client"
 import React from "react";
 import "../styles/navbar.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 const Navbar = () => {
+  const router = useRouter();
+
+  const handleRegister =()=>{
+    router.push('/register')
+  }
+
+  const handleLogin =() => {
+    router.push("/login")
+  }
+
   return (
     <div className="" style={{display:'flex',justifyContent:'center'}}>
       <nav className="navbar navbar-expand-lg bg-body-tertiary mt-3">
@@ -59,10 +72,10 @@ const Navbar = () => {
               </li>
             </ul>
 
-            <button className="btn btn-outline-success mx-3" type="submit">
+            <button className="btn btn-outline-success mx-3" type="submit" onClick={handleRegister}>
             Signup Diver
             </button>
-            <button className="btn btn-outline-success" type="submit">
+            <button className="btn btn-outline-success" type="submit" onClick={handleLogin}>
               Login
             </button>
           </div>
