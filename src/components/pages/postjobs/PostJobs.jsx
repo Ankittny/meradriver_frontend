@@ -37,7 +37,7 @@ const PostJobs = () => {
                 </div>
             </div>
             <div className="post1-title " style={{ marginTop: "195px" }}>
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row">
                         <div className="col-lg-3">
                             <div className="post1-heading-left">
@@ -53,7 +53,7 @@ const PostJobs = () => {
 
                                {/*  Salary*/}
                                <div className='salary'>
-                                  <p>Salary</p>
+                                  <p><strong>Salary</strong></p>
                                   
                                   <div className='flex'>
                                     <input type='checkbox' />

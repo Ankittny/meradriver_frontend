@@ -33,7 +33,7 @@ const ContactusPage = () => {
             </div>
 
             <div className="form-section" style={{ marginTop: "190px" }}>
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row py-5">
                         <div className="col-lg-6">
                             <div className="location-trace">
