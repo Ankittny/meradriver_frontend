@@ -31,7 +31,7 @@ const Tech = () => {
             </div>
 
             <div className='mera-tech' style={{ marginTop: "195px" }}>
-                <div className='container-fluid'>
+                <div className='container'>
                     <div className='row'>
                         <div className='col-lg-6'>
                             <div className='tech-row'>
@@ -198,7 +198,7 @@ const Tech = () => {
                                             performance.</p>
                                     </div>
                                 </div>
-                                <div className='col-lg-4 vmt-5'>
+                                <div className='col-lg-4 mt-5'>
                                     <div className='toys-size'>
                                         <img
                                             src={"/shield.svg.png"}

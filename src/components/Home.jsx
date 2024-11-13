@@ -132,7 +132,7 @@ const Home = () => {
       <CounterComponent />
 
       {/* Our Services */}
-      <div className="container-fluid ">
+      <div className="container ">
         <div className="row ">
           <div className="col-lg-6">
             <div className="service-right">
@@ -172,7 +172,7 @@ const Home = () => {
 
       {/* Our Strenght */}
       <div className="our-strenght pt-5">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
             <div className="col-lg-6">
               <div className="our-strenght-left">
@@ -237,13 +237,13 @@ const Home = () => {
       <FeelJourney />
 
       {/* driver vs taxi druvers */}
-      <div className="driver-title pt-5">
-        <div className="container-fluid">
-          <div className="driver-heading">
+      <div className="driver-title pt-5 pb-5">
+      <div className="driver-heading">
             <h2 className="driver-text text-center font-lighter mx-auto">Driver Vs Taxi Services</h2>
           </div>
-          <div className="map-item mt-5">
-            <div className="row">
+        <div className="container">
+        <div className="row">
+          {/* <div className="map-item mt-5"> */}
               <div className="col-lg-3">
                 <div className="driver-safe-title">
                   <h3 className="text-center"> Driver </h3>
@@ -294,11 +294,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
 
       {/* plqace-requirements */}
-      <div className="place-title">
-        <div className="container-fluid">
+      <div className="place-title pt-5">
+        <div className="container">
           <div className="row">
             <div className="col-lg-6">
               <div className="place-heading">
@@ -435,7 +435,7 @@ const Home = () => {
         <div className="driver-mera text-center">
           <h3 className="fw-bold ">Mera Driver Benefits</h3>
         </div>
-        <div className="container-fluid mt-5">
+        <div className="container mt-5">
           <div className="row">
             <div className="col-lg-3">
               <div className="police-title py-3">

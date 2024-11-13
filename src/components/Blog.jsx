@@ -33,7 +33,7 @@ const Blog = () => {
       </div>
 
       <div className='blog-title' style={{ marginTop: "195px" }}>
-        <div className='container-fluid'>
+        <div className='container'>
           <div className='row'>
             <div className='col-lg-4'>
               <div className='start-blog-title'>

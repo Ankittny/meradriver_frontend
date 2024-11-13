@@ -15,7 +15,7 @@ const CounterComponent = () => {
 
   return (
     <div className='counter'>
-      <div className='container-fluid'>
+      <div className='container'>
         <div className='row '>
             <div className='col-lg-6' style={{display:'flex',flexDirection:'row'}}>
             {counters.map((counter, index) => (

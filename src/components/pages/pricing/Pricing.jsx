@@ -88,7 +88,7 @@ const renderPlans = (plans) => (
               alt="Hover Image"
               className="hover-image"
             />
-            <div className="p-3 mt-5" >
+            <div className="p-3 mt-5 position-relative" >
               {plan.isPopular && (
                 <div className="popular-badge">Most Popular</div>
               )}
