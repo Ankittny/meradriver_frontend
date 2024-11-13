@@ -281,7 +281,8 @@ align-items: center;
    border-radius: 6px;
    margin: auto;
    width: 47%;
-   height: 50px;
+   height: 72px;
+    padding-top: 28px;
    }
   
    .navbar-nav {
@@ -328,7 +329,7 @@ align-items: center;
   .sep{
     border-right: 8px solid #01233d;
     height: 272px;
-    width: 330px;
+    width: 278px;
     top: 8px;
   }
   .driver-organizations{
@@ -499,12 +500,109 @@ align-items: center;
 
 @media(max-width:768px){
 .content-overlay {
-  flex-direction: column;
+  flex-direction: column-reverse;
+  background: #fff;
+  padding-bottom: 30px;
 }
 .content{
-  margin-top: 75px;
+  margin-top: -15px;
 }
 .form-container{
+  margin-top: 50%;
+}
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+.counter .counter-box {
+  width: 100% !important;
+  margin-top: 20px !important;
+}
+.counter {
+  top: -15px !important;
+}
+.counter .icon svg {
+  border: 3px solid #01233b;
+  padding: 6px;
+  border-radius: 100%;
+  position: absolute;
+  top: -18px;
+  left: 145px !important;
+}
+.service-left-heading {
+  margin-top: 20px;
+  text-align: center;
+} 
+.service-left-menu{
+  width: 90%;
+}
+.service-left-menu{
+  margin-top: 10px;
+}
+.our-strenght-logo{
+  display: none;
+}
+}
+
+@media(max-width:425px){
+  .content {
+    text-align: center;
+  }
+  .flex-rm{
+    flex-direction: column-reverse;
+  }
+  .our-strenght-heading h1{
+    text-align: center;
+  }
+  .our-strenght-img {
+    width: 100%;
+    margin-top: 0px;
+}
+.driver-text {
+  border: 2px solid #01233B;
+  border-radius: 40px;
+  padding: 10px;
+  width: 100%;
+}
+.your-cls {
+  color: #000;
+  font-size: 30px;
+  text-align: center;
+}
+.place-title{
   margin-top: 0px;
+}
+.place-heading p {
+  font-size: 15px;
+  margin-top: 20px;
+}
+.work-apply h4{
+  display: none;
+}
+.animation-heading {
+  margin-top: 40px !important;
+}
+.police-title {
+margin-top: 20px;
+
+}
+.main-circle-icon {
+  width: 100%;
+}
+.image-little  p{
+  font-size: 12px;
+}
+.main-circle-icon {
+  margin-top: 0px !important;
+}
+.online-text span,h1{
+  font-size: 30px !important;
+  text-align: center ;
+}
+.accordian-title {
+  display: none;
 }
 }

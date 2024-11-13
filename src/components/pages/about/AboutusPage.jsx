@@ -39,10 +39,10 @@ const AboutusPage = () => {
 
       {/* stand quality */}
       <div className="row ">
-        <div className="col-6 p-0">
+        <div className="col-lg-6 p-0">
           <img src="/happy-car.png" alt="" className="stand-quality-left" />
         </div>
-        <div className="col-6 p-0 stand-quality-right">
+        <div className="col-lg-6 p-0 stand-quality-right">
           <div className="stand-quality-right-heading">
             <h1 className="">We are stand for quality</h1>
           </div>
@@ -69,7 +69,7 @@ const AboutusPage = () => {
 
         <div className="d-flex justify-content-center ">
           <div className="row mt-5 executive-team-shaddow">
-            <div className="col-6">
+            <div className="col-lg-6">
               <div className="executive-team-left">
                 <img src="/Ellipse.png" alt="ddd" className="" />
                 <div className="mt-3 executive-team-left-name">
@@ -78,7 +78,7 @@ const AboutusPage = () => {
                 </div>
               </div>
             </div>
-            <div className="col-6 d-flex justify-content-center align-items-center">
+            <div className="col-lg-6 d-flex justify-content-center align-items-center">
               <div className="executive-team-right">
                 <p>
                   <span className="">Mr. Mahendra Swain</span>(Founder & Managing Director) is a
@@ -99,7 +99,7 @@ const AboutusPage = () => {
 
         <div className="d-flex justify-content-center ">
           <div className="row mt-2 executive-team-shaddow">
-            <div className="col-6 d-flex justify-content-center align-items-center ">
+            <div className="col-lg-6 d-flex justify-content-center align-items-center ">
               <div className="executive-team-right">
                 <p>
                 <span className="">Mr. Mahendra Swain</span>(Founder & Managing Director) is a
@@ -115,7 +115,7 @@ const AboutusPage = () => {
                 </p>
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-lg-6">
               <div className="executive-team-left">
                 <img src="/Ellipse.png" alt="ddd" className="" />
                 <div className="mt-3 executive-team-left-name">
@@ -129,7 +129,7 @@ const AboutusPage = () => {
 
         <div className="d-flex justify-content-center ">
           <div className="row mt-2 executive-team-shaddow">
-            <div className="col-6">
+            <div className="col-lg-6">
               <div className="executive-team-left">
                 <img src="/Ellipse.png" alt="ddd" className="" />
                 <div className="mt-3 executive-team-left-name">
@@ -138,7 +138,7 @@ const AboutusPage = () => {
                 </div>
               </div>
             </div> 
-            <div className="col-6 d-flex justify-content-center align-items-center">
+            <div className="col-lg-6 d-flex justify-content-center align-items-center">
               <div className="executive-team-right">
                 <p>
                 <span className="">Mr. Mahendra Swain</span>(Founder & Managing Director) is a

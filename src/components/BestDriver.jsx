@@ -15,7 +15,7 @@ const BestDriver = () => {
           </div>
 
           <div className="row bestdrive-drivers">
-            <div className="col-lg-3" style={{ textAlign: "center" }}>
+            <div className="col-lg-3 col-xs-6 col-sm-6 col-6" style={{ textAlign: "center" }}>
               <img
                 src={"/Frame-107.png"}
                 alt="dd"
@@ -26,7 +26,7 @@ const BestDriver = () => {
               </div>
             </div>
 
-            <div className="col-lg-3" style={{ textAlign: "center" }}>
+            <div className="col-lg-3 col-xs-6 col-sm-6 col-6" style={{ textAlign: "center" }}>
               <img
                 src={"/Frame-106.png"}
                 alt="dd"
@@ -37,7 +37,7 @@ const BestDriver = () => {
               </div>
             </div>
 
-            <div className="col-lg-3" style={{ textAlign: "center" }}>
+            <div className="col-lg-3 col-xs-6 col-sm-6 col-6 aj-ak-react" style={{ textAlign: "center" }}>
               <img
                 src={"/Frame-104.png"}
                 alt="dd"
@@ -48,7 +48,7 @@ const BestDriver = () => {
               </div>
             </div>
 
-            <div className="col-lg-3" style={{ textAlign: "center" }}>
+            <div className="col-lg-3 col-xs-6 col-sm-6 col-6 aj-ak-react" style={{ textAlign: "center" }}>
               <img
                 src={"/Frame-105.png"}
                 alt="dd"
