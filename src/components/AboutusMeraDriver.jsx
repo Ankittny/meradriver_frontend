@@ -6,7 +6,7 @@ const AboutusMeraDriver = () => {
     <div className="about-us-title">
       <div className="container">
         <div className="row">  
-          <div className="col-6">
+          <div className="col-lg-6">
               <div className="aboutus-left mt-5">
                <h1 className="aboutus-left-heading text-center">About Us Mera Driver</h1>
               </div>
@@ -26,7 +26,7 @@ const AboutusMeraDriver = () => {
                  </ul>
               </div>
           </div>
-          <div className="col-6">
+          <div className="col-lg-6">
             <div className="aboutus-right">
                 <img src={'/aboutus-right.png'} alt="" className="aboutus-right-image"/>
             </div>

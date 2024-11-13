@@ -29,3 +29,12 @@
     font-size: 15px;
     margin-bottom: 10px;
 }
+
+@media(max-width:425px){
+    .aboutus-left {
+        width: 100%;
+}
+.about-us-title {
+    margin-top: -20px;
+}
+}
