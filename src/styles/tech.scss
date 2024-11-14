@@ -42,3 +42,23 @@
     color:#010D17;
     font-weight: 300;
 }
+
+@media(max-width:768px){
+    .tech-top-right-image {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .mera-tech{
+        margin-top: 85px !important;
+    }
+    .cf-row{
+        flex-direction: column-reverse;
+    }
+    .cf-rows {
+        margin-top: -30px !important;
+    }
+    .hy-text{
+        margin-top: 30px !important;
+    }
+   
+}

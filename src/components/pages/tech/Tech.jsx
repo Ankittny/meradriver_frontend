@@ -13,10 +13,10 @@ const Tech = () => {
                 <div className="tech-top">
                     <div className="container">
                         <div className="row">
-                            <div className="col-5 ">
+                            <div className="col-lg-5 ">
                                 <h1 className="tech-heading">Tech</h1>
                             </div>
-                            <div className="col-7">
+                            <div className="col-lg-7">
                                 <div className="">
                                     <img
                                         src="/abouttopcar.png"
@@ -57,7 +57,7 @@ const Tech = () => {
                             </div>
                         </div>
                         </div>
-                        <div className='row'>
+                        <div className='row cf-row'>
                         <div className='col-lg-6'>
                             <div className='tech-row-image'>
                                 <img
@@ -67,7 +67,7 @@ const Tech = () => {
                                 />
                             </div>
                         </div>
-                        <div className='col-lg-6 mt-5'>
+                        <div className='col-lg-6 mt-5 cf-rows '>
                             <div className='tech-row'>
                                 <h1>Mera Drive™ <br />
                                     Software-Only App</h1>
@@ -83,7 +83,7 @@ const Tech = () => {
                         </div>
 </div>
 <div className='row'>
-                        <div className='col-lg-6 mt-5' >
+                        <div className='col-lg-6 mt-5 cf-rows ' >
                             <div className='tech-row'>
                                 <h1>Mera Drive™ <br />
                                     Software-Only App</h1>
@@ -97,7 +97,7 @@ const Tech = () => {
                                     before.</p>
                             </div>
                         </div>
-                        <div className='col-lg-6 mt-5'>
+                        <div className='col-lg-6 mt-5 '>
                             <div className='tech-row-image'>
                                 <img
                                     src={"/figure.png"}
@@ -107,8 +107,8 @@ const Tech = () => {
                             </div>
                         </div>
                         </div>
-                        <div className='row'>
-                        <div className='col-lg-6 mt-5'>
+                        <div className='row cf-row'>
+                        <div className='col-lg-6 mt-5 cf-rows '>
                             <div className='tech-row-image'>
                                 <img
                                     src={"/car-repairmen-using-laptop-while-doing-car-engine-diagnostic-auto-repair-shop 1.png"}
@@ -117,7 +117,7 @@ const Tech = () => {
                                 />
                             </div>
                         </div>
-                        <div className='col-lg-6 mt-5'>
+                        <div className='col-lg-6 mt-5  '>
                             <div className='tech-row'>
                                 <h1>Mera Drive™ <br />
                                     Software-Only App</h1>
@@ -149,7 +149,7 @@ const Tech = () => {
                                             accidents, expenses and risk.</p>
                                     </div>
                                 </div>
-                                <div className='col-lg-4'>
+                                <div className='col-lg-4 hy-text'>
                                     <div className='toys-size'>
                                         <img
                                             src={"/finance.svg.png"}
@@ -162,7 +162,7 @@ const Tech = () => {
                                             whether or not it’s for work.</p>
                                     </div>
                                 </div>
-                                <div className='col-lg-4'>
+                                <div className='col-lg-4 hy-text'>
                                     <div className='toys-size'>
                                         <img
                                             src={"/trophy.svg.png"}

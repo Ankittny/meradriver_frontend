@@ -25,3 +25,29 @@
 .book-button {
     font-size: 13px !important;
 }
+@media(max-width:425px){
+   .journey-title-image{
+    position: inherit !important;
+   }
+   .journey-title-image img {
+    width: 200px !important;
+    height: inherit !important;
+}
+.journey-title h2 {
+    font-size: 14px !important;
+}
+.book-button {
+    padding: 0.75rem 1.5rem;
+    width: 135px !important;
+}
+.brand-lisyting li {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+.brand-lisyting{
+    padding: 0;
+}
+.journey-image {
+        height: 140px !important;
+}
+}

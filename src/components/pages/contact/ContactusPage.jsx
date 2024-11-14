@@ -15,10 +15,10 @@ const ContactusPage = () => {
                 <div className="contact-top">
                     <div className="container">
                         <div className="row">
-                            <div className="col-5 ">
+                            <div className="col-lg-5 ">
                                 <h1 className="contact-heading">Contact</h1>
                             </div>
-                            <div className="col-7">
+                            <div className="col-lg-7">
                                 <div className="">
                                     <img
                                         src="/abouttopcar.png"
@@ -55,14 +55,14 @@ const ContactusPage = () => {
                                     <div className="col-lg-6">
                                         <div className="form-group row">
                                             <div className="col-lg-12">
-                                                <input type="text" className="form-control" id="inputPassword" placeholder="First Name " />
+                                                <input type="text" className="form-control " id="inputPassword" placeholder="First Name " />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group row">
                                             <div className="col-lg-12">
-                                                <input type="text" className="form-control" id="inputPassword" placeholder="Last Name" />
+                                                <input type="text" className="form-control control-sass" id="inputPassword" placeholder="Last Name" />
                                             </div>
                                         </div>
                                     </div>

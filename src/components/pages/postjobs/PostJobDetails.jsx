@@ -20,10 +20,10 @@ const PostJobDetails = () => {
         <div className="post-top">
           <div className="container">
             <div className="row">
-              <div className="col-5 ">
+              <div className="col-lg-5 ">
                 <h1 className="post-heading">Post Job</h1>
               </div>
-              <div className="col-7">
+              <div className="col-lg-7">
                 <div className="">
                   <img
                     src="/abouttopcar.png"
@@ -107,11 +107,11 @@ const PostJobDetails = () => {
                     Skills highlighted with ‘
                     <IoStar />‘ are preferred keyskills
                   </p>
-                  <div className="">
+                  <div className="d-flex gap-3">
                     <button className="book-button">
-                      <IoStar /> &nbsp; driver trainer
+                      <IoStar /> &nbsp; driver 
                     </button>
-                    <button className="book-button mt-3 ">
+                    <button className="book-button  ">
                       <IoStar /> &nbsp; Driving
                     </button>
                   </div>
