@@ -43,6 +43,10 @@ import { Pagination } from 'swiper/modules';
 
 const Home = () => {
   const [formType, setFormType] = useState("individual");
+  const [expanded, setExpanded] = useState(false);
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   const handleTabClick = (type) => {
     setFormType(type);
@@ -120,7 +124,7 @@ const Home = () => {
                   <textarea placeholder="Additional information"></textarea>
                 </>
               )}
-              <button type="submit" className="submit-button">
+              <button type="submit" className="submit-button btn-gone">
                 Submit
               </button>
             </form>
@@ -190,7 +194,7 @@ const Home = () => {
                 />
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 d-sm-none d-md-block d-none d-sm-block" >
               <div className="our-strenght-heading">
                 <h1 className="strenght-title">OUR STRENGTH</h1>
               </div>
@@ -230,6 +234,49 @@ const Home = () => {
               </div>
 
             </div>
+            <div className="col-lg-6 d-md-none d-xl-none d-xxl-block d-lg-block d-lg-none d-xl-block" >
+              <div className="our-strenght-heading">
+                <h1 className="strenght-title">OUR STRENGTH</h1>
+              </div>
+
+              <div className="our-strenght-right-content mt-5">
+                <div>
+                  <FaCarRear size={40} />
+                </div>
+
+                <div className="">
+                  <div className="our-strenght-right-content-count">7000+</div>
+                  <div className="our-strenght-right-content-head"> Registered and Verified Driver</div>
+                </div>
+              </div>
+
+              <div className="our-strenght-right-content mt-5">
+                <div>
+                  <FaUserAlt size={40} />
+                </div>
+
+                <div className="">
+                  <div className="our-strenght-right-content-count">2500+</div>
+                  <div className="our-strenght-right-content-head">Satisfied Retail Customer</div>
+                </div>
+                <div className="our-strenght-right-content mt-5">
+                  <div>
+                    <PiUsersThreeFill size={40} />
+                  </div>
+
+                  <div className="text-center">
+                    <div className="our-strenght-right-content-count">50+</div>
+                    <div className="our-strenght-right-content-head"> Corporate Customers</div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+            </div>
           </div>
         </div>
       </div>
@@ -237,63 +284,107 @@ const Home = () => {
       <FeelJourney />
 
       {/* driver vs taxi druvers */}
-      <div className="driver-title pt-5 pb-5">
-      <div className="driver-heading">
-            <h2 className="driver-text text-center font-lighter mx-auto">Driver Vs Taxi Services</h2>
-          </div>
+      <div className="driver-title pt-5 pb-5 d-sm-none d-md-block d-none d-sm-block">
+        <div className="driver-heading">
+          <h2 className="driver-text text-center font-lighter mx-auto">Driver Vs Taxi Services</h2>
+        </div>
         <div className="container">
-        <div className="row">
-          {/* <div className="map-item mt-5"> */}
-              <div className="col-lg-3">
-                <div className="driver-safe-title">
-                  <h3 className="text-center"> Driver </h3>
-                </div>
-                <div className="driver-organization position-relative">
-                  <button type="submit" className="submit-button mb-5 ">Professionals who know their trad</button>
-                  <button type="submit" className="submit-button mb-5">Great traffic sense with great skills</button>
-                  <button type="submit" className="submit-button mb-5">Understand the society in general and
-                    hence behave in a mannered way</button>
-                  <button type="submit" className="submit-button">Highly aware and know their responsibilities well</button>
-                  <div className="sep position-absolute"></div>
-                </div>
+          <div className="row">
+            {/* <div className="map-item mt-5"> */}
+            <div className="col-lg-3">
+              <div className="driver-safe-title">
+                <h3 className="text-center"> Driver </h3>
               </div>
-              <div className="col-lg-3">
-                <div className="driver-organizations position-relative">
-                  <button type="submit" className="submit-button mb-5 ">Highly educated drivers who understand the nitty-gritties of driving</button>
-                  <button type="submit" className="submit-button mb-5">Understand technology and rules</button>
-                  <button type="submit" className="submit-button mb-5">Very well trained</button>
-                </div>
+              <div className="driver-organization position-relative">
+                <button type="submit" className="submit-button mb-5 ">Professionals who know their trad</button>
+                <button type="submit" className="submit-button mb-5">Great traffic sense with great skills</button>
+                <button type="submit" className="submit-button mb-5">Understand the society in general and
+                  hence behave in a mannered way</button>
+                <button type="submit" className="submit-button">Highly aware and know their responsibilities well</button>
+                <div className="sep position-absolute"></div>
               </div>
-              <div className="col-lg-1 position-relative">
-                <div className="sketch-title position-absolute">
-                  <img
-                    src={"/removebg-preview.png"}
-                    alt="dd3"
-                  />
-                </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="driver-organizations position-relative">
+                <button type="submit" className="submit-button mb-5 ">Highly educated drivers who understand the nitty-gritties of driving</button>
+                <button type="submit" className="submit-button mb-5">Understand technology and rules</button>
+                <button type="submit" className="submit-button mb-5">Very well trained</button>
               </div>
-              <div className="col-lg-3">
-                <div className="driver-safe-title">
-                  <h3 className="text-center"> Taxi Services </h3>
-                </div>
-                <div className="driver-organization position-relative">
-                  <button type="submit" className="submit-button mb-5 ">Professionals who know their trad</button>
-                  <button type="submit" className="submit-button mb-5">Great traffic sense with great skills</button>
-                  <button type="submit" className="submit-button mb-5">Understand the society in general and
-                    hence behave in a mannered way</button>
-                  <div className="sep position-absolute"></div>
+            </div>
+            <div className="col-lg-1 position-relative">
+              <div className="sketch-title position-absolute">
+                <img
+                  src={"/removebg-preview.png"}
+                  alt="dd3"
+                />
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="driver-safe-title">
+                <h3 className="text-center"> Taxi Services </h3>
+              </div>
+              <div className="driver-organization position-relative">
+                <button type="submit" className="submit-button mb-5 ">Professionals who know their trad</button>
+                <button type="submit" className="submit-button mb-5">Great traffic sense with great skills</button>
+                <button type="submit" className="submit-button mb-5">Understand the society in general and
+                  hence behave in a mannered way</button>
+                <div className="sep position-absolute"></div>
 
-                </div>
               </div>
-              <div className="col-lg-2">
-                <div className="dri-fix">
-                  <button type="submit" className="submit-button mb-5 ">Professionals who know their trad</button>
-                  <button type="submit" className="submit-button mb-5">Great traffic sense with great skills</button>
-                </div>
+            </div>
+            <div className="col-lg-2">
+              <div className="dri-fix">
+                <button type="submit" className="submit-button mb-5 ">Professionals who know their trad</button>
+                <button type="submit" className="submit-button mb-5">Great traffic sense with great skills</button>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="driver-title d-md-none d-xl-none d-xxl-block d-lg-block d-lg-none d-xl-block">
+        <div className="driver-heading">
+          <h2 className="driver-text text-center font-lighter mx-auto">Driver Vs Taxi Services</h2>
+        </div>
+        <div className="container">
+          <div className="row">
+            {/* <div className="map-item mt-5"> */}
+            <div className="col-lg-12">
+              <div className="driver-safe-title">
+                <h3 className="text-start"> Driver </h3>
+              </div>
+              <div className="driver-organization d-flex gap-4">
+                <div className="dr-install">
+                  <button type="submit" className="submit-button mb-2 ">Professionals who know their trad</button>
+                  <button type="submit" className="submit-button mb-2">Great traffic sense with great skills</button>
+                  <button type="submit" className="submit-button mb-2">Understand the society in general and
+                    hence behave in a mannered way</button>
+                  <button type="submit" className="submit-button mb-2">Highly aware and know their responsibilities well</button>
+                  <button type="submit" className="submit-button mb-2 ">Highly educated drivers who understand the nitty-gritties of driving</button>
+                  <button type="submit" className="submit-button mb-2">Understand technology and rules</button>
+                  <button type="submit" className="submit-button ">Very well trained</button>
+                </div>
+
+                <div className="driver-safe-title">
+                <h3 className="text-center"> Taxi Services </h3>
+             
+                  <div className="driver-organization ">
+                    <button type="submit" className="submit-button mb-2 ">Professionals who know their trad</button>
+                    <button type="submit" className="submit-button mb-2">Great traffic sense with great skills</button>
+                    <button type="submit" className="submit-button mb-2">Understand the society in general and
+                      hence behave in a mannered way</button>
+                      <button type="submit" className="submit-button mb-2 ">Professionals who know their trad</button>
+                      <button type="submit" className="submit-button ">Great traffic sense with great skills</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      
+
+
       {/* </div> */}
 
       {/* plqace-requirements */}
@@ -332,6 +423,25 @@ const Home = () => {
           spaceBetween={15}
           pagination={{
             clickable: true,
+          }}
+
+          breakpoints={{
+            425: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
           }}
           autoplay={{
             delay: 2500,
@@ -533,7 +643,7 @@ const Home = () => {
               <div className="col-lg-6">
                 <div className="accordian-item">
                   <div>
-                    <Accordion>
+                    <Accordion >
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1-content"

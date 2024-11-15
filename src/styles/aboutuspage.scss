@@ -89,3 +89,31 @@ font-size: 35px;
     
     border-radius: 10px;
 }
+
+@media(max-width:768px){
+    .aboutuspage-top-right-image {
+        width: 100%;
+        margin-top: 12px;
+    }
+    .aboutclient{
+        flex-direction: column-reverse;
+    }
+    .executive-team-left img {
+        width: 120px;
+        height: 120px;
+    
+}
+.executive-team-shaddow{
+  box-shadow: none;
+ 
+}
+.shaddwo-tile{
+    flex-direction: column-reverse;
+}
+.feel-jou-exit {
+    margin-top: -30px !important;
+}
+.online-store{
+    margin-bottom: 50px;
+}
+}

@@ -115,10 +115,10 @@ const renderPlans = (plans) => (
         <div className="pricingpage-top">
           <div className="container">
             <div className="row">
-              <div className="col-5">
+              <div className="col-lg-5">
                 <h1 className="pricing-heading">Pricing</h1>
               </div>
-              <div className="col-7">
+              <div className="col-lg-7">
                 <img
                   src="/abouttopcar.png"
                   alt=""

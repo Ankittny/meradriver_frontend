@@ -15,10 +15,10 @@ const AboutusPage = () => {
         <div className="aboutuspage-top">
           <div className="container">
             <div className="row">
-              <div className="col-5 ">
+              <div className="col-lg-5 ">
                 <h1 className="aboutuspage-heading">About Mera Driver</h1>
               </div>
-              <div className="col-7">
+              <div className="col-lg-7">
                 <div className="">
                   <img
                     src="/abouttopcar.png"
@@ -38,7 +38,7 @@ const AboutusPage = () => {
       </div>
 
       {/* stand quality */}
-      <div className="row ">
+      <div className="row aboutclient">
         <div className="col-lg-6 p-0">
           <img src="/happy-car.png" alt="" className="stand-quality-left" />
         </div>
@@ -68,7 +68,7 @@ const AboutusPage = () => {
         </div>
 
         <div className="d-flex justify-content-center ">
-          <div className="row mt-5 executive-team-shaddow">
+          <div className="row mt-5 executive-team-shaddow ">
             <div className="col-lg-6">
               <div className="executive-team-left">
                 <img src="/Ellipse.png" alt="ddd" className="" />
@@ -98,7 +98,7 @@ const AboutusPage = () => {
         </div>
 
         <div className="d-flex justify-content-center ">
-          <div className="row mt-2 executive-team-shaddow">
+          <div className="row mt-2 executive-team-shaddow shaddwo-tile">
             <div className="col-lg-6 d-flex justify-content-center align-items-center ">
               <div className="executive-team-right">
                 <p>
@@ -164,7 +164,8 @@ const AboutusPage = () => {
       {/* Slider */}
       <Slider />
       {/* Onlien store */}
-      <OnlineStore />
+      <div className="online-store"><OnlineStore /></div>
+      
       {/* Footer */}
       <Footer />
     </>

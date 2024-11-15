@@ -24,3 +24,24 @@
 .online-text span{
     font-size: 35px;
 }
+
+
+@media(max-width:768px){
+    .htp {
+        padding-top: 0px;
+    }
+    .online-car-drive{
+        height: 170px;
+    }
+    .mobile-center img {
+        width: 130px;
+        height: auto;
+    }
+    .mobile-center {
+        top: -25px;
+        position: relative;
+    }
+    .online-text span, h1{
+        font-size: 25px !important;
+    }
+}

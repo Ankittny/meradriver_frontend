@@ -47,23 +47,21 @@
   background-color: #01233b 
   ;
 }
-
-
-@media(max-width:425px){
-    .form-section{
-        // margin-top: 100px !important;
-       
-    }
-    .contact-heading{
-        text-align: center;
-    }
-    .contact-top-right-image{
+@media(max-width:768px){
+    .contact-top-right-image {
+        width: 100%;
         margin-top: 0px;
-        margin-bottom: 20px;
+    }
+    .form-section{
+        margin-top: 85px !important;
+    }
+    .form-section{
+      height: auto;
     }
     .contact-hr{
-        font-size: 16px;
-        font-weight: 600;
-        margin-top: 10px !important;
+        margin-top: 20px;
+    }
+    .control-sass{
+        margin-top: 20px;
     }
 }

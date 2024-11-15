@@ -20,10 +20,10 @@ const PostJobs = () => {
                 <div className="post1-top">
                     <div className="container">
                         <div className="row">
-                            <div className="col-5 ">
+                            <div className="col-lg-5 ">
                                 <h1 className="post1-heading">Post Job</h1>
                             </div>
-                            <div className="col-7">
+                            <div className="col-lg-7">
                                 <div className="">
                                     <img
                                         src="/abouttopcar.png"
@@ -66,7 +66,7 @@ const PostJobs = () => {
                         <div className="col-lg-9">
                             <div className="row">
                                 <div className="col-lg-4">
-                                    <div className="post1-headings p-4">
+                                    <div className="post1-headings p-4 gallert">
                                         <div className="all-main-post">
                                             <h4>Driver</h4>
                                             <div className="fleet-post d-flex gap-2">
@@ -95,7 +95,7 @@ const PostJobs = () => {
                                     </div>
                                 </div>
                                 <div className="col-lg-4">
-                                    <div className="post1-headings p-4">
+                                    <div className="post1-headings p-4 gallert">
                                         <div className="all-main-post">
                                             <h4>Driver</h4>
                                             <div className="fleet-post d-flex gap-2">
@@ -124,7 +124,7 @@ const PostJobs = () => {
                                     </div>
                                 </div>
                                 <div className="col-lg-4">
-                                    <div className="post1-headings p-4">
+                                    <div className="post1-headings p-4 gallert">
                                         <div className="all-main-post">
                                             <h4>Driver</h4>
                                             <div className="fleet-post d-flex gap-2">

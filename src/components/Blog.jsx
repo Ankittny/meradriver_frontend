@@ -15,10 +15,10 @@ const Blog = () => {
         <div className="blog-top">
           <div className="container">
             <div className="row">
-              <div className="col-5 ">
+              <div className="col-lg-5 ">
                 <h1 className="blog-heading">Blog</h1>
               </div>
-              <div className="col-7">
+              <div className="col-lg-7">
                 <div className="">
                   <img
                     src="/abouttopcar.png"

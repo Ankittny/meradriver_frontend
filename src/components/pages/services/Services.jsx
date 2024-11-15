@@ -13,10 +13,10 @@ const Services = () => {
         <div className="service-top">
           <div className="container">
             <div className="row">
-              <div className="col-5  ">
+              <div className="col-lg-5  ">
                 <h1 className="service-heading">Services</h1>
               </div>
-              <div className="col-7">
+              <div className="col-lg-7">
                 <div className="">
                   <img
                     src="/abouttopcar.png"
@@ -75,7 +75,7 @@ const Services = () => {
         </div>
 
         <div className="row mt-5">
-          <div className="col-6 p-0">
+          <div className="col-lg-6 p-0">
             <h1 className="trainer-manual-sunheading">
               Basic Service Criteria
             </h1>
@@ -88,7 +88,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="col-6 p-0">
+          <div className="col-lg-6 p-0">
             <div>
               <img
                 src={"/trainer1.png"}
@@ -99,8 +99,8 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="row mt-5">
-          <div className="col-6 p-0">
+        <div className="row mt-5 service">
+          <div className="col-lg-6 p-0">
             <div>
               <img
                 src={"/trainer2.png"}
@@ -109,7 +109,7 @@ const Services = () => {
               />
             </div>
           </div>
-          <div className="col-6 p-0">
+          <div className="col-lg-6 p-0">
             <h1 className="trainer-manual-sunheading">
               Personal Hygiene & Presentation
             </h1>
@@ -123,7 +123,7 @@ const Services = () => {
         </div>
 
         <div className="row mt-5">
-          <div className="col-6 p-0">
+          <div className="col-lg-6 p-0">
             <h1 className="trainer-manual-sunheading">Attire</h1>
             <p className="trainer-manual-para">
               The chauffeurs wear a clean, dark, woolen suit (ideally
@@ -133,7 +133,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="col-6 p-0">
+          <div className="col-lg-6 p-0">
             <div>
               <img
                 src={"/trainer3.png"}
@@ -144,8 +144,8 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="row mt-5">
-          <div className="col-6 p-0">
+        <div className="row mt-5 service">
+          <div className="col-lg-6 p-0">
             <div>
               <img
                 src={"/trainer4.png"}
@@ -154,7 +154,7 @@ const Services = () => {
               />
             </div>
           </div>
-          <div className="col-6 p-0">
+          <div className="col-lg-6 p-0">
             <h1 className="trainer-manual-sunheading">Smoking</h1>
             <p className="trainer-manual-para">
               The fact that the non smoking passengers will be sensitive to the
@@ -166,7 +166,7 @@ const Services = () => {
         </div>
 
         <div className="row mt-5">
-          <div className="col-6 p-0">
+          <div className="col-lg-6 p-0">
             <h1 className="trainer-manual-sunheading">Eating and Drinking</h1>
             <p className="trainer-manual-para">
               Despite the busy schedule of the chauffeurs, they  are trained to
@@ -176,7 +176,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="col-6 p-0">
+          <div className="col-lg-6 p-0">
             <div>
               <img
                 src={"/trainer5.png"}
@@ -187,8 +187,8 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="row mt-5">
-          <div className="col-6 p-0">
+        <div className="row mt-5 service">
+          <div className="col-lg-6 p-0">
             <div>
               <img
                 src={"/trainer6.png"}
@@ -197,7 +197,7 @@ const Services = () => {
               />
             </div>
           </div>
-          <div className="col-6 p-0">
+          <div className="col-lg-6 p-0">
             <h1 className="trainer-manual-sunheading">Mobile Telephones</h1>
             <p className="trainer-manual-para">
               All chauffeurs must have an operational mobile phone with them at
