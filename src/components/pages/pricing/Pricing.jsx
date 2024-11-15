@@ -132,7 +132,7 @@ const renderPlans = (plans) => (
       <div className="choose-title" style={{ marginTop: "190px" }}>
         <div className="container-fluid">
           <div className="choose-plans text-center">
-            <h1 className="choose-heading">Choose Your Perfect Plans</h1>
+            <h1 className="choose-heading fw-bold">Choose Your Perfect Plans</h1>
             <p>Affordable pricing</p>
           </div>
           <Box sx={{ width: "100%", typography: "body1" }}>

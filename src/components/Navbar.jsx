@@ -21,7 +21,9 @@ const Navbar = () => {
     <div className="" style={{display:'flex',justifyContent:'center'}}>
       <nav className="navbar navbar-expand-lg bg-body-tertiary mt-3">
         <div className="container-fluid">
+          <Link href="/">
           <Image src={'/MERA-DRIVER.png'} width={150} height={40} alt=""/>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
