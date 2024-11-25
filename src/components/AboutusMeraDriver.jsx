@@ -3,7 +3,7 @@ import React from "react";
 const AboutusMeraDriver = () => {
   return (
     <>
-    <div className="about-us-title">
+    <div className="about-us-title ">
       <div className="container">
         <div className="row">  
           <div className="col-lg-6">

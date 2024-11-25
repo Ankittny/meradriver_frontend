@@ -10,3 +10,27 @@
 //     z-index: 1;
     
 //   }
+   //------------- media-query-start----------------
+
+
+@media(max-width:1267px) and (min-width:1200px){
+    .navbar{
+        width: 100%;
+     }
+    }
+
+@media(max-width:1199px) and (min-width:992px){
+
+.nav-link, .btn-outline-success {
+    font-size: 12px;
+}
+.navbar{
+   width: 100%;
+}
+   }
+
+// @media(max-width:1024px){
+// .nav-link, .btn-outline-success {
+//     font-size: 13px;
+// }
+// }

@@ -40,17 +40,39 @@
   text-align: start;
 }
 
+    //------------- media-query-start----------------
 
+  
+@media(max-width:991px)and (min-width:768px){
+
+    .slider-slide p {
+      font-size: 13px;
+      text-align: left;
+  }
+  .slider-slide img {
+    width: 125px;
+    height: 125px;
+}
+}
 @media(max-width:768px){
   .swiper-title {
     margin-top: 50px;
   }
+//   .slider-slide p {
+//     font-size: 11px;
+//     text-align: start;
+// }
+// .slider-slide img{
+//   width: 125px;
+//   height: 125px;
+// }
+}
+
+
+@media(max-width:767px)and (min-width:426px){
   .slider-slide p {
-    font-size: 12px;
+    font-size: 11px;
     text-align: start;
 }
-.slider-slide img{
-  width: 125px;
-  height: 125px;
 }
-}
+

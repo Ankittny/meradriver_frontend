@@ -25,6 +25,43 @@
 .book-button {
     font-size: 13px !important;
 }
+
+                                            //------------- media-query-start----------------
+                                                    @media(max-width:991px) and (min-width:768px){
+                                                    .journey-title-image {
+                                                        position: absolute;
+                                                        top: -58px;
+                                                        right: 0px;
+                                                    }    
+                                                    .brand-lisyting li {
+                                                        font-size: 14px;
+                                                    
+                                                } 
+                                                .brand-lisyting{
+                                                    margin: 0px;
+                                                    padding: 0px;
+
+                                                }
+                                                .brand-lisyting li {
+                                                    list-style: none;
+                                                    margin-bottom: 0px !important;
+                                                }
+                                                
+                                            }                 
+@media(max-width:767px) and (min-width:426px){
+    .journey-title-image {
+        position: inherit !important;
+}
+.journey-title-image img{
+    width: inherit !important;
+    height: inherit !important;
+}
+
+}
+
+
+
+
 @media(max-width:425px){
    .journey-title-image{
     position: inherit !important;
