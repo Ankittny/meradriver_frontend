@@ -17,7 +17,7 @@ const CounterComponent = () => {
     <div className='counter'>
       <div className='container'>
         <div className='row '>
-            <div className='col-lg-6 fc-fix' style={{display:'flex',flexDirection:'row'}}>
+            <div className='col-lg-6 fc-fix d-flex'>
             {counters.map((counter, index) => (
             <div className='' key={index}>
               <div className='counter-box'>

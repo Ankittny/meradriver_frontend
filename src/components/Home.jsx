@@ -342,7 +342,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="driver-title d-md-none d-xl-none d-xxl-block d-lg-block d-lg-none d-xl-block">
+      <div className="driver-title hello-title d-md-block d-xl-none d-xxl-block d-lg-block d-lg-none d-xl-block">
         <div className="driver-heading">
           <h2 className="driver-text text-center font-lighter mx-auto">Driver Vs Taxi Services</h2>
         </div>
@@ -366,23 +366,23 @@ const Home = () => {
                 </div>
 
                 <div className="driver-safe-title">
-                <h3 className="text-center"> Taxi Services </h3>
-             
+                  <h3 className="text-center"> Taxi Services </h3>
+
                   <div className="driver-organization ">
                     <button type="submit" className="submit-button mb-2 ">Professionals who know their trad</button>
                     <button type="submit" className="submit-button mb-2">Great traffic sense with great skills</button>
                     <button type="submit" className="submit-button mb-2">Understand the society in general and
                       hence behave in a mannered way</button>
-                      <button type="submit" className="submit-button mb-2 ">Professionals who know their trad</button>
-                      <button type="submit" className="submit-button ">Great traffic sense with great skills</button>
-                    </div>
+                    <button type="submit" className="submit-button mb-2 ">Professionals who know their trad</button>
+                    <button type="submit" className="submit-button ">Great traffic sense with great skills</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          </div>
-      
+        </div>
+      </div>
+
 
 
       {/* </div> */}

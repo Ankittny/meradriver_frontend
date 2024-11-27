@@ -78,7 +78,7 @@ const Blog = () => {
               </div>
             </div>
             <div className='col-lg-4'>
-              <div className='start-blog-title'>
+              <div className='start-blog-title title-action'>
                 <img src='/post3.png' alt='car' />
                 {/* <div className='bussiness-title'>
                 BUSINESS
