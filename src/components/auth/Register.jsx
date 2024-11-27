@@ -65,15 +65,15 @@ const Register = () => {
                           variant="outlined"
                           margin="normal"
                           fullWidth
-                          id="firstName"
-                          label="First Name"
-                          name="firstName"
-                          autoComplete="firstName"
-                          value={values.firstName}
+                          id="Full Name"
+                          label="Full Name"
+                          name="FullName"
+                          autoComplete="FullName"
+                          value={values.FullName}
                           onChange={handleChange}
                           helperText={
                             <ErrorMessage
-                              name="firstName"
+                              name="FullName"
                               component="div"
                               className="error"
                             />
@@ -86,15 +86,15 @@ const Register = () => {
                           variant="outlined"
                           margin="normal"
                           fullWidth
-                          id="lastName"
-                          label="Last Name"
-                          name="lastName"
-                          autoComplete="lastName"
-                          value={values.lastName}
+                          id="Email"
+                          label="Email"
+                          name="Email"
+                          autoComplete="Email"
+                          value={values.email}
                           onChange={handleChange}
                           helperText={
                             <ErrorMessage
-                              name="lastName"
+                              name="Email"
                               component="div"
                               className="error"
                             />
@@ -108,15 +108,15 @@ const Register = () => {
                           variant="outlined"
                           margin="normal"
                           fullWidth
-                          id="email"
-                          label="Email Address"
-                          name="email"
-                          autoComplete="email"
-                          value={values.email}
+                          id="Mobile"
+                          label="Mobile Number"
+                          name="Mobile"
+                          autoComplete="Mobile"
+                          value={values.Mobile}
                           onChange={handleChange}
                           helperText={
                             <ErrorMessage
-                              name="email"
+                              name="Mobile"
                               component="div"
                               className="error"
                             />
@@ -129,33 +129,54 @@ const Register = () => {
                           variant="outlined"
                           margin="normal"
                           fullWidth
-                          id="password"
-                          label="Password"
-                          name="password"
-                          type={showPassword ? "text" : "password"}
-                          value={values.password}
+                          id="Address"
+                          label="Address"
+                          name="Address"
+                          autoComplete="Address"
+                          value={values.Address}
                           onChange={handleChange}
-                          InputProps={{
-                            endAdornment: (
-                              <InputAdornment position="end">
-                                <IconButton
-                                  aria-label="toggle password visibility"
-                                  onClick={() => setShowPassword(!showPassword)}
-                                >
-                                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                                </IconButton>
-                              </InputAdornment>
-                            ),
-                          }}
                           helperText={
                             <ErrorMessage
-                              name="password"
+                              name="Address"
                               component="div"
                               className="error"
                             />
                           }
                         />
                       </Grid>
+                      {/* <Grid item xs={6}>
+                        <Field
+                          as={TextField}
+                          variant="outlined"
+                          margin="normal"
+                          fullWidth
+                          id="Address"
+                          label="Address"
+                          name="Address"
+                          // type={showPassword ? "text" : "text"}
+                          value={values.text}
+                          onChange={handleChange}
+                          InputProps={{
+                            endAdornment: (
+                              // <InputAdornment position="end">
+                              //   <IconButton
+                              //     aria-label="toggle password visibility"
+                              //     onClick={() => setShowPassword(!showPassword)}
+                              //   >
+                              //     {showPassword ? <VisibilityOff /> : <Visibility />}
+                              //   </IconButton>
+                              // </InputAdornment>
+                            ),
+                          }}
+                          helperText={
+                            <ErrorMessage
+                              name="Address"
+                              component="div"
+                              className="error"
+                            />
+                          }
+                        />
+                      </Grid> */}
                       <Grid item xs={12} className="text-center mt-2 mb-2">
                         <Button type="submit" variant="contained" className="loginButton">
                           Sign Up
