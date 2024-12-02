@@ -27,34 +27,33 @@ const Login = () => {
 
   return (
     <div className="row login">
-      <div className="col-lg-6">
+      <div className="col-lg-12">
         <div className="login-left text-center">
           <img src={"/MERA-DRIVER.png"} alt="" className="mt-4" />
-          <div className="driver-image-session">
+          {/* <div className="driver-image-session">
             <img src={"/login.png"} alt="" className="w-100" />
-          </div>
+          </div> */}
         </div>
-      </div>
+  
 
-      <div className="col-lg-6">
         <div className="login-right">
-          <div className="text-center p-5">
+          <div className="text-center py-3">
             <h1 className="login-right-heading">Login</h1>
             <p className="login-right-subheading">
               Let’s get you all set up so you can access your personal account.
             </p>
           </div>
 
-          <div className="loginwithother">
+          {/* <div className="loginwithother">
             <img src={"/google.png"} alt="Google Login" />
             <p className="m-0">Login with Google</p>
-          </div>
-          <div className="loginwithother mt-2">
+          </div> */}
+          {/* <div className="loginwithother mt-2">
             <img src={"/facebook.png"} alt="Facebook Login" />
             <p className="m-0">Login with Facebook</p>
-          </div>
+          </div> */}
 
-          <Divider className="mt-4">OR</Divider>
+          {/* <Divider className="mt-4">OR</Divider> */}
 
           <Formik
             initialValues={{ email: "", password: "" }}
@@ -66,7 +65,7 @@ const Login = () => {
             {({ values, handleChange, handleSubmit }) => (
               <Form onSubmit={handleSubmit} noValidate>
                 <Grid  spacing={2} className="container">
-                  <Grid item xs={12}>
+                   <Grid item xs={6}>
                     <Field
                       as={TextField}
                       variant="outlined"
@@ -89,7 +88,7 @@ const Login = () => {
                       }
                     />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid item xs={6}>
                     <Field
                       as={TextField}
                       variant="outlined"

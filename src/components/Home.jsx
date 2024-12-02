@@ -531,7 +531,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="driver-title d-md-none d-xl-none d-xxl-block d-lg-block d-lg-none d-xl-block">
+      <div className="driver-title hello-title d-md-block d-xl-none d-xxl-block d-lg-block d-lg-none d-xl-block">
         <div className="driver-heading">
           <h2 className="driver-text text-center font-lighter mx-auto">
             Driver Vs Taxi Services
@@ -575,6 +575,7 @@ const Home = () => {
                   <h3 className="text-center"> Taxi Services </h3>
 
                   <div className="driver-organization ">
+
                     <button type="submit" className="submit-button mb-2 ">
                       Professionals who know their trad
                     </button>
@@ -591,6 +592,9 @@ const Home = () => {
                     <button type="submit" className="submit-button ">
                       Great traffic sense with great skills
                     </button>
+
+                   
+
                   </div>
                 </div>
               </div>
@@ -598,8 +602,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* </div> */}
 
       {/* plqace-requirements */}
       <div className="place-title pt-5">

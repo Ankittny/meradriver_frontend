@@ -43,22 +43,55 @@
     font-weight: 300;
 }
 
+@media(max-width:991px) and (min-width:768px){
+    .mera-tech{
+        margin-top: 360px !important;
+    }
+    .toys-size{
+        text-align: center;
+    }
+    .hy-text{
+        margin-top: 40px;
+    }
+}
+
 @media(max-width:768px){
     .tech-top-right-image {
         width: 100%;
         margin-top: 0px;
     }
-    .mera-tech{
-        margin-top: 85px !important;
-    }
+    // .mera-tech{
+    //     margin-top: 85px !important;
+    // }
     .cf-row{
         flex-direction: column-reverse;
     }
-    .cf-rows {
-        margin-top: -30px !important;
-    }
+    // .cf-rows {
+    //     margin-top: -30px !important;
+    // }
     .hy-text{
         margin-top: 30px !important;
     }
    
 }
+
+   //------------- media-query-start----------------
+   @media(max-width:767px) and (min-width:426px){
+    .tech-row{
+        margin-top: 100px;
+    }
+    .tech-row, .tech-row-image{
+        margin-top: 80px;
+    }
+    .tech-row-image img{
+        height: inherit ;
+    }
+   
+   }
+
+   @media(max-width:425px){
+    .tech-row, .tech-row-image{
+        margin-top: 40px;
+    }
+   }
+

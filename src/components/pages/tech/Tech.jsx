@@ -57,7 +57,7 @@ const Tech = () => {
                             </div>
                         </div>
                         </div>
-                        <div className='row cf-row'>
+                        <div className='row cf-row mt-5'>
                         <div className='col-lg-6'>
                             <div className='tech-row-image'>
                                 <img

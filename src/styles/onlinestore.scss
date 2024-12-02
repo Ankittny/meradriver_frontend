@@ -45,3 +45,36 @@
         font-size: 25px !important;
     }
 }
+
+   //------------- media-query-start----------------
+
+
+   @media(max-width:1199px) and (min-width:991px){
+    .mobile-center img {
+        width: 150px;
+        height: auto;
+    }
+    .mobile-center {
+        top: -70px;
+    }
+    .brand-lisyting li {
+        list-style: none;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    }
+
+@media(max-width:991px) and (min-width:768px){
+   .mobile-center {
+    top: -75px;
+    right: 0px;
+}
+   }
+
+@media(max-width:767px) and (min-width:426px){
+.mobile-center {
+    top: -65px;
+    position: relative;
+    left: 65px;
+}
+   }

@@ -211,11 +211,10 @@ margin-top: -80px;
     .pricing-card-topimg,
     .hover-image {
         width: 260px;
-        margin-left: 53px;
         transition: opacity 0.3s ease;
         position: absolute; /* Stack images */
         top: 0;
-        left: 0;
+        right: 0;
     }
 
     .hover-image {

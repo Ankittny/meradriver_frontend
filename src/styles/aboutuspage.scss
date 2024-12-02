@@ -90,6 +90,13 @@ font-size: 35px;
     border-radius: 10px;
 }
 
+
+@media(max-width:991px) and (min-width:768px){
+    .about-us-title {
+        margin-top: 510px;
+    }
+}
+
 @media(max-width:768px){
     .aboutuspage-top-right-image {
         width: 100%;
@@ -116,4 +123,10 @@ font-size: 35px;
 .online-store{
     margin-bottom: 50px;
 }
+}
+
+@media(max-width:767px) and (min-width:426px){
+    .about-us-title {
+        margin-top: 360px;
+    }
 }

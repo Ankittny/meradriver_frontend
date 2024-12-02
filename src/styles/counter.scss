@@ -46,6 +46,32 @@
   }
   
 
+                                            //------------- media-query-start----------------
+                                            @media(max-width:991px) and (min-width:768px){
+                                              .fc-fix{
+                                                flex-direction: column !important;
+                                                margin-top: 40px;
+                                              }
+                                              .counter .counter-box{
+                                                  width: 100%;
+                                                  margin-top: 20px;
+                                              }
+                                              .counter {
+                                                top: -70px;
+                                                
+                                            }
+                                              }   
+                                              
+                                              
+@media(max-width:767px) and (min-width:426px){
+  .fc-fix {
+    flex-direction: column !important;
+}
+}
+
+
+
+
   @media(max-width:425px){
     .fc-fix{
       flex-direction: column !important;
