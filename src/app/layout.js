@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 // import "./globals.css";
 import "../styles/app.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import StoreProvider from "@/redux/StoreProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <StoreProvider>{children}</StoreProvider>
       </body>
     </html>
   );
