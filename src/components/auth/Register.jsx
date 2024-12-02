@@ -90,7 +90,7 @@ const Register = () => {
                           label="Email"
                           name="Email"
                           autoComplete="Email"
-                          value={values.email}
+                          value={values.text}
                           onChange={handleChange}
                           helperText={
                             <ErrorMessage
