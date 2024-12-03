@@ -4,3 +4,13 @@
     background: none;
     padding: 10px;
 }
+
+                                              // media-query-start
+@media(max-width: 991px){
+    .login-left {
+        padding-top: 0px !important;
+    }
+    form{
+        margin-top: 40px;
+    }
+}
