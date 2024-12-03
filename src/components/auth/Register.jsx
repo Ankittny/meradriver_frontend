@@ -8,6 +8,8 @@ import { InputAdornment, IconButton, Link, Button } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const validationSchema = Yup.object({
   email: Yup.string()
@@ -27,6 +29,7 @@ const Register = () => {
 
   return (
     <div className="login">
+      <Navbar/>
       <div className="container ">
         <div className="row ">
           <div className="col-12">
@@ -201,6 +204,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
