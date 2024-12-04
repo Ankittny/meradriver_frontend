@@ -65,13 +65,30 @@
             width: 100%;
             margin-top: 0px;
         }
-        .our-services {
-            margin-top: 50px;
-        }
+        // .our-services {
+        //     margin-top: 50px;
+        // }
         .trainer-manual-para{
             padding: 0px 10px;
         }
         .service{
             flex-direction: column-reverse;
+        }
+    }
+    @media(max-width:991px) and (min-width:768px){
+        .our-services {
+            margin-top: 560px;
+        }
+    }
+
+    @media(max-width:767px) and (min-width:577px){
+        .our-services {
+            margin-top: 400px;
+        }
+    }
+
+    @media(max-width:576px) and (min-width:426px){
+        .our-services {
+            margin-top: 385px;
         }
     }

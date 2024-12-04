@@ -49,13 +49,17 @@ const Register = () => {
 
   return (
     <div className="login">
-      <Navbar />
-      <div className="container">
-        <div className="row">
+
+      <Navbar/>
+      <div className="container ">
+        <div className="row ">
           <div className="col-lg-12">
             <div className="login-left text-center">
-              <img src="/MERA-DRIVER.png" alt="Logo" className="mt-4" />
-              {/* <img src="/register.png" alt="Register" className="w-100 mt-3" /> */}
+              <img src={"/MERA-DRIVER.png"} alt="" className="mt-4" />
+              {/* <div>
+                <img src={"/register.png"} alt="" className="w-100" />
+              </div> */}
+
             </div>
 
             {/* Right Side */}

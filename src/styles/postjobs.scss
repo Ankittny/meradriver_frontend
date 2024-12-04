@@ -176,6 +176,11 @@
         }
       }
 
+      @media(max-width:1199px) and (min-width:992px){
+     .bang-title {
+        flex-direction: column;
+     }
+      }
 
       @media(max-width:991px) and (min-width:768px){
         .post1-title {
