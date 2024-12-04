@@ -52,11 +52,11 @@ const Navbar = () => {
                   Service 
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
               <Link className="nav-link active" aria-current="page" href="/pricing">
                   Pricing
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
               <Link className="nav-link active" aria-current="page" href="/tech">
                   Tech
@@ -75,10 +75,10 @@ const Navbar = () => {
             </ul>
 
             <button className="btn btn-outline-success mx-3" type="submit" onClick={handleRegister}>
-            Signup Diver
+            SIGNUP DRIVER
             </button>
             <button className="btn btn-outline-success" type="submit" onClick={handleLogin}>
-              Login
+              LOGIN
             </button>
           </div>
         </div>

@@ -8,6 +8,8 @@ import { InputAdornment, IconButton, Link, Button } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const validationSchema = Yup.object({
   email: Yup.string()
@@ -22,11 +24,12 @@ const validationSchema = Yup.object({
     .required("Password is required"),
 });
 
+
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-
   return (
     <div className="row login">
+      <Navbar />
       <div className="col-lg-12">
         <div className="login-left text-center">
           <img src={"/MERA-DRIVER.png"} alt="" className="mt-4" />
@@ -147,7 +150,9 @@ const Login = () => {
           </Grid>
         </div>
       </div>
+      <Footer/>
     </div>
+    
   );
 };
 

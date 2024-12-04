@@ -43,6 +43,9 @@ border-radius: 0px;
    .footer-heading h4{
     text-align: center;
    }
+   .footer-heading{
+    margin-top: 20px;
+}
 }
 
 
@@ -52,5 +55,8 @@ border-radius: 0px;
     }
     .bottom-footer {
         display: none !important;
+    }
+    .footer-heading{
+        margin-top: 20px;
     }
 }

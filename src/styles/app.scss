@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 :root {
   --primary-color:#01233B;
   --secondary-color:#155A8B;
-
   --font-family: 'Poppins', sans-serif;
 
 }
@@ -41,10 +39,8 @@ p {
 @import "./bestdriver.scss";
 @import "./aboutus.scss";
 @import "./aboutuspage.scss";
-
 @import "./services.scss";
 @import "./login.scss";
-
 @import "./feeljourney.scss";
 @import "./slider.scss";
 @import "./onlinestore.scss";
