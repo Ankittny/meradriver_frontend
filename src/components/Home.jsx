@@ -12,25 +12,25 @@ import { PiUsersThreeFill } from "react-icons/pi";
 import FeelJourney from "./FeelJourney";
 import Link from "next/link";
 import OnlineStore from "./OnlineStore";
-import Accordion from "@mui/material/Accordion";
-import AccordionActions from "@mui/material/AccordionActions";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Button from "@mui/material/Button";
+// import Accordion from "@mui/material/Accordion";
+// import AccordionActions from "@mui/material/AccordionActions";
+// import AccordionSummary from "@mui/material/AccordionSummary";
+// import AccordionDetails from "@mui/material/AccordionDetails";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import Button from "@mui/material/Button";
 import Slider from "./Slider";
 import Footer from "./Footer";
 import React, { useEffect, useRef, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import StarOutlineIcon from "@mui/icons-material/StarOutline";
+// import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import { Pagination } from "swiper/modules";
+// import { Pagination } from "swiper/modules";
 // import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { enquery } from "@/redux/Action/Enquery";
-
+import 'bootstrap/dist/js/bootstrap.bundle';
 const Home = () => {
   const [formType, setFormType] = useState("individual");
   const [expanded, setExpanded] = useState(false);
@@ -79,7 +79,7 @@ const Home = () => {
 
   const handleTabClick = (type) => {
     setFormType(type);
-    
+
   };
 
   const handleChange = (e) => {
@@ -132,7 +132,7 @@ const Home = () => {
               transforms the driver hiring experience, ensuring precision and
               reliability in every service.
             </p>
-            <button className="book-button">Book</button>
+            <button className=" book-tickets">Book</button>
           </div>
 
           <div className="form-container">
@@ -140,17 +140,15 @@ const Home = () => {
             <p className="form-container-text">Book Your Driver Now</p>
             <div className="button-group mt-3">
               <button
-                className={`tab rounded ${
-                  formType === "company" ? "active" : ""
-                }`}
+                className={`tab rounded ${formType === "company" ? "active" : ""
+                  }`}
                 onClick={() => handleTabClick("company")}
               >
                 Company
               </button>
               <button
-                className={`tab rounded mx-3 ${
-                  formType === "individual" ? "active" : ""
-                }`}
+                className={`tab rounded mx-3 ${formType === "individual" ? "active" : ""
+                  }`}
                 onClick={() => handleTabClick("individual")}
               >
                 Individual
@@ -593,7 +591,7 @@ const Home = () => {
                       Great traffic sense with great skills
                     </button>
 
-                   
+
 
                   </div>
                 </div>
@@ -863,7 +861,7 @@ const Home = () => {
           <h2 className="frequently-title text-center">
             Frequently Asked Questions
           </h2>
-          <div className="accordian-map pt-3">
+          {/* <div className="accordian-map pt-3">
             <div className="row">
               <div className="col-lg-6">
                 <div className="accordian-item">
@@ -989,6 +987,131 @@ const Home = () => {
                         lobortis eget.
                       </AccordionDetails>
                     </Accordion>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> */}
+          <div className="accordion accordian-map pt-4" id="accordionExample">
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button className="accordion-button" type="button" Name data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      How do I book an airport transfer?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
+                      <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse malesuada lacus ex, sit amet blandit leo
+                        lobortis eget.</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item mt-3">
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Are there any extra charges?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
+                      <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse malesuada lacus ex, sit amet blandit leo
+                        lobortis eget.</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item mt-3">
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      How much do I need to pay for airport transfer service?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
+                      <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse malesuada lacus ex, sit amet blandit leo
+                        lobortis eget.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="accordion-item mt-3">
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Will I get to travel in a shared vehicle or privately
+                    reserved?
+                    </button>
+                  </h2>
+                  <div id="collapseFour" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
+                      <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse malesuada lacus ex, sit amet blandit leo
+                        lobortis eget.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button className="accordion-button" type="button" Name data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+                    If my flight gets delayed, will I be picked up by the
+                        chauffeur?
+                    </button>
+                  </h2>
+                  <div id="collapsefive" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
+                      <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse malesuada lacus ex, sit amet blandit leo
+                        lobortis eget.</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item mt-3">
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                    At the airport where will my driver come to receive me?
+                    </button>
+                  </h2>
+                  <div id="collapsesix" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
+                      <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse malesuada lacus ex, sit amet blandit leo
+                        lobortis eget.</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item mt-3">
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+                    Do you provide child seats?
+                    </button>
+                  </h2>
+                  <div id="collapseseven" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
+                      <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse malesuada lacus ex, sit amet blandit leo
+                        lobortis eget.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="accordion-item mt-3">
+                  <h2 className="accordion-header">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
+                    What happens if I'm unable to find my driver at the
+                        airport?
+                    </button>
+                  </h2>
+                  <div id="collapseeight" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div className="accordion-body">
+                    <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Suspendisse malesuada lacus ex, sit amet blandit leo
+                        lobortis eget.</span>
+                    </div>
                   </div>
                 </div>
               </div>
