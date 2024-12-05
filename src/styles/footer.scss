@@ -40,6 +40,10 @@ border-radius: 0px;
 .glad-item li a{
     color:#fff;
 }
+.input-group-append span{
+    cursor: pointer;
+    border-radius: 0px 6px 6px 0px;
+}
 
         //------------- media-query-start----------------
 @media(max-width:767px) and (min-width:426px){

@@ -757,7 +757,7 @@ const Home = () => {
                     height="100px"
                   />
                   <p className="mt-3">
-                    Hire Professional drivers for limited period/ hours
+                    Hire Professional drivers for <br /> limited period/ hours
                   </p>
                 </div>
               </div>
@@ -785,7 +785,7 @@ const Home = () => {
                     height="100px"
                   />
                   <p className="mt-3 px-3">
-                    Hire cost is less than renting a taxi/cab
+                    Hire cost is less than <br /> renting a taxi/cab
                   </p>
                 </div>
               </div>
