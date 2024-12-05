@@ -1,34 +1,55 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import "../../styles/login.scss";
-import Divider from "@mui/material/Divider";
-import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
-import { InputAdornment, IconButton, Link, Button } from "@mui/material";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useDispatch } from "react-redux";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import { driverRegister } from "@/redux/Action/auth";
+import Swal from "sweetalert2"; // Import SweetAlert
+import { Grid, TextField } from "@material-ui/core";
+import { Button } from "@mui/material";
 
+
+// Validation Schema
 const validationSchema = Yup.object({
+  full_name: Yup.string()
+    .matches(/^[A-Za-z\s]+$/, "Name can only contain alphabets and spaces")
+    .min(3, "Name must contain at least 3 characters")
+    .required("Full Name is required"),
   email: Yup.string()
     .email("Invalid email address")
-    .matches(
-      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-      "Please enter a valid email"
-    )
     .required("Email is required"),
-  password: Yup.string()
-    .min(6, "Password must be at least 6 characters")
-    .required("Password is required"),
+  mobile: Yup.string()
+    .matches(/^\d{10}$/, "Phone number must be 10 digits")
+    .required("Mobile number is required"),
+  address: Yup.string()
+    .min(10, "Address must be at least 10 characters")
+    .required("Address is required"),
 });
 
 const Register = () => {
-  const [showPassword, setShowPassword] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleSubmit = (values, { resetForm }) => {
+    dispatch(driverRegister(values)).then(() => {
+      // Show SweetAlert success popup
+      Swal.fire({
+        icon: "success",
+        title: "Registration Successful",
+        text: "Our team will be connect sortly..",
+        confirmButtonText: "OK",
+      });
+
+      // Reset the form fields
+      resetForm();
+    });
+  };
 
   return (
     <div className="login">
+
       <Navbar/>
       <div className="container ">
         <div className="row ">
@@ -38,29 +59,36 @@ const Register = () => {
               {/* <div>
                 <img src={"/register.png"} alt="" className="w-100" />
               </div> */}
+
             </div>
 
+            {/* Right Side */}
             <div className="login-right">
-              <div className="  text-center py-3">
+              <div className="text-center py-3">
                 <h1 className="login-right-heading">Sign Up</h1>
                 <p className="login-right-subheading">
-                  Let’s get you all set up so you can access your personal account.
+                  Let’s get you all set up so you can access your personal
+                  account.
                 </p>
               </div>
 
-
-
-              {/* <Divider className="mt-4">OR</Divider> */}
-
+              {/* Form Section */}
               <Formik
-                initialValues={{ email: "", password: "" }}
-                validationSchema={validationSchema}
-                onSubmit={(values) => {
-                  handleSubmit(values);
+                initialValues={{
+                  full_name: "",
+                  email: "",
+                  mobile: "",
+                  address: "",
                 }}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
               >
-                {({ values, handleChange, handleSubmit }) => (
-                  <Form onSubmit={handleSubmit} noValidate>
+                {({ handleChange, handleSubmit, values }) => (
+                  <Form
+                    onSubmit={handleSubmit}
+                    className="form-container text-left"
+                    noValidate
+                  >
                     <Grid container spacing={2} className="form-container">
                       <Grid item xs={6}>
                         <Field
@@ -68,40 +96,18 @@ const Register = () => {
                           variant="outlined"
                           margin="normal"
                           fullWidth
-                          id="Full Name"
+                          autoComplete="full_name"
+                          type="text"
+                          id="full_name"
+                          name="full_name"
+                          value={values.full_name}
+                          onChange={handleChange}
                           label="Full Name"
-                          name="FullName"
-                          autoComplete="FullName"
-                          value={values.FullName}
-                          onChange={handleChange}
-                          helperText={
-                            <ErrorMessage
-                              name="FullName"
-                              component="div"
-                              className="error"
-                            />
-                          }
                         />
-                      </Grid>
-                      <Grid item xs={6}>
-                        <Field
-                          as={TextField}
-                          variant="outlined"
-                          margin="normal"
-                          fullWidth
-                          id="Email"
-                          label="Email"
-                          name="Email"
-                          autoComplete="Email"
-                          value={values.text}
-                          onChange={handleChange}
-                          helperText={
-                            <ErrorMessage
-                              name="Email"
-                              component="div"
-                              className="error"
-                            />
-                          }
+                        <ErrorMessage
+                          name="full_name"
+                          component="div"
+                          className="error"
                         />
                       </Grid>
 
@@ -111,77 +117,70 @@ const Register = () => {
                           variant="outlined"
                           margin="normal"
                           fullWidth
-                          id="Mobile"
-                          label="Mobile Number"
-                          name="Mobile"
-                          autoComplete="Mobile"
-                          value={values.Mobile}
+                          autoComplete="email"
+                          type="email"
+                          id="email"
+                          name="email"
+                          label="Email Id"
+                          value={values.email}
                           onChange={handleChange}
-                          helperText={
-                            <ErrorMessage
-                              name="Mobile"
-                              component="div"
-                              className="error"
-                            />
-                          }
+                        />
+                        <ErrorMessage
+                          name="email"
+                          component="div"
+                          className="error"
                         />
                       </Grid>
+
                       <Grid item xs={6}>
                         <Field
                           as={TextField}
                           variant="outlined"
                           margin="normal"
                           fullWidth
-                          id="Address"
-                          label="Address"
-                          name="Address"
-                          autoComplete="Address"
-                          value={values.Address}
+                          autoComplete="mobile"
+                          type="number"
+                          id="mobile"
+                          name="mobile"
+                          label="Mobile Number"
+                          value={values.mobile}
                           onChange={handleChange}
-                          helperText={
-                            <ErrorMessage
-                              name="Address"
-                              component="div"
-                              className="error"
-                            />
-                          }
+                        />
+                        <ErrorMessage
+                          name="mobile"
+                          component="div"
+                          className="error"
                         />
                       </Grid>
-                      {/* <Grid item xs={6}>
+
+                      <Grid item xs={6}>
                         <Field
                           as={TextField}
                           variant="outlined"
                           margin="normal"
                           fullWidth
-                          id="Address"
+                          autoComplete="address"
+                          type="text"
+                          id="address"
+                          name="address"
                           label="Address"
-                          name="Address"
-                          // type={showPassword ? "text" : "text"}
-                          value={values.text}
+                          
+                          value={values.address}
                           onChange={handleChange}
-                          InputProps={{
-                            endAdornment: (
-                              // <InputAdornment position="end">
-                              //   <IconButton
-                              //     aria-label="toggle password visibility"
-                              //     onClick={() => setShowPassword(!showPassword)}
-                              //   >
-                              //     {showPassword ? <VisibilityOff /> : <Visibility />}
-                              //   </IconButton>
-                              // </InputAdornment>
-                            ),
-                          }}
-                          helperText={
-                            <ErrorMessage
-                              name="Address"
-                              component="div"
-                              className="error"
-                            />
-                          }
                         />
-                      </Grid> */}
+                        <ErrorMessage
+                          name="address"
+                          component="div"
+                          className="error"
+                        />
+                      </Grid>
+
                       <Grid item xs={12} className="text-center mt-2 mb-2">
-                        <Button type="submit" variant="contained" className="loginButton">
+                        <Button
+                          type="submit"
+                          variant="contained"
+                          className="loginButton"
+                        >
                           Sign Up
                         </Button>
                       </Grid>
@@ -190,21 +189,17 @@ const Register = () => {
                 )}
               </Formik>
 
-              <Grid container>
-                <Grid item xs>
-                  <p className="mt-4 text-center">
-                    Already have an account?{" "}
-                    <span>
-                      <Link href="/login" className="curser">Login</Link>
-                    </span>
-                  </p>
-                </Grid>
-              </Grid>
+              <p className="mt-4 text-center">
+                Already have an account?{" "}
+                <a href="/login" className="cursor">
+                  Login
+                </a>
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

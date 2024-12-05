@@ -865,8 +865,8 @@ const Home = () => {
             <div className="row">
               <div className="col-lg-6">
                 <div className="accordian-item">
-                  <div>
-                    <Accordion>
+                  <div >
+                    <Accordion >
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1-content"
