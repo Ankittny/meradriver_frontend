@@ -513,11 +513,16 @@ align-items: center;
 }
 .accordion-button{
   font-size: 15px !important;
+  color: #000 !important;
 }
 .accordion-button:not(.collapsed){
   background-color: transparent !important;
 }
 
+.accordion-button:focus:not(:focus-visible) {
+  box-shadow: none;
+  border-bottom: 1px solid #dde2e6;
+}
 
                                         //---------------- media-query  ----------------------
 
