@@ -20,7 +20,7 @@
 
 
 .aboutus-right-image{
-    width: 100%;
+    width: 102%;
 }
 .about-us-title{
     margin-top: 150px;
@@ -29,6 +29,7 @@
     font-size: 15px;
     margin-bottom: 10px;
 }
+                                            //------------- media-query-start----------------
 
 @media(max-width:425px){
     .aboutus-left {

@@ -5,7 +5,7 @@
     position: relative !important;
     background-size: cover !important;
     height: 400px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 .swiper {
   width: 100%;
@@ -34,7 +34,7 @@
 }
 .heading-title h1{
   color: #000;
-  font-size: 35px;
+  font-size: 2rem;
 }
 .slider-slide p{
   font-size: 16px;
@@ -74,6 +74,13 @@
   .slider-slide p {
     font-size: 11px;
     text-align: start;
+}
+}
+
+@media(max-width:425px){
+  .slider-slide p {
+    font-size: 12px;
+    /* text-align: start; */
 }
 }
 

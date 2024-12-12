@@ -65,11 +65,11 @@ const Footer = () => {
                         <div className="footer-heading">
                             <h4 className="glad-list mb-4">Company</h4>
                             <ul className="glad-item">
-                           <li><Link href={"/about"}></Link>About Us</li>
+                           <li><Link href={"/about"}>About Us</Link></li>
                                 <li>Tearm and Conditions</li>
                                 <li>Privacy policy</li>
                                 <li>FAQ</li>
-                                <li>Contact Us</li>
+                                <li><Link href={"/contact"}>Contact Us</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -77,10 +77,10 @@ const Footer = () => {
                         <div className="footer-heading">
                             <h4 className="glad-list mb-4">Quick Link</h4>
                             <ul className="glad-item">
-                           <li><Link href={"/blog"}></Link>Our Blogs</li>
+                           <li><Link href={"/blog"}>Our Blogs</Link></li>
                                 <li>Search Job</li>
-                                <li>Post Job</li>
-                                <li>Services</li>
+                                <li><Link href={"/postjobs"}>Post Job</Link></li>
+                                <li><Link href={"/services"}>Services</Link></li>
                                 <li>How It Works</li>
                             </ul>
                         </div>
