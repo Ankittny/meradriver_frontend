@@ -78,40 +78,36 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-lg-4 pt-5">
-            <div className="footer-heading">
-              <h4 className="glad-list mb-4">Company</h4>
-              <ul className="glad-item">
-                <li>
-                  <Link href={"/about"}></Link>About Us
-                </li>
-                <li>Tearm and Conditions</li>
-                <li>Privacy policy</li>
-                <li>FAQ</li>
-                <li>Contact Us</li>
-              </ul>
-            </div>
-          </div>
+                        <div className="footer-heading">
+                            <h4 className="glad-list mb-4">Company</h4>
+                            <ul className="glad-item">
+                           <li><Link href={"/about"}>About Us</Link></li>
+                                <li>Tearm and Conditions</li>
+                                <li>Privacy policy</li>
+                                <li>FAQ</li>
+                                <li><Link href={"/contact"}>Contact Us</Link></li>
+                            </ul>
+                        </div>
+                    </div>
           <div className="col-lg-4 pt-5">
-            <div className="footer-heading">
-              <h4 className="glad-list mb-4">Quick Link</h4>
-              <ul className="glad-item">
-                <li>
-                  <Link href={"/blog"}></Link>Our Blogs
-                </li>
-                <li>Search Job</li>
-                <li>Post Job</li>
-                <li>Services</li>
-                <li>How It Works</li>
-              </ul>
-            </div>
-          </div>
+                        <div className="footer-heading">
+                            <h4 className="glad-list mb-4">Quick Link</h4>
+                            <ul className="glad-item">
+                           <li><Link href={"/blog"}>Our Blogs</Link></li>
+                                <li>Search Job</li>
+                                <li><Link href={"/postjobs"}>Post Job</Link></li>
+                                <li><Link href={"/services"}>Services</Link></li>
+                                <li>How It Works</li>
+                            </ul>
+                        </div>
+                    </div>
           <div className="col-lg-4 pt-5">
             <div className="footer-heading">
               <h4 className="glad-list mb-4">Download Our App</h4>
               <div className="d-flex gap-4">
                 <div className="google-idea">
                   <img src="/google-play.png" width="150" alt="dd6" />
-                  
+
                     {/* <div className="col-lg-4 pt-5">
                         <div className="footer-heading">
                             <h4 className="glad-list mb-4">Company</h4>
