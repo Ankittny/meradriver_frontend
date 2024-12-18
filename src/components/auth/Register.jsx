@@ -1,16 +1,17 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/login.scss";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { driverRegister } from "@/redux/Action/auth";
-import Swal from "sweetalert2"; // Import SweetAlert
+import Swal from "sweetalert2"; // SweetAlert for feedback
 import { Grid, TextField } from "@material-ui/core";
 import { Button } from "@mui/material";
-
+import Image from "next/image";
+import Loader from "../Loader";
 
 // Validation Schema
 const validationSchema = Yup.object({
@@ -30,39 +31,55 @@ const validationSchema = Yup.object({
 });
 
 const Register = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
+  const { success, error, loading } = useSelector((state) => state.driverRegister);
 
-  const handleSubmit = (values, { resetForm }) => {
-    dispatch(driverRegister(values)).then(() => {
-      // Show SweetAlert success popup
+  useEffect(() => {
+    // Simulate loading state for initial load
+    const timeout = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleSubmit = async (values, { resetForm }) => {
+    try {
+      const response = await dispatch(driverRegister(values));
       Swal.fire({
         icon: "success",
         title: "Registration Successful",
-        text: "Our team will be connect sortly..",
+        text: response?.message &&  "Our team will connect shortly.",
         confirmButtonText: "OK",
       });
-
-      // Reset the form fields
-      resetForm();
-    });
+      resetForm(); // Reset form fields after success
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Registration Failed",
+        text: error.message || "An error occurred. Please try again.",
+        confirmButtonText: "OK",
+      });
+    }
   };
+
+  if (isLoading) return <Loader />;
 
   return (
     <div className="login">
-
-      <Navbar/>
-      <div className="container ">
-        <div className="row ">
+      <Navbar />
+      <div className="container">
+        <div className="row">
           <div className="col-lg-12">
-            <div className="login-left text-center">
-              <img src={"/MERA-DRIVER.png"} alt="" className="mt-4" />
-              {/* <div>
-                <img src={"/register.png"} alt="" className="w-100" />
-              </div> */}
-
+            <div className="text-center">
+              <Image
+                src="/MERA-DRIVER.png"
+                alt="Logo"
+                className="mt-4"
+                width={170}
+                height={50}
+                priority
+              />
             </div>
 
-            {/* Right Side */}
             <div className="login-right">
               <div className="text-center py-3">
                 <h1 className="login-right-heading">Sign Up</h1>
@@ -72,7 +89,6 @@ const Register = () => {
                 </p>
               </div>
 
-              {/* Form Section */}
               <Formik
                 initialValues={{
                   full_name: "",
@@ -89,8 +105,8 @@ const Register = () => {
                     className="form-container text-left"
                     noValidate
                   >
-                    <Grid container spacing={2} className="form-container">
-                      <Grid item xs={6}>
+                    <Grid container spacing={2}>
+                      <Grid item xs={12} md={6}>
                         <Field
                           as={TextField}
                           variant="outlined"
@@ -111,7 +127,7 @@ const Register = () => {
                         />
                       </Grid>
 
-                      <Grid item xs={6}>
+                      <Grid item xs={12} md={6}>
                         <Field
                           as={TextField}
                           variant="outlined"
@@ -132,14 +148,14 @@ const Register = () => {
                         />
                       </Grid>
 
-                      <Grid item xs={6}>
+                      <Grid item xs={12} md={6}>
                         <Field
                           as={TextField}
                           variant="outlined"
                           margin="normal"
                           fullWidth
                           autoComplete="mobile"
-                          type="number"
+                          type="text"
                           id="mobile"
                           name="mobile"
                           label="Mobile Number"
@@ -153,7 +169,7 @@ const Register = () => {
                         />
                       </Grid>
 
-                      <Grid item xs={6}>
+                      <Grid item xs={12} md={6}>
                         <Field
                           as={TextField}
                           variant="outlined"
@@ -164,7 +180,6 @@ const Register = () => {
                           id="address"
                           name="address"
                           label="Address"
-                          
                           value={values.address}
                           onChange={handleChange}
                         />
@@ -179,9 +194,11 @@ const Register = () => {
                         <Button
                           type="submit"
                           variant="contained"
+                          color="primary"
                           className="loginButton"
+                          disabled={loading}
                         >
-                          Sign Up
+                          {loading ? "Submitting..." : "Sign Up"}
                         </Button>
                       </Grid>
                     </Grid>

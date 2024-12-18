@@ -1,170 +1,131 @@
-"use client"
-import React from 'react'
-import "../../../styles/postjobs.scss"
-import { IoStar } from "react-icons/io5";
-import { IoLocationOutline } from "react-icons/io5";
-import { PiToolbox } from "react-icons/pi";
-import FeelJourney from '../../FeelJourney';
-import Slider from '../../Slider';
-import OnlineStore from '../../OnlineStore';
-import Footer from '../../Footer';
-import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
-import { Divider } from '@mui/material';
-import Button from '@mui/material/Button';
 
+"use client";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { verifyDriver } from "@/redux/Action/VerifyDriver";
+import { Divider, Button } from "@mui/material";
+import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
+import { IoLocationOutline } from "react-icons/io5";
+import { useRouter } from "next/navigation";
 
 const PostJobs = () => {
-    return (
-        <div>
-            <div className="pricingpage">
-                <div className="post1-top">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-5 ">
-                                <h1 className="post1-heading">Post Job</h1>
-                            </div>
-                            <div className="col-lg-7">
-                                <div className="">
-                                    <img
-                                        src="/abouttopcar.png"
-                                        alt=""
-                                        className="post1-top-right-image"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="post1-title " style={{ marginTop: "195px" }}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-3">
-                            <div className="post1-heading-left">
-                               <div className='filter'>
-                                <p>All Filter</p>
-                               </div>
-                               <Divider className='mt-2'/>
-                               {/*  */}
-                               <div className='experience'>
-                                  <p>Experience</p>
-                                  <div></div>
-                               </div>
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const { jobs, loading, error } = useSelector((state) => state.verifyDriver);
 
-                               {/*  Salary*/}
-                               <div className='salary'>
-                                  <p><strong>Salary</strong></p>
-                                  
-                                  <div className='flex'>
-                                    <input type='checkbox' />
-                                    <p>0-3 lack <span>(110)</span></p>
-                                  </div> 
-                                  <Button>View More</Button>
-                               </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-9">
-                            <div className="row">
-                                <div className="col-lg-4">
-                                    <div className="post1-headings p-4 gallert">
-                                        <div className="all-main-post">
-                                            <h4>Driver</h4>
-                                            <div className="fleet-post d-flex gap-2">
-                                                <p>Unilode Aviation Solutions</p>
-                                            </div>
-                                            <div className="fleet-post d-flex gap-3">
-                                                <p>
-                                                    <PiToolbox />  1 - 2 years &nbsp; Rs Not disclosed &nbsp;<IoLocationOutline />
-                                                    Kolkata, Mumbai, N…
-                                                </p>
-                                            </div>
-                                            <div className="fleet-post d-flex justify-content-between gap-3">
-                                                <p>
-                                                    Valid Driver s License or CDL-A (required). Driving
-                                                    experience. Meet all stan…
-                                                </p>
-                                            </div>
-                                            <div className=''>
-                                                <ul className="d-flex bang-title gap-3 p-0 "><li>Training</li><li>Driving</li><li>Instructing</li></ul>
-                                            </div>
-                                            <div className=' dd d-flex justify-content-between'>
-                                                <p>10 Days Ago</p>
-                                                <span><BookmarkBorderOutlinedIcon fontSize={'medium'}/> Save</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4">
-                                    <div className="post1-headings p-4 gallert">
-                                        <div className="all-main-post">
-                                            <h4>Driver</h4>
-                                            <div className="fleet-post d-flex gap-2">
-                                                <p>Unilode Aviation Solutions</p>
-                                            </div>
-                                            <div className="fleet-post d-flex gap-3">
-                                                <p>
-                                                    <PiToolbox />  1 - 2 years &nbsp; Rs Not disclosed &nbsp;<IoLocationOutline />
-                                                    Kolkata, Mumbai, N…
-                                                </p>
-                                            </div>
-                                            <div className="fleet-post d-flex justify-content-between gap-3">
-                                                <p>
-                                                    Valid Driver s License or CDL-A (required). Driving
-                                                    experience. Meet all stan…
-                                                </p>
-                                            </div>
-                                            <div className=''>
-                                                <ul className="d-flex bang-title gap-3 p-0 "><li>Training</li><li>Driving</li><li>Instructing</li></ul>
-                                            </div>
-                                            <div className=' dd d-flex justify-content-between'>
-                                                <p>10 Days Ago</p>
-                                                <span><BookmarkBorderOutlinedIcon fontSize={'medium'}/> Save</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4">
-                                    <div className="post1-headings p-4 gallert">
-                                        <div className="all-main-post">
-                                            <h4>Driver</h4>
-                                            <div className="fleet-post d-flex gap-2">
-                                                <p>Unilode Aviation Solutions</p>
-                                            </div>
-                                            <div className="fleet-post d-flex gap-3">
-                                                <p>
-                                                    <PiToolbox />  1 - 2 years &nbsp; Rs Not disclosed &nbsp;<IoLocationOutline />
-                                                    Kolkata, Mumbai, N…
-                                                </p>
-                                            </div>
-                                            <div className="fleet-post d-flex justify-content-between gap-3">
-                                                <p>
-                                                    Valid Driver s License or CDL-A (required). Driving
-                                                    experience. Meet all stan…
-                                                </p>
-                                            </div>
-                                            <div className=''>
-                                                <ul className="d-flex bang-title gap-3 p-0 "><li>Training</li><li>Driving</li><li>Instructing</li></ul>
-                                            </div>
-                                            <div className=' dd d-flex justify-content-between'>
-                                                <p>10 Days Ago</p>
-                                                <span><BookmarkBorderOutlinedIcon fontSize={'medium'}/> Save</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  useEffect(() => {
+    dispatch(verifyDriver());
+  }, [dispatch]);
+
+   // Helper to mask mobile number
+   const maskMobile = (number) => {
+    if (number && number.length >= 4) {
+      return `XXXX-XXXX-${number.slice(-4)}`;
+    }
+    return "XXXX-XXXX-XXXX";
+  };
+
+  // Helper to mask email
+  const maskEmail = (email) => {
+    if (email) {
+      const [name, domain] = email.split("@");
+      const maskedName = name.slice(0, 2) + "***";
+      return `${maskedName}@${domain}`;
+    }
+    return "******@email.com";
+  };
+
+  const handleDetailsClick = (id) => {
+    router.push(`/postjobs/${id}`); // Navigate to the details page with the job id
+  };
+
+  if (loading) return <div className="loading">Loading...</div>;
+  if (error) return <div className="error">Error: {error}</div>;
+
+  return (
+    <div>
+      <div className="pricingpage">
+        <div className="post1-top">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-5">
+                <h1 className="post1-heading">Post Job</h1>
+              </div>
+              <div className="col-lg-7">
+                <img
+                  src="/abouttopcar.png"
+                  alt="Top Image"
+                  className="post1-top-right-image"
+                />
+              </div>
             </div>
-            <div className="feel-jou-exit">
-                <FeelJourney />
-            </div>
-            <Slider />
-            <OnlineStore />
-            <Footer />
+          </div>
         </div>
-    )
-}
+      </div>
 
-export default PostJobs
+      <div className="post1-title" style={{ marginTop: "195px" }}>
+        <div className="container">
+          <div className="row">
+            {/* Sidebar */}
+            <div className="col-lg-3">
+              <div className="post1-heading-left">
+                <p>All Filter</p>
+                <Divider className="mt-2" />
+                <p>Experience</p>
+                <div className="salary">
+                  <p>
+                    <strong>Salary</strong>
+                  </p>
+                  <div className="flex">
+                    <input type="checkbox" />
+                    <p>
+                      0-3 lack <span>(110)</span>
+                    </p>
+                  </div>
+                  <Button>View More</Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Jobs Section */}
+            <div className="col-lg-9">
+              <div className="row">
+                {Array.isArray(jobs) && jobs.length > 0 ? (
+                  jobs.map((job, index) => (
+                    <div className="col-lg-6 mb-4" key={index}>
+                <div className="job-card">
+                  {/* Static Left Image */}
+                  <div className="job-card-image">
+                    <img src="https://media.istockphoto.com/id/2158807978/photo/successful-african-american-ceo-happily-driving-new-corporate-car-in-summer.jpg?s=1024x1024&w=is&k=20&c=6gw-MMVCyk62RTi7ECN-BYYFTr5XmW7KOS56msmDEEI=" alt="Job" />
+                  </div>
+                  {/* Right Section */}
+                  <div className="job-card-details">
+                    <h4>{job.first_name || "First Name"} {job.last_name || "Last Name"}</h4>
+                    <p>📞 {maskMobile(job.contact_number)}</p>
+                    <p>✉ {maskEmail(job.email)}</p>
+                    <button
+                            className="apply-button"
+                            onClick={() => handleDetailsClick(job.id)} // Pass job ID
+                          >
+                            Details
+                          </button>
+                  </div>
+                </div>
+              </div>
+                  ))
+                ) : (
+                  <p>No jobs available</p>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PostJobs;
+
+
+
