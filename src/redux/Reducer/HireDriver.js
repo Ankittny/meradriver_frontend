@@ -4,26 +4,23 @@ const initialState = {
   loading: false,
   success: false,
   error: null,
-  Details: {}, // Object, not array
 };
 
-export const DriverDetailReducer = createReducer(initialState, (builder) => {
+export const hireDriverReducer = createReducer(initialState, (builder) => {
   builder
-    .addCase("driverDetailRequest", (state) => {
+    .addCase("HireDriverRequest", (state) => {
       state.loading = true;
       state.success = false;
       state.error = null;
     })
-    .addCase("driverDetailSuccess", (state, action) => {
+    .addCase("HireDriverSuccess", (state, action) => {
       state.loading = false;
       state.success = true;
-      state.Details = action.payload?.data || {}; // Extract data object
       state.error = null;
     })
-    .addCase("driverDetailFail", (state, action) => {
+    .addCase("HireDriverFailure", (state, action) => {
       state.loading = false;
       state.success = false;
-      state.Details = {}; // Reset on failure
       state.error = action.payload;
     });
 });
