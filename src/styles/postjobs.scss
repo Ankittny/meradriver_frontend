@@ -124,80 +124,7 @@
         align-items: baseline;
       }
 
-
-                                               //------------- media-query-start----------------
-
-      @media(max-width:768px){
-        .post1-top-right-image {
-            width: 100%;
-            margin-top: 0px;
-        }
-        .post1-title {
-            // margin-top: 30px !important;
-        }
-        .post1-heading-left {
-            width: 100%;
-        }
-        .gallert{
-            margin-top: 30px;
-        }
-
-        // post-details
-
-        .post-top-right-image {
-            width: 100%;
-            margin-top: 0px;
-        }
-        .fleet-post{
-            flex-direction: column;
-        }
-        .post-title{
-            margin-top: 60px !important;
-        }
-        .book-button{
-            border-radius: 30px;
-            font-size: 10px !important;
-        }
-        .company-title  p{
-            font-size: 11px;
-        }
-        .bang-title {
-            flex-direction: column;
-        }
-      }
-
-      @media(max-width:1199px) and (min-width:992px){
-     .bang-title {
-        flex-direction: column;
-     }
-      }
-
-      @media(max-width:991px) and (min-width:768px){
-        .post1-title {
-            margin-top: 400px !important;
-        }
-        .post1-heading-left{
-            width: 100%;
-        }
-        .post1-headings{
-            margin-top: 40px;
-        }
-      }
-
-@media(max-width:767px) and (min-width:426px){
-      .post1-title{
-        margin-top: 180px !important;
-    }
-}
-
-@media(max-width:425px){
-    .post1-title {
-        margin-top: 140px !important;
-    }
-}
-
-
-
+      
 .job-card {
     display: flex;
     align-items: center;
@@ -265,3 +192,82 @@
     font-size: 1.2rem;
     color: #155A8B;
   }
+
+ //-------------=================== media-query-start----------------===================================
+@media(max-width:991px){
+    .job-card{
+        margin-top: 30px;
+
+    }
+}
+      @media(max-width:768px){
+        .post1-top-right-image {
+            width: 100%;
+            margin-top: 0px;
+        }
+       
+        .post1-heading-left {
+            width: 100%;
+        }
+        .gallert{
+            margin-top: 30px;
+        }
+
+        // post-details
+
+        .post-top-right-image {
+            width: 100%;
+            margin-top: 0px;
+        }
+        .fleet-post{
+            flex-direction: column;
+        }
+        // .post-title{
+        //     margin-top: 60px !important;
+        // }
+        .book-button{
+            border-radius: 30px;
+            font-size: 10px !important;
+        }
+        .company-title  p{
+            font-size: 11px;
+        }
+        .bang-title {
+            flex-direction: column;
+        }
+      }
+
+      @media(max-width:1199px) and (min-width:992px){
+     .bang-title {
+        flex-direction: column;
+     }
+      }
+
+      @media(max-width:991px) and (min-width:768px){
+        .post1-title {
+            margin-top: 400px !important;
+        }
+        .post1-heading-left{
+            width: 100%;
+        }
+        .post1-headings{
+            margin-top: 40px;
+        }
+        .post-title{
+            margin-top: 380px !important ;
+        }
+      }
+
+@media(max-width:767px) and (min-width:426px){
+      .post1-title{
+        margin-top: 180px !important;
+    }
+}
+
+@media(max-width:425px){
+    .post1-title {
+        margin-top: 140px !important;
+    }
+}
+
+
