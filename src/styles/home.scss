@@ -45,6 +45,10 @@
 
 .content {
   max-width: 500px;
+  background: aliceblue;
+  opacity: .8;
+  padding: 10px 10px;
+  border-radius: 10px;
 }
 .content h1 {
   color: #000;
@@ -62,10 +66,20 @@
   background-color: #01233b;
   border: none;
   color: white;
-  font-size: 13px !important;
+  font-size: 17px !important;
   cursor: pointer;
   border-radius: 4px;
   width: 200px;
+}
+.book-tickets{
+    font-size: 17px;
+    padding: 0.75rem 1.5rem;
+    background-color: #01233b;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 200px;
 }
 
 .form-container {
@@ -217,6 +231,7 @@
   .service-left-heading{
     color: #01233B;
     font-weight: 500;
+    font-size: 2rem;
   }
   .service-left-para{
     color:  #444444;
@@ -303,6 +318,7 @@ align-items: center;
   //  strength css
   .strenght-title{
     font-weight: 600;
+    font-size: 2rem;
   }
   .our-strenght{
     background-color: #ECF5FB;
@@ -354,7 +370,7 @@ align-items: center;
 
   .your-cls{
     color:#212529;
-    font-size: 35px;
+    font-size: 2rem;
   }
   .place-heading p{
     font-size: 15px;
@@ -415,7 +431,7 @@ align-items: center;
   margin-top: 20px;
 }
 .frequently-title {
-  font-size: 35px;
+  font-size: 2rem;
   color: #000000;
 }
 .MuiAccordionSummary-content {
@@ -495,7 +511,18 @@ align-items: center;
 .driver-title {
   background-color: #ECF5FB;
 }
+.accordion-button{
+  font-size: 15px !important;
+  color: #000 !important;
+}
+.accordion-button:not(.collapsed){
+  background-color: transparent !important;
+}
 
+.accordion-button:focus:not(:focus-visible) {
+  box-shadow: none;
+  border-bottom: 1px solid #dde2e6;
+}
 
                                         //---------------- media-query  ----------------------
 
@@ -684,3 +711,17 @@ margin-top: 20px;
 // .accordion-button::after {
 //   transition: all 0.5s;
 // }
+
+// mera-deriver
+.driver-mera h3{
+  font-size: 2rem;
+}
+.btn-gone{
+  font-size: 1rem;
+}
+.image-little p{
+  font-size: 15px;
+}
+.police-title {
+  border-radius: 10px;
+}
