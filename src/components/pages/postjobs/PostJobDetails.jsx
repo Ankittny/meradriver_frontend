@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../../styles/postjobs.scss";
 import { IoStar } from "react-icons/io5";
 import { PiToolbox } from "react-icons/pi";
@@ -12,8 +12,34 @@ import Footer from "../../Footer";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
+import { useRouter } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import { driverDetail } from "@/redux/Action/DriverDetail";
 
-const PostJobDetails = () => {
+const PostJobDetails = ({ params }) => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const [id, setId] = useState();
+
+  const { Details, loading, error } = useSelector(
+    (state) => state.driverDetail
+  );
+
+  // console.log("DETAHJDKNDK",Details)
+
+  useEffect(() => {
+    const url = window.location.href; // Current URL
+    const idFromUrl = url.split("/").pop(); // Extract last part of URL
+    setId(idFromUrl);
+  }, []);
+
+  // Fetch data when 'id' is set
+  useEffect(() => {
+    if (id) {
+      dispatch(driverDetail(id));
+    }
+  }, [id, dispatch]);
+
   return (
     <div>
       <div className="pricingpage">
@@ -41,6 +67,7 @@ const PostJobDetails = () => {
           <div className="row">
             <div className="col-lg-8">
               <div className="all-main-post bg-white p-4">
+                {id ? <p>Job ID: {id}</p> : <p>Loading Job ID...</p>}
                 <h4>Driver Trainer</h4>
                 <div className="fleet-post d-flex gap-2">
                   <p>Everest Fleet</p>
@@ -62,14 +89,14 @@ const PostJobDetails = () => {
                   <span>Send me jobs like this</span>
                 </div>
                 <hr />
-                <div className="fleet-post d-flex  gap-3">
+                <div className="fleet-post d-flex justify-content-between  gap-3">
                   <p>Posted: 21 days ago | Openings: 1 | Applicants: 94</p>
                   <div className="d-flex gap-3">
-                    <button className="book-button">Register to apply</button>
-                    <button className="book-button">Login to apply</button>
+                    <button className="book-button">APPLY</button>
                   </div>
                 </div>
               </div>
+
               <div className="job-title p-4 mt-4 bg-white">
                 <h3>Job description</h3>
                 <h4 className="mt-3">Role & responsibilities</h4>
@@ -109,7 +136,7 @@ const PostJobDetails = () => {
                   </p>
                   <div className="d-flex gap-3">
                     <button className="book-button">
-                      <IoStar /> &nbsp; driver 
+                      <IoStar /> &nbsp; driver
                     </button>
                     <button className="book-button  ">
                       <IoStar /> &nbsp; Driving
@@ -117,8 +144,6 @@ const PostJobDetails = () => {
                   </div>
                 </div>
                 <hr />
-
-                {/* social icon*/}
                 <div className="social-icon m-lg-1 gap-4">
                   <FacebookIcon color={"primary"} />
                   <XIcon />
@@ -131,13 +156,7 @@ const PostJobDetails = () => {
                   Transforming Indias shared mobility scene, one journey at a
                   time. Our fleet, packed with 16,500+ cars, fuels the heart of
                   seven bustling metro cities in seamless collaboration with
-                  premier taxi aggregators. But we go beyond just getting you
-                  there – We are the catalysts for unorganized sector
-                  entrepreneurship, passionate advocates for sustainable
-                  mobility proudly steering an eco-friendly CNG and EV fleet. We
-                  also ensure the secure delivery of your preferred perishables
-                  across various cities,backed by a fleet of refrigerated and
-                  freezer vans that power our Logistics business.
+                  premier taxi aggregators...
                 </p>
                 <h4>Company Info</h4>
                 <p>
@@ -149,148 +168,116 @@ const PostJobDetails = () => {
                 <p>
                   Naukri.com does not promise a job or an interview in exchange
                   of money. Fraudsters may ask you to pay in the pretext of
-                  registration fee, Refundable Fee…Read more
+                  registration fee...
                 </p>
               </div>
 
               {/* Similar jobs */}
               <div className="similar-title mt-4">
                 <h4> Similar jobs</h4>
-
                 <div className="similar-post p-4 mt-4 bg-white">
                   <h4>Driving Instructor</h4>
-                  <div className="fleet-post d-flex gap-3">
-                    <span>
-                      Everest Fleet &nbsp;
-                      <IoStar />
-                      &nbsp; 3.5 | 113 Reviews
-                    </span>
-                  </div>
-                  <div className="fleet-post">
-                    <p>
-                      <IoLocationOutline />
-                      Bengaluru(Singasandra)
-                    </p>
-                    <ul className="d-flex bang-title gap-3 p-0 m-0">
-                      <li>Training</li>
-                      <li>Driving</li>
-                      <li>Instructing</li>
-                      <li>Soft Skills</li>
-                      <li>Soft</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="similar-post p-4 mt-4 bg-white">
-                  <h4>Driver (car + Trucks) For THE Company - DELHI NCR - LMV OR
-                  HMV Licence</h4>
-                  <div className="fleet-post d-flex gap-3">
-                    <span>
-                      Shelendra &nbsp;
-                      <IoStar />
-                      &nbsp; 3.5 | 113 Reviews
-                    </span>
-                  </div>
-                  <div className="fleet-post">
-                    <p>
-                      <IoLocationOutline />
-                      Bengaluru(Singasandra)
-                    </p>
-                    <ul className="d-flex bang-title gap-3 p-0 m-0">
-                      <li>Training</li>
-                      <li>Driving</li>
-                      <li>Instructing</li>
-                      <li>Soft Skills</li>
-                      <li>Soft</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="similar-post p-4 mt-4 bg-white">
-                  <h4>Trainer</h4>
-                  <div className="fleet-post d-flex gap-3">
-                    <span>
-                      Usha Armour &nbsp;
-                      <IoStar />
-                      &nbsp; 3.5 | 113 Reviews
-                    </span>
-                  </div>
-                  <div className="fleet-post">
-                    <p>
-                      <IoLocationOutline />
-                      Bengaluru(Singasandra)
-                    </p>
-                    <ul className="d-flex bang-title gap-3 p-0 m-0">
-                      <li>Training</li>
-                      <li>Driving</li>
-                      <li>Instructing</li>
-                      <li>Soft Skills</li>
-                      <li>Soft</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="similar-post p-4 mt-4 bg-white">
-                  <h4>Teacher and Trainer</h4>
-                  <div className="fleet-post d-flex gap-3">
-                    <span>
-                      Natraj Technosoft &nbsp;
-                      <IoStar />
-                      &nbsp; 3.5 | 113 Reviews
-                    </span>
-                  </div>
-                  <div className="fleet-post">
-                    <p>
-                      <IoLocationOutline />
-                      Bengaluru(Singasandra)
-                    </p>
-                    <ul className="d-flex bang-title gap-3 p-0 m-0">
-                      <li>Training</li>
-                      <li>Driving</li>
-                      <li>Instructing</li>
-                      <li>Soft Skills</li>
-                      <li>Soft</li>
-                    </ul>
-                  </div>
+                  <p>
+                    <IoLocationOutline />
+                    Bengaluru(Singasandra)
+                  </p>
                 </div>
               </div>
             </div>
-
-
             <div className="col-lg-4">
               <div className="all-main-post bg-white p-4">
-                <h4>Driver Trainer</h4>
+                <h4>Jobs you might be interested in</h4>
                 <div className="fleet-post d-flex gap-2">
-                  <p>Everest Fleet</p>
-                  <span>
-                    <IoStar /> &nbsp; 3.5 | 113 Reviews
-                  </span>
+                  <h6 className="mt-2">
+                    Driver (car + Trucks) For THE Company - DELHI NCR - LMV OR
+                    HMV Licence
+                  </h6>
                 </div>
-                <div className="fleet-post d-flex gap-3">
-                  <p>
-                    <PiToolbox />1 - 2 years
-                  </p>
-                  <span>Rs | 2.75-3.5 Lacs P.A.</span>
+                <div>
+                  <p>Shelendra Singh</p>
                 </div>
                 <div className="fleet-post d-flex justify-content-between gap-3">
                   <p>
                     <IoLocationOutline />
                     New Delhi( Uttam Nagar )
                   </p>
+
+                  <p>Posted 27 Days Ago</p>
+                </div>
+                <hr />
+
+
+                <div className="fleet-post d-flex gap-2">
+                  <h6 className="mt-2">
+                    Driver (car + Trucks) For THE Company - DELHI NCR - LMV OR
+                    HMV Licence
+                  </h6>
+                </div>
+                <div>
+                  <p>Shelendra Singh</p>
+                </div>
+                <div className="fleet-post d-flex justify-content-between gap-3">
+                  <p>
+                    <IoLocationOutline />
+                    New Delhi( Uttam Nagar )
+                  </p>
+
+                  <p>Posted 27 Days Ago</p>
+                </div>
+                <hr />
+
+
+                <div className="fleet-post d-flex gap-2">
+                  <h6 className="mt-2">
+                    Driver (car + Trucks) For THE Company - DELHI NCR - LMV OR
+                    HMV Licence
+                  </h6>
+                </div>
+                <div>
+                  <p>Rahul Singh</p>
+                </div>
+                <div className="fleet-post d-flex justify-content-between gap-3">
+                  <p>
+                    <IoLocationOutline />
+                    New Delhi( Uttam Nagar )
+                  </p>
+
+                  <p>Posted 27 Days Ago</p>
+                </div>
+                <hr />
+
+
+
+                <div className="fleet-post d-flex gap-2">
+                  <h6 className="mt-2">
+                    Driver (car + Trucks) For THE Company - DELHI NCR - LMV OR
+                    HMV Licence
+                  </h6>
+                </div>
+                <div>
+                  <p>Ankit Singh</p>
+                </div>
+                <div className="fleet-post d-flex justify-content-between gap-3">
+                  <p>
+                    <IoLocationOutline />
+                    New Delhi( Uttam Nagar )
+                  </p>
+
+                  <p>Posted 27 Days Ago</p>
                 </div>
                 <hr />
               </div>
             </div>
           </div>
+
         </div>
       </div>
-      <div className="feel-jou-exit">
-        <FeelJourney />
-      </div>
+      <FeelJourney />
       <Slider />
       <OnlineStore />
       <Footer />
     </div>
   );
 };
+
 export default PostJobDetails;
