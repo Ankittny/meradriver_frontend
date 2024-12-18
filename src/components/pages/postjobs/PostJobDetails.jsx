@@ -68,7 +68,7 @@ const PostJobDetails = ({ params }) => {
             <div className="col-lg-8">
               <div className="all-main-post bg-white p-4">
                 {id ? <p>Job ID: {id}</p> : <p>Loading Job ID...</p>}
-                <h4>Driver Trainer</h4>
+                <h4 className="fw-bold">Driver Trainer</h4>
                 <div className="fleet-post d-flex gap-2">
                   <p>Everest Fleet</p>
                   <span>
@@ -90,15 +90,16 @@ const PostJobDetails = ({ params }) => {
                 </div>
                 <hr />
                 <div className="fleet-post d-flex justify-content-between  gap-3">
-                  <p>Posted: 21 days ago | Openings: 1 | Applicants: 94</p>
+                  <p>Posted: <strong>21 days ago </strong>| Openings: <strong>1</strong> | Applicants: <strong>94</strong> </p>
                   <div className="d-flex gap-3">
+                  <button className="book-button">Register To APPLY</button>
                     <button className="book-button">APPLY</button>
                   </div>
                 </div>
               </div>
 
               <div className="job-title p-4 mt-4 bg-white">
-                <h3>Job description</h3>
+                {/* <h3>Job description</h3>
                 <h4 className="mt-3">Role & responsibilities</h4>
                 <p>
                   Need to Teach driving and Uber Application use to newly hired
@@ -107,9 +108,9 @@ const PostJobDetails = ({ params }) => {
                 <h4>Preferred candidate profile</h4>
                 <p>Driving Instructor</p>
                 <h4>Perks and benefits</h4>
-                <p>Good salary Hike</p>
+                <p>Good salary Hike</p> */}
                 <div className="role-post mt-5">
-                  <p>
+                  {/* <p>
                     <strong>Role: </strong> Teaching & Training - Other
                   </p>
                   <p>
@@ -118,39 +119,39 @@ const PostJobDetails = ({ params }) => {
                   </p>
                   <p>
                     <strong>Department: </strong> Teaching & Training
-                  </p>
+                  </p> */}
                   <p>
                     <strong>Employment Type: </strong> Full Time, Permanent
                   </p>
-                  <p>
+                  {/* <p>
                     <strong>Role Category: </strong> Teaching & Training - Other
-                  </p>
-                  <h4 className="mt-3">Education</h4>
+                  </p> */}
+                  {/* <h4 className="mt-3">Education</h4>
                   <p>
                     <strong>UG:</strong> Graduation Not Required
-                  </p>
+                  </p> */}
                   <h4 className="mt-3">Key Skills</h4>
                   <p>
                     Skills highlighted with ‘
                     <IoStar />‘ are preferred keyskills
                   </p>
-                  <div className="d-flex gap-3">
+                  {/* <div className="d-flex gap-3">
                     <button className="book-button">
                       <IoStar /> &nbsp; driver
                     </button>
                     <button className="book-button  ">
                       <IoStar /> &nbsp; Driving
                     </button>
-                  </div>
+                  </div> */}
                 </div>
                 <hr />
-                <div className="social-icon m-lg-1 gap-4">
+                {/* <div className="social-icon m-lg-1 gap-4">
                   <FacebookIcon color={"primary"} />
                   <XIcon />
                   <LinkedInIcon color={"primary"} />
-                </div>
+                </div> */}
               </div>
-              <div className="company-title p-4 mt-4 bg-white ">
+              <div className="company-title p-4 mt-4 bg-white mb-5">
                 <h4>About company</h4>
                 <p>
                   Transforming Indias shared mobility scene, one journey at a
@@ -163,17 +164,17 @@ const PostJobDetails = ({ params }) => {
                   <strong>Address: </strong> Everest Fleet, New Delhi
                 </p>
               </div>
-              <div className="beware-title p-4 mt-4 bg-white">
+              {/* <div className="beware-title p-4 mt-4 bg-white">
                 <h4>Beware of imposters!</h4>
                 <p>
                   Naukri.com does not promise a job or an interview in exchange
                   of money. Fraudsters may ask you to pay in the pretext of
                   registration fee...
                 </p>
-              </div>
+              </div> */}
 
               {/* Similar jobs */}
-              <div className="similar-title mt-4">
+              {/* <div className="similar-title mt-4">
                 <h4> Similar jobs</h4>
                 <div className="similar-post p-4 mt-4 bg-white">
                   <h4>Driving Instructor</h4>
@@ -182,7 +183,7 @@ const PostJobDetails = ({ params }) => {
                     Bengaluru(Singasandra)
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="col-lg-4">
               <div className="all-main-post bg-white p-4">

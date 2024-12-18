@@ -111,7 +111,8 @@ const Footer = () => {
               <div className="d-flex gap-4">
                 <div className="google-idea">
                   <img src="/google-play.png" width="150" alt="dd6" />
-                    <div className="col-lg-4 pt-5">
+                  
+                    {/* <div className="col-lg-4 pt-5">
                         <div className="footer-heading">
                             <h4 className="glad-list mb-4">Company</h4>
                             <ul className="glad-item">
@@ -122,8 +123,8 @@ const Footer = () => {
                                 <li><Link href={"/contact"}>Contact Us</Link></li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="col-lg-4 pt-5">
+                    </div> */}
+                    {/* <div className="col-lg-4 pt-5">
                         <div className="footer-heading">
                             <h4 className="glad-list mb-4">Quick Link</h4>
                             <ul className="glad-item">
@@ -134,8 +135,8 @@ const Footer = () => {
                                 <li>How It Works</li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="col-lg-4 pt-5">
+                    </div> */}
+                    {/* <div className="col-lg-4 pt-5">
                         <div className="footer-heading">
                             <h4 className="glad-list mb-4">Download Our App</h4>
                             <div className="d-flex gap-4">
@@ -147,7 +148,7 @@ const Footer = () => {
                             </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="google-idea">
                   <img src="/app-store.png" width="150" alt="dd7" />
