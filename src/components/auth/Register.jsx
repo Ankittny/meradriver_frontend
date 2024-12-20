@@ -12,6 +12,7 @@ import { Grid, TextField } from "@material-ui/core";
 import { Button } from "@mui/material";
 import Image from "next/image";
 import Loader from "../Loader";
+import Link from "next/link";
 
 // Validation Schema
 const validationSchema = Yup.object({
@@ -208,9 +209,9 @@ const Register = () => {
 
               <p className="mt-4 text-center">
                 Already have an account?{" "}
-                <a href="/login" className="cursor">
+                <Link href="/login" className="cursor">
                   Login
-                </a>
+                </Link>
               </p>
             </div>
           </div>

@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -16,6 +17,8 @@ import DialogTitle from "@mui/material/DialogTitle";
 import TextField from "@mui/material/TextField";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 import FeelJourney from "../../FeelJourney";
 import Slider from "../../Slider";
@@ -29,6 +32,9 @@ const PostJobDetails = ({ params }) => {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [mobile_number, setMobile] = useState("");
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
 
   const { Details, loading, error } = useSelector(
     (state) => state.driverDetail
@@ -57,9 +63,13 @@ const PostJobDetails = ({ params }) => {
 
   const handleClose = () => {
     setOpen(false);
-    setName("")
-    setAddress("")
-    setMobile("")
+    setName("");
+    setAddress("");
+    setMobile("");
+  };
+
+  const handleSnackbarClose = () => {
+    setSnackbarOpen(false);
   };
 
   const handleHireNow = (e) => {
@@ -67,12 +77,16 @@ const PostJobDetails = ({ params }) => {
     const driver_id = id;
     // Basic validation
     if (!name || !address || !mobile_number) {
-      alert("Please fill out all fields.");
+      setSnackbarMessage("Please fill out all fields.");
+      setSnackbarSeverity("error");
+      setSnackbarOpen(true);
       return;
     }
 
     if (!/^\d{10}$/.test(mobile_number)) {
-      alert("Please enter a valid mobile number.");
+      setSnackbarMessage("Please enter a valid mobile number.");
+      setSnackbarSeverity("error");
+      setSnackbarOpen(true);
       return;
     }
 
@@ -80,10 +94,20 @@ const PostJobDetails = ({ params }) => {
     formData.append("name", name);
     formData.append("address", address);
     formData.append("mobile_number", mobile_number);
-    formData.append("driver_id",driver_id);
+    formData.append("driver_id", driver_id);
 
-    dispatch(hireDriver(formData));
-    handleClose();
+    dispatch(hireDriver(formData))
+      .then(() => {
+        setSnackbarMessage("Hire request submitted successfully!");
+        setSnackbarSeverity("success");
+        setSnackbarOpen(true);
+        handleClose();
+      })
+      .catch(() => {
+        setSnackbarMessage("Failed to submit hire request. Please try again.");
+        setSnackbarSeverity("error");
+        setSnackbarOpen(true);
+      });
   };
 
   if (loading) return <p className="loading">Loading...</p>;
@@ -175,6 +199,7 @@ const PostJobDetails = ({ params }) => {
                         margin="dense"
                         id="name"
                         label="Name"
+                        name="name"
                         type="text"
                         fullWidth
                         variant="standard"
@@ -188,6 +213,7 @@ const PostJobDetails = ({ params }) => {
                         label="Address"
                         type="text"
                         fullWidth
+                        name="address"
                         variant="standard"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
@@ -199,6 +225,7 @@ const PostJobDetails = ({ params }) => {
                         label="Mobile Number"
                         type="text"
                         fullWidth
+                        name="mobile-number"
                         variant="standard"
                         value={mobile_number}
                         onChange={(e) => setMobile(e.target.value)}
@@ -220,6 +247,22 @@ const PostJobDetails = ({ params }) => {
                     </DialogActions>
                   </Dialog>
 
+                  <Snackbar
+                    open={snackbarOpen}
+                    autoHideDuration={6000}
+                    onClose={handleSnackbarClose}
+                    anchorOrigin={{ vertical: "top", horizontal: "center", }}
+                  >
+                    <Alert
+                      onClose={handleSnackbarClose}
+                      severity="success"
+                      variant="filled"
+                      sx={{ width: "100%" }}
+                    >
+                      {snackbarMessage}
+                    </Alert>
+                  </Snackbar>
+
                   <div className="job-title p-4 mt-4 bg-white">
                     <h4>Key Skills</h4>
                     <p>Skills highlighted with ‘<IoStar />’ are preferred key skills</p>
@@ -230,7 +273,7 @@ const PostJobDetails = ({ params }) => {
                   </div>
 
                   <div className="company-title p-4 mt-4 bg-white mb-5">
-                    <h4>About Company</h4>
+                  <h4>About Company</h4>
                     <p>
                       Transforming India's shared mobility scene, one journey at a time. Our fleet, packed with 16,500+ cars, fuels the heart of seven bustling metro cities in seamless collaboration with premier taxi aggregators...
                     </p>
@@ -241,11 +284,10 @@ const PostJobDetails = ({ params }) => {
                   </div>
                 </div>
               ) : (
-                <p>No job details available</p>
+                <p>No driver details available.</p>
               )}
             </div>
 
-            {/* Jobs you might be interested in */}
             <div className="col-lg-4">
               <div className="all-main-post bg-white p-4">
                 <h4>Jobs you might be interested in</h4>
@@ -275,7 +317,9 @@ const PostJobDetails = ({ params }) => {
         </div>
       </div>
 
-      <FeelJourney />
+     
+     <FeelJourney />
+     
       <Slider />
       <OnlineStore />
       <Footer />

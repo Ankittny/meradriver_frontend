@@ -135,24 +135,7 @@ const Slider = () => {
             <StarOutlineIcon />
           </div>
         </SwiperSlide>
-        {/* <SwiperSlide>
-          <div className="slider-slide d-flex gap-4">
-            <img src={"/testimonial_img4.png"} alt="dd7" />
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit
-              esse cillum dolore eu fugiat nulla pariatu Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore
-              eu fugiat nulla pariatu Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatu</p>
-          </div>
-          <div className="icons text-end ">
-            <StarOutlineIcon />
-            <StarOutlineIcon />
-            <StarOutlineIcon />
-            <StarOutlineIcon />
-            <StarOutlineIcon />
-          </div>
-        </SwiperSlide> */}
+        
         <SwiperSlide>
           <div className="slider-slide d-flex gap-4">
             <img src={"/testimonial_img.png"} alt="dd7" />
