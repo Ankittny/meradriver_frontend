@@ -1,6 +1,6 @@
-// .servicepage{
+/* // .servicepage{
 //     position: absolute;
-// }
+// } */
 .service-top{
     background-color: rgba(200, 186, 159, 1);
     width: 100%;
@@ -59,16 +59,16 @@
     .feel-jou-exit{
         margin-top: 75px;
     }
-                                      //------------- media-query-start----------------
+                                     
 
     @media(max-width:768px){
         .service-top-right-image {
             width: 100%;
             margin-top: 0px;
         }
-        // .our-services {
+        /* // .our-services {
         //     margin-top: 50px;
-        // }
+        // } */
         .trainer-manual-para{
             padding: 0px 10px;
         }

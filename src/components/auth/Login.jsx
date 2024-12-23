@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import "../../styles/login.scss";
+import "../../styles/login.css";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";

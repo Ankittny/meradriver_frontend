@@ -60,22 +60,22 @@
         width: 100%;
         margin-top: 0px;
     }
-    // .mera-tech{
+    /* // .mera-tech{
     //     margin-top: 85px !important;
-    // }
+    // } */
     .cf-row{
         flex-direction: column-reverse;
     }
-    // .cf-rows {
+    /* // .cf-rows {
     //     margin-top: -30px !important;
-    // }
+    // } */
     .hy-text{
         margin-top: 30px !important;
     }
    
 }
 
-   //------------- media-query-start----------------
+  
    @media(max-width:767px) and (min-width:426px){
     .tech-row{
         margin-top: 100px;

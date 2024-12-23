@@ -19,6 +19,7 @@
     .all-main-post{
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         border-radius: 20px;
+        margin-bottom: 85px;
     }
     .bang-title {
         list-style: none;
@@ -115,8 +116,8 @@
     .social-icon {
         display: flex;
         gap: 1rem; /* Adjust the gap value as needed */
-        // margin: 1rem;
-        // cursor: pointer;
+        /* // margin: 1rem;
+        // cursor: pointer; */
       }
       .flex{
         display: flex;
@@ -193,7 +194,7 @@
     color: #155A8B;
   }
 
- //-------------=================== media-query-start----------------===================================
+ 
 @media(max-width:991px){
     .job-card{
         margin-top: 30px;
@@ -213,7 +214,7 @@
             margin-top: 30px;
         }
 
-        // post-details
+        
 
         .post-top-right-image {
             width: 100%;
@@ -222,9 +223,9 @@
         .fleet-post{
             flex-direction: column;
         }
-        // .post-title{
+        /* // .post-title{
         //     margin-top: 60px !important;
-        // }
+        // } */
         .book-button{
             border-radius: 30px;
             font-size: 10px !important;
