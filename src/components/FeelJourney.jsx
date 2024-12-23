@@ -1,5 +1,4 @@
 import React from 'react'
-import "../styles/FeelJourney.scss";
 import Image from 'next/image';
 
 const FeelJourney = () => {

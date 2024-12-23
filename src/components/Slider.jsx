@@ -1,5 +1,5 @@
 
-import "../styles/slider.scss";
+// import "../styles/slider.scss";
 import Image from "next/image";
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
@@ -13,7 +13,6 @@ import 'swiper/css';
 // import 'swiper/css/pagination';
 
 // import './styles.css';/
-
 // import required modules
 import { Pagination } from 'swiper/modules';
 
@@ -135,24 +134,7 @@ const Slider = () => {
             <StarOutlineIcon />
           </div>
         </SwiperSlide>
-        {/* <SwiperSlide>
-          <div className="slider-slide d-flex gap-4">
-            <img src={"/testimonial_img4.png"} alt="dd7" />
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit
-              esse cillum dolore eu fugiat nulla pariatu Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore
-              eu fugiat nulla pariatu Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatu</p>
-          </div>
-          <div className="icons text-end ">
-            <StarOutlineIcon />
-            <StarOutlineIcon />
-            <StarOutlineIcon />
-            <StarOutlineIcon />
-            <StarOutlineIcon />
-          </div>
-        </SwiperSlide> */}
+        
         <SwiperSlide>
           <div className="slider-slide d-flex gap-4">
             <img src={"/testimonial_img.png"} alt="dd7" />
