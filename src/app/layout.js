@@ -6,6 +6,8 @@ import "../styles/app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
 import StoreProvider from "@/redux/StoreProvider";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 import Head from 'next/head';
 
 const geistSans = localFont({

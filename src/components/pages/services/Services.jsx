@@ -5,9 +5,15 @@ import FeelJourney from "../../FeelJourney";
 import Slider from "../../Slider";
 import OnlineStore from "../../OnlineStore";
 import Footer from "../../Footer";
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 import "../../../styles/services.css";
 
 const Services = () => {
+   useEffect(()=>{
+       Aos.init({duration:600})
+    },[])
   return (
     <>
       <div className="servicepage ">
