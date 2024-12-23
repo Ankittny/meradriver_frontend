@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import "../../../styles/postjobs.scss";
+// import "../../../styles/postjobs.scss";
 import { IoStar, IoLocationOutline } from "react-icons/io5";
 import { PiToolbox } from "react-icons/pi";
 import { useDispatch, useSelector } from "react-redux";

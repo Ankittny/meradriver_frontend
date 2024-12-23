@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import "../../../styles/contactusPage.scss";
+// import "../../../styles/contactusPage.scss";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "../../styles/login.scss";
+// import "../../styles/login.scss";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";

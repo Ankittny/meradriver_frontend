@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import "../../../styles/aboutuspage.scss";
+// import "../../../styles/aboutuspage.scss";
 import AboutusMeraDriver from "../../AboutusMeraDriver";
 import FeelJourney from "../../FeelJourney";
 import Slider from "../../Slider";

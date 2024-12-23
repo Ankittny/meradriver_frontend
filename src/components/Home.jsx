@@ -1,6 +1,6 @@
 "use client";
 // import React, { useState } from "react";
-import "../styles/home.scss";
+// import "../styles/home.scss";
 import Navbar from "./Navbar";
 import CounterComponent from "./CounterComponent";
 import Image from "next/image";

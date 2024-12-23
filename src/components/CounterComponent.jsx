@@ -2,7 +2,7 @@
 "use client"
 import React from 'react';
 import CountUp from 'react-countup';
-import "../styles/counter.scss";
+// import "../styles/counter.scss";
 import { FaHeart, FaHandshake, FaUserTie, FaMapMarkerAlt } from 'react-icons/fa';
 
 const CounterComponent = () => {

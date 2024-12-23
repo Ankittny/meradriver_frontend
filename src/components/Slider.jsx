@@ -1,5 +1,5 @@
 
-import "../styles/slider.scss";
+// import "../styles/slider.scss";
 import Image from "next/image";
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
@@ -13,7 +13,6 @@ import 'swiper/css';
 // import 'swiper/css/pagination';
 
 // import './styles.css';/
-
 // import required modules
 import { Pagination } from 'swiper/modules';
 
