@@ -14,7 +14,7 @@ const BestDriver = () => {
             </h1>
           </div>
 
-          <div className="row bestdrive-drivers">
+          <div className="row bestdrive-drivers " data-aos="zoom-in-up">
             <div className="col-lg-3 col-xs-6 col-sm-6 col-6" style={{ textAlign: "center" }}>
               <img
                 src={"/Frame-107.png"}

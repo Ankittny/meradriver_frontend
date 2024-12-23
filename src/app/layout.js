@@ -3,6 +3,10 @@ import localFont from "next/font/local";
 import "../styles/app.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import StoreProvider from "@/redux/StoreProvider";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

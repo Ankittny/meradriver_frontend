@@ -31,6 +31,9 @@ import "swiper/css";
 import { useDispatch, useSelector } from "react-redux";
 import { enquery } from "@/redux/Action/Enquery";
 import 'bootstrap/dist/js/bootstrap.bundle';
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { duration } from "@mui/material";
 const Home = () => {
   const [formType, setFormType] = useState("individual");
   const [expanded, setExpanded] = useState(false);
@@ -75,6 +78,10 @@ const Home = () => {
       }));
     }
   }, [formType]);
+
+  useEffect(() => {
+    Aos.init({ duration: 600 })
+  }, [])
 
 
   const handleTabClick = (type) => {
@@ -135,7 +142,7 @@ const Home = () => {
             <button className=" book-tickets">Book</button>
           </div>
 
-          <div className="form-container">
+          <div className="form-container" data-aos="fade-left">
             <p>ONLINE BOOKING</p>
             <p className="form-container-text">Book Your Driver Now</p>
             <div className="button-group mt-3">
@@ -290,7 +297,9 @@ const Home = () => {
       <div className="container ">
         <div className="row ">
           <div className="col-lg-6">
-            <div className="service-right">
+            <div className="service-right" data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine">
               <Image src={"/DeWatermark.png"} width={520} height={300} alt="" />
             </div>
           </div>
@@ -312,10 +321,10 @@ const Home = () => {
                     Huge Data base of several kinds of Drivers.
                   </p>
                   <p className="" style={{ textAlign: "center" }}>
-                  The behavior pattern of the driver/ employee is maintained.
+                    The behavior pattern of the driver/ employee is maintained.
                   </p>
                   <p className="" style={{ textAlign: "center" }}>
-                  Drivers available with international driving experience.
+                    Drivers available with international driving experience.
                   </p>
                 </div>
                 <div className="col-lg-6 service-left-menu ">
@@ -324,10 +333,10 @@ const Home = () => {
                     association of reputed agency.
                   </p>
                   <p className="" style={{ textAlign: "center" }}>
-                  If need be, English speaking drivers are provided.
+                    If need be, English speaking drivers are provided.
                   </p>
                   <p className="" style={{ textAlign: "center" }}>
-                  High profile drivers can be provided who have experience in handling VVIP customers.
+                    High profile drivers can be provided who have experience in handling VVIP customers.
                   </p>
                 </div>
               </div>
@@ -636,7 +645,8 @@ const Home = () => {
               <div className="work-apply">
                 <h4 className="text-center fw-bold">How it works?</h4>
               </div>
-              <div className="animation-heading mt-3">
+              <div className="animation-heading mt-3 " data-aos="fade-up"
+                data-aos-anchor-placement="top-center">
                 <img src={"/Layer_1.png"} alt="dd4" />
               </div>
             </div>
@@ -760,7 +770,7 @@ const Home = () => {
         <div className="container mt-5">
           <div className="row">
             <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
-              <div className="police-title py-3">
+              <div className="police-title py-3 " data-aos="fade-up-right">
                 <div className="image-little text-center">
                   <img
                     src={"/Group.png"}
@@ -775,7 +785,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
-              <div className="police-title py-3">
+              <div className="police-title py-3" data-aos="fade-up-right">
                 <div className="image-little text-center">
                   <img
                     src={"/Frame.png"}
@@ -788,7 +798,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
-              <div className="police-title  py-3">
+              <div className="police-title  py-3" data-aos="fade-up-left">
                 <div className="image-little text-center">
                   <img
                     src={"/Group (1).png"}
@@ -803,7 +813,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
-              <div className="police-title py-3">
+              <div className="police-title py-3" data-aos="fade-up-left">
                 <div className="image-little text-center">
                   <img
                     src={"/Group (2).png"}
@@ -820,7 +830,7 @@ const Home = () => {
             <div className="main-circle-icon mt-5 mx-auto">
               <div className="row">
                 <div className="col-lg-4 col-sm-6 col-xs-6 col-6">
-                  <div className="police-title py-3">
+                  <div className="police-title py-3" data-aos="flip-left">
                     <div className="image-little text-center">
                       <img
                         src={"/Frame (2).png"}
@@ -833,7 +843,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="col-lg-4  col-sm-6 col-xs-6 col-6">
-                  <div className="police-title py-3">
+                  <div className="police-title py-3" data-aos="flip-right">
                     <div className="image-little text-center">
                       <img
                         src={"/Frame (1).png"}
@@ -848,7 +858,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="col-lg-4  col-sm-6 col-xs-6 col-6">
-                  <div className="police-title py-3">
+                  <div className="police-title py-3" data-aos="flip-left">
                     <div className="image-little text-center">
                       <img
                         src={"/Group (3).png"}
@@ -1053,8 +1063,8 @@ const Home = () => {
                 <div className="accordion-item mt-3">
                   <h2 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Will I get to travel in a shared vehicle or privately
-                    reserved?
+                      Will I get to travel in a shared vehicle or privately
+                      reserved?
                     </button>
                   </h2>
                   <div id="collapseFour" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -1070,8 +1080,8 @@ const Home = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header">
                     <button className="accordion-button" type="button" Name data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
-                    If my flight gets delayed, will I be picked up by the
-                        chauffeur?
+                      If my flight gets delayed, will I be picked up by the
+                      chauffeur?
                     </button>
                   </h2>
                   <div id="collapsefive" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -1085,7 +1095,7 @@ const Home = () => {
                 <div className="accordion-item mt-3">
                   <h2 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
-                    At the airport where will my driver come to receive me?
+                      At the airport where will my driver come to receive me?
                     </button>
                   </h2>
                   <div id="collapsesix" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -1099,7 +1109,7 @@ const Home = () => {
                 <div className="accordion-item mt-3">
                   <h2 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
-                    Do you provide child seats?
+                      Do you provide child seats?
                     </button>
                   </h2>
                   <div id="collapseseven" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -1114,13 +1124,13 @@ const Home = () => {
                 <div className="accordion-item mt-3">
                   <h2 className="accordion-header">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
-                    What happens if I'm unable to find my driver at the
-                        airport?
+                      What happens if I'm unable to find my driver at the
+                      airport?
                     </button>
                   </h2>
                   <div id="collapseeight" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                    <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Suspendisse malesuada lacus ex, sit amet blandit leo
                         lobortis eget.</span>
                     </div>
