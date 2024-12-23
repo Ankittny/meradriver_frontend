@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-// import "../../../styles/tech.scss";
+import "../../../styles/tech.css";
 import FeelJourney from '../../FeelJourney';
 import OnlineStore from '../../OnlineStore';
 import Slider from '../../Slider';

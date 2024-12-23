@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-// import "../styles/bestdriver.scss";
+import "../styles/bestdriver.css";
 import Image from "next/image";
 
 const BestDriver = () => {
