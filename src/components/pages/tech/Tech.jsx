@@ -56,8 +56,8 @@ const Tech = () => {
                                 />
                             </div>
                         </div>
-                        </div>
-                        <div className='row cf-row mt-5'>
+                    </div>
+                    <div className='row cf-row mt-5'>
                         <div className='col-lg-6'>
                             <div className='tech-row-image'>
                                 <img
@@ -81,8 +81,8 @@ const Tech = () => {
                                     before.</p>
                             </div>
                         </div>
-</div>
-<div className='row'>
+                    </div>
+                    <div className='row'>
                         <div className='col-lg-6 mt-5 cf-rows ' >
                             <div className='tech-row'>
                                 <h1>Mera Drive™ <br />
@@ -106,8 +106,8 @@ const Tech = () => {
                                 />
                             </div>
                         </div>
-                        </div>
-                        <div className='row cf-row'>
+                    </div>
+                    <div className='row cf-row'>
                         <div className='col-lg-6 mt-5 cf-rows '>
                             <div className='tech-row-image'>
                                 <img
@@ -131,102 +131,102 @@ const Tech = () => {
                                     before.</p>
                             </div>
                         </div>
-                        </div>
+                    </div>
 
-                        <div className='icons-toys mt-5'>
-                            <div className='row'>
-                                <div className='col-lg-4'>
-                                    <div className='toys-size'>
-                                        <img
-                                            src={"/feedback.svg.png"}
-                                            alt=""
-                                            className="tech-module-img"
-                                        />
-                                        <h4>Objective In-Vehicle <br />
-                                            Feedback</h4>
-                                        <p >Give drivers real-time coaching
-                                            on 150 maneuvers to slash
-                                            accidents, expenses and risk.</p>
-                                    </div>
+                    <div className='icons-toys mt-5'>
+                        <div className='row'>
+                            <div className='col-lg-4'>
+                                <div className='toys-size'>
+                                    <img
+                                        src={"/feedback.svg.png"}
+                                        alt=""
+                                        className="tech-module-img"
+                                    />
+                                    <h4>Objective In-Vehicle <br />
+                                        Feedback</h4>
+                                    <p >Give drivers real-time coaching
+                                        on 150 maneuvers to slash
+                                        accidents, expenses and risk.</p>
                                 </div>
-                                <div className='col-lg-4 hy-text'>
-                                    <div className='toys-size'>
-                                        <img
-                                            src={"/finance.svg.png"}
-                                            alt=""
-                                            className="tech-module-img"
-                                        />
-                                        <h4>App “Duty” Settings</h4>
-                                        <p>GreenRoad offers drivers value
-                                            whenever they’re on the road –
-                                            whether or not it’s for work.</p>
-                                    </div>
+                            </div>
+                            <div className='col-lg-4 hy-text'>
+                                <div className='toys-size'>
+                                    <img
+                                        src={"/finance.svg.png"}
+                                        alt=""
+                                        className="tech-module-img"
+                                    />
+                                    <h4>App “Duty” Settings</h4>
+                                    <p>GreenRoad offers drivers value
+                                        whenever they’re on the road –
+                                        whether or not it’s for work.</p>
                                 </div>
-                                <div className='col-lg-4 hy-text'>
-                                    <div className='toys-size'>
-                                        <img
-                                            src={"/trophy.svg.png"}
-                                            alt=""
-                                            className="tech-module-img"
-                                        />
-                                        <h4>Gamification</h4>
-                                        <p>Motivate safe driving using
-                                            evidence-based behavior
-                                            management methodologies
-                                            and friendly competition to
-                                            make safety (dare we say it?)
-                                            fun.</p>
-                                    </div>
+                            </div>
+                            <div className='col-lg-4 hy-text'>
+                                <div className='toys-size'>
+                                    <img
+                                        src={"/trophy.svg.png"}
+                                        alt=""
+                                        className="tech-module-img"
+                                    />
+                                    <h4>Gamification</h4>
+                                    <p>Motivate safe driving using
+                                        evidence-based behavior
+                                        management methodologies
+                                        and friendly competition to
+                                        make safety (dare we say it?)
+                                        fun.</p>
                                 </div>
+                            </div>
 
-                                <div className='col-lg-4 mt-5'>
-                                    <div className='toys-size'>
-                                        <img
-                                            src={"/safety-score.svg.png"}
-                                            alt=""
-                                            className="tech-module-img"
-                                        />
-                                        <h4>Proactive Safety Alerts</h4>
-                                        <p>Keep your drivers aware of risky
-                                            areas to help them prevent the
-                                            next collision..</p>
-                                    </div>
+                            <div className='col-lg-4 mt-5'>
+                                <div className='toys-size'>
+                                    <img
+                                        src={"/safety-score.svg.png"}
+                                        alt=""
+                                        className="tech-module-img"
+                                    />
+                                    <h4>Proactive Safety Alerts</h4>
+                                    <p>Keep your drivers aware of risky
+                                        areas to help them prevent the
+                                        next collision..</p>
                                 </div>
-                                <div className='col-lg-4 mt-5'>
-                                    <div className='toys-size'>
-                                        <img
-                                            src={"/car.svg.png"}
-                                            alt=""
-                                            className="tech-module-img"
-                                        />
-                                        <h4>Safety Score</h4>
-                                        <p>Give drivers an objective, easy-
-                                            to-understand measurement for
-                                            tracking their safety
-                                            performance.</p>
-                                    </div>
+                            </div>
+                            <div className='col-lg-4 mt-5'>
+                                <div className='toys-size'>
+                                    <img
+                                        src={"/car.svg.png"}
+                                        alt=""
+                                        className="tech-module-img"
+                                    />
+                                    <h4>Safety Score</h4>
+                                    <p>Give drivers an objective, easy-
+                                        to-understand measurement for
+                                        tracking their safety
+                                        performance.</p>
                                 </div>
-                                <div className='col-lg-4 mt-5'>
-                                    <div className='toys-size'>
-                                        <img
-                                            src={"/shield.svg.png"}
-                                            alt=""
-                                            className="tech-module-img"
-                                        />
-                                        <h4>Distracted Driving <br />
+                            </div>
+                            <div className='col-lg-4 mt-5'>
+                                <div className='toys-size'>
+                                    <img
+                                        src={"/shield.svg.png"}
+                                        alt=""
+                                        className="tech-module-img"
+                                    />
+                                    <h4>Distracted Driving <br />
 
-                                            Solution</h4>
-                                        <p>Disrupt incoming calls and
-                                            blocks notifications, while still
-                                            allowing driving-related apps to
-                                            operate normally.</p>
-                                    </div>
+                                        Solution</h4>
+                                    <p>Disrupt incoming calls and
+                                        blocks notifications, while still
+                                        allowing driving-related apps to
+                                        operate normally.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            
+            </div>
+
             <div className="feel-jou-exit">
                 <FeelJourney />
             </div>
@@ -234,7 +234,7 @@ const Tech = () => {
             <OnlineStore />
             <Footer />
         </div>
-        
+
     )
 }
 
