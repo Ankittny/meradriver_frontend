@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-// import "../styles/onlinestore.scss";
+import "../styles/onlinestore.css";
 
 const OnlineStore = () => {
   return (

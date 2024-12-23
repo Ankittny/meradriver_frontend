@@ -1,5 +1,5 @@
 import React from "react";
-// import "../styles/footer.scss";
+import "../styles/footer.css";
 import { TiSocialFacebook } from "react-icons/ti";
 import { FaGooglePlusG } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";

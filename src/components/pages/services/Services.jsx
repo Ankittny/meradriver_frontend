@@ -5,6 +5,7 @@ import FeelJourney from "../../FeelJourney";
 import Slider from "../../Slider";
 import OnlineStore from "../../OnlineStore";
 import Footer from "../../Footer";
+import "../../../styles/services.css";
 
 const Services = () => {
   return (

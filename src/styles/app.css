@@ -34,7 +34,7 @@ p {
 }
 
 
-@import  "./home.scss";
+/* @import  "./home.scss";
 @import "./navbar.scss";
 @import "./bestdriver.scss";
 @import "./aboutus.scss";
@@ -47,7 +47,7 @@ p {
 @import "./footer.scss";
 @import "./register.scss";
 @import "./postjobs.scss";
-@import "./loader.scss";
+@import "./loader.scss"; */
 
 
 .css-ptdwpq-MuiPaper-root-MuiAppBar-root{
@@ -74,5 +74,5 @@ border-radius: 10px;
  .error {
   color:#FF0000;
   font-family: "Alilato", sans-serif !important;
-  // font-size: 16px;
+  font-size: 16px;
 }

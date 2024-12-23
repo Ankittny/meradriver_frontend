@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-// import "../../../styles/pricing.scss";
+import "../../../styles/pricing.css";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";

@@ -1,6 +1,6 @@
 "use client";
 // import React, { useState } from "react";
-// import "../styles/home.scss";
+import "../styles/home.css";
 import Navbar from "./Navbar";
 import CounterComponent from "./CounterComponent";
 import Image from "next/image";
@@ -23,10 +23,21 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { useDispatch, useSelector } from "react-redux";
 import { enquery } from "@/redux/Action/Enquery";
-import 'bootstrap/dist/js/bootstrap.bundle';
+
+import Head from 'next/head';
 const Home = () => {
+
+  useEffect(() => {
+    const element = document.getElementById("my-element");
+    console.log("Found element:", element);
+  }, []);
   const [formType, setFormType] = useState("individual");
   const [loadings, setLoading] = useState(false);
+
+
+  console.log("Environment:", typeof window !== "undefined" ? "Client" : "Server");
+
+
 
   const [formData, setFormData] = useState({
     name: "",
