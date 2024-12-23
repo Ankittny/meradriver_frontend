@@ -1,6 +1,6 @@
 "use client";
 // import React, { useState } from "react";
-import "../styles/home.scss";
+import "../styles/home.css";
 import Navbar from "./Navbar";
 import CounterComponent from "./CounterComponent";
 import Image from "next/image";
@@ -12,36 +12,41 @@ import { PiUsersThreeFill } from "react-icons/pi";
 import FeelJourney from "./FeelJourney";
 import Link from "next/link";
 import OnlineStore from "./OnlineStore";
-// import Accordion from "@mui/material/Accordion";
-// import AccordionActions from "@mui/material/AccordionActions";
-// import AccordionSummary from "@mui/material/AccordionSummary";
-// import AccordionDetails from "@mui/material/AccordionDetails";
-// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-// import Button from "@mui/material/Button";
+
 import Slider from "./Slider";
 import Footer from "./Footer";
 import React, { useEffect, useRef, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-// import StarOutlineIcon from "@mui/icons-material/StarOutline";
+
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-// import { Pagination } from "swiper/modules";
-// import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { enquery } from "@/redux/Action/Enquery";
 import 'bootstrap/dist/js/bootstrap.bundle';
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { duration } from "@mui/material";
+import Head from 'next/head';
+
 const Home = () => {
+
+  useEffect(() => {
+    const element = document.getElementById("my-element");
+    console.log("Found element:", element);
+  }, []);
   const [formType, setFormType] = useState("individual");
-  const [expanded, setExpanded] = useState(false);
+  const [loadings, setLoading] = useState(false);
+
+
+  console.log("Environment:", typeof window !== "undefined" ? "Client" : "Server");
+
+
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    mobile_no: "",
+    mobile: "",
     location: "",
     job_type: "",
     vehicle_type: "",
@@ -55,12 +60,11 @@ const Home = () => {
   const dispatch = useDispatch();
   const { loading, success, error } = useSelector((state) => state.enquery);
 
-  // const handleChanges = (panel) => (event, isExpanded) => {
-  //   setExpanded(isExpanded ? panel : false);
-  // };
+
 
   useEffect(() => {
     if (formType === "individual") {
+      
       setFormData((prev) => ({
         ...prev,
         company_name: "",
@@ -69,6 +73,7 @@ const Home = () => {
         company_email: "",
       }));
     } else {
+     
       setFormData((prev) => ({
         ...prev,
         name: "",
@@ -90,39 +95,56 @@ const Home = () => {
   };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value, 
+    }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
-    const formDataToSend = new FormData();
 
-    // Add fields common to both forms
-    formDataToSend.append("location", formData.location);
-    formDataToSend.append("vehicle_type", formData.vehicle_type);
-    formDataToSend.append("additional_info", formData.additional_info);
-    formDataToSend.append(
-      "company",
-      formType === "individual" ? "individual" : formData.company_name
-    );
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
+    setLoading(true); 
+  
+    try {
+      const formDataToSend = new FormData();
 
-    // Add fields specific to individual
-    if (formType === "individual") {
-      formDataToSend.append("name", formData.name);
-      formDataToSend.append("email", formData.email);
-      formDataToSend.append("mobile", formData.mobile);
-      formDataToSend.append("jobType", formData.job_type);
-    } else {
-      // Add fields specific to company
-      formDataToSend.append("contactPerson", formData.contact_person);
-      formDataToSend.append("companyContact", formData.contact_no);
-      formDataToSend.append("companyEmail", formData.company_email);
+      formDataToSend.append("location", formData.location || "");
+      formDataToSend.append("vehicle_type", formData.vehicle_type || "");
+      formDataToSend.append("additional_info", formData.additional_info || "");
+      formDataToSend.append(
+        "company",
+        formType === "individual" ? "individual" : formData.company_name || ""
+      );
+  
+  
+      if (formType === "individual") {
+        formDataToSend.append("name", formData.name || "");
+        formDataToSend.append("email", formData.email || "");
+        formDataToSend.append("mobile", formData.mobile || "");
+        formDataToSend.append("jobType", formData.job_type || "");
+      } else {
+       
+        formDataToSend.append("contactPerson", formData.contact_person || "");
+        formDataToSend.append("companyContact", formData.contact_no || "");
+        formDataToSend.append("companyEmail", formData.company_email || "");
+      }
+  
+      
+      await dispatch(enquery(formDataToSend));
+  
+      alert("Form submitted successfully!");
+    } catch (error) {
+      console.error("Error submitting form:", error); 
+      alert("Failed to submit the form. Please try again.");
+    } finally {
+      setLoading(false); 
     }
-
-    dispatch(enquery(formDataToSend));
   };
 
+  
   return (
     <>
       <Navbar />
@@ -163,125 +185,126 @@ const Home = () => {
             </div>
 
             <form className="booking-form" onSubmit={handleSubmit}>
-              {formType === "individual" ? (
-                <>
-                  <div className="form-row">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleChange}
-                    />
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      value={formData.email}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="form-row">
-                    <input
-                      type="tel"
-                      name="mobile"
-                      placeholder="Mobile No."
-                      value={formData.mobile}
-                      onChange={handleChange}
-                    />
-                    <input
-                      type="text"
-                      name="location"
-                      placeholder="Location"
-                      value={formData.location}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="form-row">
-                    <input
-                      type="text"
-                      name="jobType"
-                      placeholder="Job Type"
-                      value={formData.job_type}
-                      onChange={handleChange}
-                    />
-                    <input
-                      type="text"
-                      name="vehicleType"
-                      placeholder="Vehicle Type"
-                      value={formData.vehicle_type}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <textarea
-                    name="additionalInfo"
-                    placeholder="Additional information"
-                    value={formData.additional_info}
-                    onChange={handleChange}
-                  />
-                </>
-              ) : (
-                <>
-                  <div className="form-row">
-                    <input
-                      type="text"
-                      name="companyName"
-                      placeholder="Company Name"
-                      value={formData.company_name}
-                      onChange={handleChange}
-                    />
-                    <input
-                      type="text"
-                      name="contactPerson"
-                      placeholder="Contact Person"
-                      value={formData.contact_person}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="form-row">
-                    <input
-                      type="tel"
-                      name="companyContact"
-                      placeholder="Company Contact No."
-                      value={formData.contact_no}
-                      onChange={handleChange}
-                    />
-                    <input
-                      type="email"
-                      name="companyEmail"
-                      placeholder="Company Email"
-                      value={formData.company_email}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="form-row">
-                    <input
-                      type="text"
-                      name="location"
-                      placeholder="Location"
-                      value={formData.location}
-                      onChange={handleChange}
-                    />
-                    <input
-                      type="text"
-                      name="vehicleType"
-                      placeholder="Vehicle Type"
-                      value={formData.vehicle_type}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <textarea
-                    name="additionalInfo"
-                    placeholder="Additional information"
-                    value={formData.additional_info}
-                    onChange={handleChange}
-                  />
-                </>
-              )}
-              <button type="submit" className="submit-button btn-gone">
-                {loading ? "Submitting..." : "Submit"}
-              </button>
-            </form>
+  {formType === "individual" ? (
+    <>
+      <div className="form-row">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="form-row">
+        <input
+          type="tel"
+          name="mobile"
+          placeholder="Mobile No."
+          value={formData.mobile}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="location"
+          placeholder="Location"
+          value={formData.location}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="form-row">
+        <input
+          type="text"
+          name="job_type"
+          placeholder="Job Type"
+          value={formData.job_type}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="vehicle_type"
+          placeholder="Vehicle Type"
+          value={formData.vehicle_type}
+          onChange={handleChange}
+        />
+      </div>
+      <textarea
+        name="additional_info"
+        placeholder="Additional information"
+        value={formData.additional_info}
+        onChange={handleChange}
+      />
+    </>
+  ) : (
+    <>
+      <div className="form-row">
+        <input
+          type="text"
+          name="company_name"
+          placeholder="Company Name"
+          value={formData.company_name}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="contact_person"
+          placeholder="Contact Person"
+          value={formData.contact_person}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="form-row">
+        <input
+          type="tel"
+          name="contact_no"
+          placeholder="Company Contact No."
+          value={formData.contact_no}
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          name="company_email"
+          placeholder="Company Email"
+          value={formData.company_email}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="form-row">
+        <input
+          type="text"
+          name="location"
+          placeholder="Location"
+          value={formData.location}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="vehicle_type"
+          placeholder="Vehicle Type"
+          value={formData.vehicle_type}
+          onChange={handleChange}
+        />
+      </div>
+      <textarea
+        name="additional_info"
+        placeholder="Additional information"
+        value={formData.additional_info}
+        onChange={handleChange}
+      />
+    </>
+  )}
+  <button type="submit" className="submit-button btn-gone" disabled={loading}>
+    {loading ? "Submitting..." : "Submit"}
+  </button>
+</form>
+
             {success && (
               <p className="success-text">Booking submitted successfully!</p>
             )}
@@ -883,143 +906,13 @@ const Home = () => {
           <h2 className="frequently-title text-center">
             Frequently Asked Questions
           </h2>
-          {/* <div className="accordian-map pt-3">
-            <div className="row">
-              <div className="col-lg-6">
-                <div className="accordian-item">
-                  <div >
-                    <Accordion >
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel1-content"
-                        id="panel1-header"
-                      >
-                        How do I book an airport transfer?
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget.
-                      </AccordionDetails>
-                    </Accordion>
-                    <Accordion>
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2-content"
-                        id="panel2-header"
-                      >
-                        Are there any extra charges?
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget.
-                      </AccordionDetails>
-                    </Accordion>
-                    <Accordion>
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel3-content"
-                        id="panel3-header"
-                      >
-                        How much do I need to pay for airport transfer service?
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget.
-                      </AccordionDetails>
-                    </Accordion>
-                    <Accordion>
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel4-content"
-                        id="panel4-header"
-                      >
-                        Will I get to travel in a shared vehicle or privately
-                        reserved?
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget.
-                      </AccordionDetails>
-                    </Accordion>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="accordian-item">
-                  <div>
-                    <Accordion>
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel1-content"
-                        id="panel1-header"
-                      >
-                        If my flight gets delayed, will I be picked up by the
-                        chauffeur?
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget.
-                      </AccordionDetails>
-                    </Accordion>
-                    <Accordion>
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2-content"
-                        id="panel2-header"
-                      >
-                        At the airport where will my driver come to receive me?
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget.
-                      </AccordionDetails>
-                    </Accordion>
-                    <Accordion>
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel3-content"
-                        id="panel3-header"
-                      >
-                        Do you provide child seats?
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget.
-                      </AccordionDetails>
-                    </Accordion>
-                    <Accordion>
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel4-content"
-                        id="panel4-header"
-                      >
-                        What happens if I'm unable to find my driver at the
-                        airport?
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget.
-                      </AccordionDetails>
-                    </Accordion>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
+        
           <div className="accordion accordian-map pt-4" id="accordionExample">
             <div className="row">
               <div className="col-lg-6">
                 <div className="accordion-item">
                   <h2 className="accordion-header">
-                    <button className="accordion-button" type="button" Name data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       How do I book an airport transfer?
                     </button>
                   </h2>
@@ -1079,9 +972,11 @@ const Home = () => {
               <div className="col-lg-6">
                 <div className="accordion-item">
                   <h2 className="accordion-header">
-                    <button className="accordion-button" type="button" Name data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
-                      If my flight gets delayed, will I be picked up by the
-                      chauffeur?
+
+                 
+                    <button className="accordion-button" type="button"  data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+                    If my flight gets delayed, will I be picked up by the
+                        chauffeur?
                     </button>
                   </h2>
                   <div id="collapsefive" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">

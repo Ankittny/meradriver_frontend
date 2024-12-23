@@ -6,7 +6,7 @@ export const enquery = (values) => async (dispatch) => {
 try {
     dispatch({type:"EnqueryRequest"});
     
-    const {data} = await axios.post("/",values)
+    const {data} = await axios.post("/driver-enquiry",values)
 
     dispatch({ type: "EnquerySuccess", payload: data });
 } catch (error) {

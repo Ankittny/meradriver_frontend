@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/footer.scss";
+import "../styles/footer.css";
 import { TiSocialFacebook } from "react-icons/ti";
 import { FaGooglePlusG } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -22,6 +22,7 @@ const Footer = () => {
               <div className="input-group mb-3">
                 <input
                   type="text"
+                  name=""
                   className="form-control"
                   placeholder="Recipient's username"
                   aria-label="Recipient's username"
@@ -108,6 +109,7 @@ const Footer = () => {
                 <div className="google-idea">
                   <img src="/google-play.png" width="150" alt="dd6" />
 
+
                     {/* <div className="col-lg-4 pt-5">
                         <div className="footer-heading">
                             <h4 className="glad-list mb-4">Company</h4>
@@ -145,6 +147,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div> */}
+
                 </div>
                 <div className="google-idea">
                   <img src="/app-store.png" width="150" alt="dd7" />

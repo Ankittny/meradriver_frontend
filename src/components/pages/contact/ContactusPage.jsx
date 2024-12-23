@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import "../../../styles/contactusPage.scss";
+import "../../../styles/contactusPage.css";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -55,34 +55,34 @@ const ContactusPage = () => {
                                     <div className="col-lg-6">
                                         <div className="form-group row">
                                             <div className="col-lg-12">
-                                                <input type="text" className="form-control " id="inputPassword" placeholder="First Name " />
+                                                <input type="text" className="form-control " id="inputPassword" name="inputPassword" placeholder="First Name " />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group row">
                                             <div className="col-lg-12">
-                                                <input type="text" className="form-control control-sass" id="inputPassword" placeholder="Last Name" />
+                                                <input type="text" className="form-control control-sass" name='inputPassword' id="inputPassword" placeholder="Last Name" />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group row mt-3">
                                             <div className="col-lg-12">
-                                                <input type="text" className="form-control" id="inputPassword" placeholder="Email" />
+                                                <input type="text" name='inputPassword' className="form-control" id="inputPassword" placeholder="Email" />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="form-group row mt-3">
                                             <div className="col-lg-12">
-                                                <input type="digit" className="form-control" id="inputPassword" placeholder="Phone Number" />
+                                                <input type="digit" className="form-control" id="inputPassword" name='inputPassword' placeholder="Phone Number" />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-lg-12">
                                         <div className="form-group mt-3">
-                                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            <textarea className="form-control" id="message" name='message'  rows="3"></textarea>
                                         </div>
                                     </div>
 

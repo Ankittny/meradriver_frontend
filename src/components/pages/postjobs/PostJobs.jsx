@@ -7,6 +7,7 @@ import { Divider, Button } from "@mui/material";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import { IoLocationOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
+import "../../../styles/postjobs.css";
 
 const PostJobs = () => {
   const dispatch = useDispatch();
