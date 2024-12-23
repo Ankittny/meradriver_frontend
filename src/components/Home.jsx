@@ -146,9 +146,9 @@ const Home = () => {
         </video>
 
         <div className="content-overlay mt-3">
-          <div className="content">
-            <h1>Meet Your Driver Needs, 24×7</h1>
-            <p>
+          <div className="content text-center">
+            <h1 className="text-start">Meet Your Driver Needs, 24×7</h1>
+            <p className="text-start">
               With a commitment to professionalism and quality, MeraDriver
               transforms the driver hiring experience, ensuring precision and
               reliability in every service.
@@ -331,13 +331,25 @@ const Home = () => {
               <div className="row">
                 <div className="col-lg-6 service-left-menu ">
                   <p className="" style={{ textAlign: "center" }}>
-                    Huge Data base of several kinds of Drivers
+                    Huge Data base of several kinds of Drivers.
+                  </p>
+                  <p className="" style={{ textAlign: "center" }}>
+                  The behavior pattern of the driver/ employee is maintained.
+                  </p>
+                  <p className="" style={{ textAlign: "center" }}>
+                  Drivers available with international driving experience.
                   </p>
                 </div>
                 <div className="col-lg-6 service-left-menu ">
                   <p className="" style={{ textAlign: "center" }}>
                     Driver training is provided as and when required in
                     association of reputed agency.
+                  </p>
+                  <p className="" style={{ textAlign: "center" }}>
+                  If need be, English speaking drivers are provided.
+                  </p>
+                  <p className="" style={{ textAlign: "center" }}>
+                  High profile drivers can be provided who have experience in handling VVIP customers.
                   </p>
                 </div>
               </div>
