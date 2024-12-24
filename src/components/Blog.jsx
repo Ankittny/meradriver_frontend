@@ -56,7 +56,7 @@ const Blog = () => {
                   </div>
                 </div>
               </div>
-              <div className='start-blog-title mt-5'>
+              <div className='start-blog-title mt-5 mb-5'>
                 <img src='/post2.png' alt='car' />
                 {/* <div className='bussiness-title'>
                 BUSINESS

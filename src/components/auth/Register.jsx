@@ -83,7 +83,7 @@ const Register = () => {
             <div className="login-right">
               <div className="text-center py-3">
                 <Typography variant="h4">Sign Up</Typography>
-                <Typography variant="subtitle1" color="textSecondary">
+                <Typography variant="subtitle1" color="textSecondary" className="tyrpo-text mt-3 mb-5">
                   Let’s get you all set up so you can access your personal account.
                 </Typography>
               </div>
@@ -168,6 +168,7 @@ const Register = () => {
                           color="primary"
                           disabled={loading}
                           fullWidth
+                          className="btn-secondry-success"
                         >
                           {loading ? <CircularProgress size={24} /> : "Sign Up"}
                         </Button>
@@ -177,7 +178,7 @@ const Register = () => {
                 )}
               </Formik>
 
-              <Typography align="center" variant="body2" className="mt-4">
+              <Typography align="center" variant="body2" className="mt-4 mb-4">
                 Already have an account?{" "}
                 <Link href="/login" className="cursor">
                   Login

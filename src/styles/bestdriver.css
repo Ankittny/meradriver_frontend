@@ -63,6 +63,9 @@
                                                 width: 100%;
                                                 height: 340px;
                                             }
+                                            .about-us-title {
+                                                margin-top: 500px !important;
+                                            }
                                         }
 
 
@@ -71,6 +74,9 @@
         object-fit: cover;
         width: 100%;
         height: inherit;
+}
+.about-us-title {
+    margin-top: 360px !important;
 }
 }                                                                                    
 

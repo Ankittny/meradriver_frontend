@@ -25,7 +25,7 @@ const geistMono = localFont({
 export default function RootLayout({ children }) {
   useEffect(() => {
     // Import Bootstrap JS only on the client side
-    import("bootstrap/dist/js/bootstrap.bundle.min.js");
+    ("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
 
   return (

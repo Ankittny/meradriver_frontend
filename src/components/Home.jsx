@@ -492,7 +492,7 @@ const Home = () => {
       <FeelJourney />
 
       {/* driver vs taxi druvers */}
-      <div className="driver-title pt-5 pb-5 d-sm-none d-md-block d-none d-sm-block">
+      <div className="driver-title py-5 d-sm-none d-md-block d-none d-sm-block  block-fxt-tr">
         <div className="driver-heading">
           <h2 className="driver-text text-center font-lighter mx-auto">
             Driver Vs Taxi Services
@@ -573,7 +573,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="driver-title hello-title d-md-block d-xl-none d-xxl-block d-lg-block d-lg-none d-xl-block">
+      <div className="driver-title hello-title py-5 d-md-block d-xl-none d-xxl-block d-lg-block d-lg-none d-xl-block">
         <div className="driver-heading">
           <h2 className="driver-text text-center font-lighter mx-auto">
             Driver Vs Taxi Services
@@ -793,7 +793,7 @@ const Home = () => {
         <div className="container mt-5">
           <div className="row">
             <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
-              <div className="police-title py-3 " data-aos="fade-up-right">
+              <div className="police-title py-3 " data-aos="zoom-out-down">
                 <div className="image-little text-center">
                   <img
                     src={"/Group.png"}
@@ -808,7 +808,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
-              <div className="police-title py-3" data-aos="fade-up-right">
+              <div className="police-title py-3" data-aos="zoom-out-down">
                 <div className="image-little text-center">
                   <img
                     src={"/Frame.png"}
@@ -821,7 +821,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
-              <div className="police-title  py-3" data-aos="fade-up-left">
+              <div className="police-title  py-3" data-aos="zoom-out-down">
                 <div className="image-little text-center">
                   <img
                     src={"/Group (1).png"}
@@ -836,7 +836,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-3 col-sm-6 col-xs-6 col-6">
-              <div className="police-title py-3" data-aos="fade-up-left">
+              <div className="police-title py-3" data-aos="zoom-out-down">
                 <div className="image-little text-center">
                   <img
                     src={"/Group (2).png"}
@@ -853,7 +853,7 @@ const Home = () => {
             <div className="main-circle-icon mt-5 mx-auto">
               <div className="row">
                 <div className="col-lg-4 col-sm-6 col-xs-6 col-6">
-                  <div className="police-title py-3" data-aos="flip-left">
+                  <div className="police-title py-3" data-aos="zoom-in-down">
                     <div className="image-little text-center">
                       <img
                         src={"/Frame (2).png"}
@@ -866,7 +866,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="col-lg-4  col-sm-6 col-xs-6 col-6">
-                  <div className="police-title py-3" data-aos="flip-right">
+                  <div className="police-title py-3" data-aos="zoom-in-down">
                     <div className="image-little text-center">
                       <img
                         src={"/Frame (1).png"}
@@ -881,7 +881,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="col-lg-4  col-sm-6 col-xs-6 col-6">
-                  <div className="police-title py-3" data-aos="flip-left">
+                  <div className="police-title py-3" data-aos="zoom-in-down">
                     <div className="image-little text-center">
                       <img
                         src={"/Group (3).png"}

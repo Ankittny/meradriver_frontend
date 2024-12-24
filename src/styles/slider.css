@@ -5,7 +5,7 @@
     position: relative !important;
     background-size: cover !important;
     height: 400px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 .swiper {
   width: 100%;
@@ -42,6 +42,12 @@
 }
 
    
+@media(max-width:1071px) and (min-width:992px){
+  .slider-slide p {
+    font-size: 13px;
+    text-align: start;
+}
+}
 
   
 @media(max-width:991px)and (min-width:768px){
@@ -75,6 +81,13 @@
     font-size: 11px;
     text-align: start;
 }
+}
+
+@media(max-width:767px) and (min-width:640px){
+  .swiper-title img{
+    width: 125px;
+    height: 125px;
+  }
 }
 
 @media(max-width:425px){
