@@ -26,28 +26,43 @@
 .journey-title button{
     font-size: 17px !important;
 }
-                                            
-                                                    @media(max-width:991px) and (min-width:768px){
-                                                    .journey-title-image {
-                                                        position: absolute;
-                                                        top: -58px;
-                                                        right: 0px;
-                                                    }    
-                                                    .brand-lisyting li {
-                                                        font-size: 14px;
-                                                    
-                                                } 
-                                                .brand-lisyting{
-                                                    margin: 0px;
-                                                    padding: 0px;
+.book-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #01233b;
+    border: none;
+    color: white;
+    font-size: 17px !important;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 200px;
+  }                                            
+                                                        @media(max-width:991px) and (min-width:768px){
+                                                        .journey-title-image {
+                                                            position: absolute;
+                                                            top: -58px;
+                                                            right: 0px;
+                                                        }    
+                                                        .brand-lisyting li {
+                                                            font-size: 14px;
+                                                        
+                                                    } 
+                                                    .brand-lisyting{
+                                                        margin: 5px;
+                                                        padding: 0px;
 
-                                                }
-                                                .brand-lisyting li {
-                                                    list-style: none;
-                                                    margin-bottom: 0px !important;
-                                                }
-                                                
-                                            }                 
+                                                    }
+                                                    .brand-lisyting li {
+                                                        list-style: none;
+                                                        margin-bottom: 0px !important;
+                                                    }
+                                                    .journey-image{
+                                                        padding-top: 20px !important;
+                                                    }
+                                                    .category-title{
+                                                        margin-bottom: 90px;
+                                                    }
+                                                    
+                                                }                 
 @media(max-width:767px) and (min-width:426px){
     .journey-title-image {
         position: inherit !important;
@@ -75,7 +90,7 @@
 }
 .journey-title button {
     padding: 0.75rem 1.5rem;
-    width: 135px !important;
+    /* width: 135px !important; */
 }
 .brand-lisyting li {
     font-size: 12px;
@@ -87,4 +102,12 @@
 .journey-image {
         height: 140px !important;
 }
+}
+
+
+@media (max-width: 375px) {
+    .brand-lisyting li {
+        font-size: 11px;
+        margin-bottom: 0px;
+    }
 }

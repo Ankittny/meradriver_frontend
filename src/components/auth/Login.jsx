@@ -126,7 +126,7 @@ const Login = () => {
                     />
                   </Grid>
                   <Grid item xs className="text-end">
-                    <Link href="/forget-password">Forget Password</Link>
+                    <Link href="/forget-password" className="curser">Forget Password</Link>
                   </Grid>
                 </Grid>
                 <Grid item xs className="text-center mt-2 mb--2">

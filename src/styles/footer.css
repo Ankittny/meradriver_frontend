@@ -45,25 +45,40 @@ border-radius: 0px;
     border-radius: 0px 6px 6px 0px;
 }
 
+@media(max-width:991px) and (min-width:768px){
+    .bottom-footer {
+        flex-direction: column;
+    }
+    .footer-heading{
+        margin: 20px 20px;
+      }
+}
                                       
 @media(max-width:767px) and (min-width:426px){
    .footer-heading h4{
     text-align: center;
    }
-   .footer-heading{
-    margin-top: 20px;
+
+.bottom-footer {
+    flex-direction: column;
 }
+.footer-heading{
+    margin: 20px 20px;
+  }
 }
 
 
 @media(max-width:425px){
     .footer-heading{
-       margin-top: 20px;
+      margin: 20px 20px;
     }
-    .bottom-footer {
+    /* .bottom-footer {
         display: none !important;
-    }
+    } */
     .footer-heading{
         margin-top: 20px;
+    }
+    .bottom-footer {
+        flex-direction: column;
     }
 }

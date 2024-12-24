@@ -4,7 +4,16 @@
     background: none;
     padding: 10px;
 }
+.login{
+    background-color: #F7FDFF;;
+}
 
+.btn-secondry-success{
+    background-color: #01233B !important;
+}
+.cursor{
+    color: #01233B;
+}
                                             
 @media(max-width: 991px){
     .login-left {
